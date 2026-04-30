@@ -44,11 +44,8 @@ def main() -> None:
     summaries = []
 
     with sync_playwright() as pw:
-        browser = pw.chromium.launch(
-            headless=config.headless,
-            args=["--start-maximized"],
-        )
-        context = browser.new_context(no_viewport=True)
+        browser = pw.chromium.launch(headless=config.headless)
+        context = browser.new_context(viewport={"width": 1920, "height": 1080})
         page = context.new_page()
 
         with open(log_path, "w", encoding="utf-8") as log_file:
