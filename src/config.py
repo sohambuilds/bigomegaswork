@@ -11,8 +11,6 @@ class Config:
     username: str
     password: str
     model: str
-    mcq_single_threshold: int
-    mcq_multi_threshold: int
     headless: bool
 
 
@@ -21,7 +19,5 @@ config = Config(
     username=os.environ["USERNAME"],
     password=os.environ["PASSWORD"],
     model=os.environ.get("LITELLM_MODEL", "gemini/gemini-2.5-pro"),
-    mcq_single_threshold=int(os.environ.get("MCQ_SINGLE_THRESHOLD", "90")),
-    mcq_multi_threshold=int(os.environ.get("MCQ_MULTI_THRESHOLD", "100")),
     headless=os.environ.get("HEADLESS", "false").lower() == "true",
 )

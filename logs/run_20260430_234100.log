@@ -1,0 +1,903 @@
+2026-04-30 23:41:00,358 [INFO] main: Model : groq/meta-llama/llama-4-scout-17b-16e-instruct
+2026-04-30 23:41:00,358 [INFO] main: JSONL : logs\run_20260430_234100.jsonl
+2026-04-30 23:41:00,358 [INFO] main: Papers: 4
+2026-04-30 23:41:00,359 [DEBUG] asyncio: Using proactor: IocpProactor
+2026-04-30 23:41:01,855 [INFO] browser: Navigating to https://jee-image.onrender.com
+2026-04-30 23:41:03,002 [DEBUG] browser: Filling login form
+2026-04-30 23:41:03,093 [DEBUG] browser: Selecting paper: 2025 – Paper 1 – English
+2026-04-30 23:41:03,180 [INFO] browser: Logged in — paper: 2025 – Paper 1 – English
+2026-04-30 23:41:03,181 [DEBUG] browser: Zooming out (Ctrl+Minus x5)
+2026-04-30 23:41:03,193 [DEBUG] browser:   Ctrl+Minus press 1/5
+2026-04-30 23:41:03,206 [DEBUG] browser:   Ctrl+Minus press 2/5
+2026-04-30 23:41:03,213 [DEBUG] browser:   Ctrl+Minus press 3/5
+2026-04-30 23:41:03,221 [DEBUG] browser:   Ctrl+Minus press 4/5
+2026-04-30 23:41:03,229 [DEBUG] browser:   Ctrl+Minus press 5/5
+2026-04-30 23:41:04,274 [INFO] browser: Total questions in paper: 60
+2026-04-30 23:41:04,275 [INFO] exam_runner: Submit target for 2025 – Paper 1 – English: Q48
+2026-04-30 23:41:04,287 [DEBUG] browser: Question number: 1  (header text: 'Question 1 of 60')
+2026-04-30 23:41:05,121 [DEBUG] browser: Question meta: type='MCQ-Multiple'  subject='Chemistry'
+2026-04-30 23:41:05,275 [DEBUG] browser: Screenshot taken (86202 bytes)
+2026-04-30 23:41:07,277 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 23:41:07,897 [INFO] vlm: VLM parsed result: {'A': 0, 'B': 0, 'C': 0, 'D': 0}
+2026-04-30 23:41:07,897 [DEBUG] exam_runner: Q1: type='MCQ-Multiple' subject='Chemistry' vlm={'A': 0, 'B': 0, 'C': 0, 'D': 0, '_type': 'mcq-multiple'}
+2026-04-30 23:41:07,897 [DEBUG] browser: Clicking Next
+2026-04-30 23:41:07,897 [DEBUG] browser: sleep 2.0s (before Next)
+2026-04-30 23:41:09,932 [DEBUG] browser: sleep 2.0s (after Next)
+2026-04-30 23:41:11,951 [DEBUG] browser: Question number: 2  (header text: 'Question 2 of 48')
+2026-04-30 23:41:11,961 [DEBUG] browser: Question meta: type='MCQ-Multiple'  subject='Chemistry'
+2026-04-30 23:41:12,100 [DEBUG] browser: Screenshot taken (102643 bytes)
+2026-04-30 23:41:14,101 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 23:41:14,691 [INFO] vlm: VLM parsed result: {'A': 80, 'B': 100, 'C': 30, 'D': 95}
+2026-04-30 23:41:14,691 [DEBUG] exam_runner: Q2: type='MCQ-Multiple' subject='Chemistry' vlm={'A': 80, 'B': 100, 'C': 30, 'D': 95, '_type': 'mcq-multiple'}
+2026-04-30 23:41:14,691 [DEBUG] browser: Attempting to click option 'B'
+2026-04-30 23:41:14,763 [INFO] browser: Clicked option B via selector: .mcq-option[data-option='B']
+2026-04-30 23:41:14,763 [DEBUG] browser: sleep 2.0s (after option B click)
+2026-04-30 23:41:16,765 [DEBUG] browser: Attempting to click option 'D'
+2026-04-30 23:41:16,815 [INFO] browser: Clicked option D via selector: .mcq-option[data-option='D']
+2026-04-30 23:41:16,816 [DEBUG] browser: sleep 2.0s (after option D click)
+2026-04-30 23:41:18,817 [DEBUG] browser: Clicking Next
+2026-04-30 23:41:18,817 [DEBUG] browser: sleep 2.0s (before Next)
+2026-04-30 23:41:20,856 [DEBUG] browser: sleep 2.0s (after Next)
+2026-04-30 23:41:22,864 [DEBUG] browser: Question number: 3  (header text: 'Question 3 of 48')
+2026-04-30 23:41:22,882 [DEBUG] browser: Question meta: type='MCQ-Multiple'  subject='Chemistry'
+2026-04-30 23:41:23,011 [DEBUG] browser: Screenshot taken (157285 bytes)
+2026-04-30 23:41:25,015 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 23:41:25,655 [INFO] vlm: VLM parsed result: {'A': 80, 'B': 100, 'C': 30, 'D': 95}
+2026-04-30 23:41:25,655 [DEBUG] exam_runner: Q3: type='MCQ-Multiple' subject='Chemistry' vlm={'A': 80, 'B': 100, 'C': 30, 'D': 95, '_type': 'mcq-multiple'}
+2026-04-30 23:41:25,655 [DEBUG] browser: Attempting to click option 'B'
+2026-04-30 23:41:25,711 [INFO] browser: Clicked option B via selector: .mcq-option[data-option='B']
+2026-04-30 23:41:25,711 [DEBUG] browser: sleep 2.0s (after option B click)
+2026-04-30 23:41:27,715 [DEBUG] browser: Attempting to click option 'D'
+2026-04-30 23:41:27,778 [INFO] browser: Clicked option D via selector: .mcq-option[data-option='D']
+2026-04-30 23:41:27,778 [DEBUG] browser: sleep 2.0s (after option D click)
+2026-04-30 23:41:29,782 [DEBUG] browser: Clicking Next
+2026-04-30 23:41:29,782 [DEBUG] browser: sleep 2.0s (before Next)
+2026-04-30 23:41:31,813 [DEBUG] browser: sleep 2.0s (after Next)
+2026-04-30 23:41:33,823 [DEBUG] browser: Question number: 4  (header text: 'Question 4 of 48')
+2026-04-30 23:41:33,839 [DEBUG] browser: Question meta: type='MCQ-Single'  subject='Chemistry'
+2026-04-30 23:41:33,951 [DEBUG] browser: Screenshot taken (123764 bytes)
+2026-04-30 23:41:35,961 [DEBUG] vlm: Sending mcq-single question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 23:41:37,281 [INFO] vlm: VLM parsed result: {'answer': 'A', 'confidence': 95}
+2026-04-30 23:41:37,281 [DEBUG] exam_runner: Q4: type='MCQ-Single' subject='Chemistry' vlm={'answer': 'A', 'confidence': 95, '_type': 'mcq-single'}
+2026-04-30 23:41:37,281 [DEBUG] browser: Attempting to click option 'A'
+2026-04-30 23:41:37,336 [INFO] browser: Clicked option A via selector: .mcq-option[data-option='A']
+2026-04-30 23:41:37,336 [DEBUG] browser: sleep 2.0s (after option A click)
+2026-04-30 23:41:39,339 [DEBUG] browser: Clicking Next
+2026-04-30 23:41:39,339 [DEBUG] browser: sleep 2.0s (before Next)
+2026-04-30 23:41:41,372 [DEBUG] browser: sleep 2.0s (after Next)
+2026-04-30 23:41:43,379 [DEBUG] browser: Question number: 5  (header text: 'Question 5 of 48')
+2026-04-30 23:41:43,395 [DEBUG] browser: Question meta: type='MCQ-Single'  subject='Chemistry'
+2026-04-30 23:41:43,520 [DEBUG] browser: Screenshot taken (155619 bytes)
+2026-04-30 23:41:45,526 [DEBUG] vlm: Sending mcq-single question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 23:41:48,473 [INFO] vlm: VLM parsed result: {'answer': 'C', 'confidence': 95}
+2026-04-30 23:41:48,473 [DEBUG] exam_runner: Q5: type='MCQ-Single' subject='Chemistry' vlm={'answer': 'C', 'confidence': 95, '_type': 'mcq-single'}
+2026-04-30 23:41:48,473 [DEBUG] browser: Attempting to click option 'C'
+2026-04-30 23:41:48,527 [INFO] browser: Clicked option C via selector: .mcq-option[data-option='C']
+2026-04-30 23:41:48,527 [DEBUG] browser: sleep 2.0s (after option C click)
+2026-04-30 23:41:50,530 [DEBUG] browser: Clicking Next
+2026-04-30 23:41:50,530 [DEBUG] browser: sleep 2.0s (before Next)
+2026-04-30 23:41:52,569 [DEBUG] browser: sleep 2.0s (after Next)
+2026-04-30 23:41:54,578 [DEBUG] browser: Question number: 6  (header text: 'Question 6 of 48')
+2026-04-30 23:41:54,592 [DEBUG] browser: Question meta: type='MCQ-Single'  subject='Chemistry'
+2026-04-30 23:41:54,712 [DEBUG] browser: Screenshot taken (107129 bytes)
+2026-04-30 23:41:56,721 [DEBUG] vlm: Sending mcq-single question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 23:41:57,302 [INFO] vlm: VLM parsed result: {'answer': 'B', 'confidence': 95}
+2026-04-30 23:41:57,302 [DEBUG] exam_runner: Q6: type='MCQ-Single' subject='Chemistry' vlm={'answer': 'B', 'confidence': 95, '_type': 'mcq-single'}
+2026-04-30 23:41:57,302 [DEBUG] browser: Attempting to click option 'B'
+2026-04-30 23:41:57,357 [INFO] browser: Clicked option B via selector: .mcq-option[data-option='B']
+2026-04-30 23:41:57,357 [DEBUG] browser: sleep 2.0s (after option B click)
+2026-04-30 23:41:59,359 [DEBUG] browser: Clicking Next
+2026-04-30 23:41:59,359 [DEBUG] browser: sleep 2.0s (before Next)
+2026-04-30 23:42:01,384 [DEBUG] browser: sleep 2.0s (after Next)
+2026-04-30 23:42:03,400 [DEBUG] browser: Question number: 7  (header text: 'Question 7 of 48')
+2026-04-30 23:42:03,415 [DEBUG] browser: Question meta: type='MCQ-Single'  subject='Chemistry'
+2026-04-30 23:42:03,544 [DEBUG] browser: Screenshot taken (117086 bytes)
+2026-04-30 23:42:05,545 [DEBUG] vlm: Sending mcq-single question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 23:42:06,342 [INFO] vlm: VLM parsed result: {'answer': 'B', 'confidence': 95}
+2026-04-30 23:42:06,342 [DEBUG] exam_runner: Q7: type='MCQ-Single' subject='Chemistry' vlm={'answer': 'B', 'confidence': 95, '_type': 'mcq-single'}
+2026-04-30 23:42:06,342 [DEBUG] browser: Attempting to click option 'B'
+2026-04-30 23:42:06,397 [INFO] browser: Clicked option B via selector: .mcq-option[data-option='B']
+2026-04-30 23:42:06,397 [DEBUG] browser: sleep 2.0s (after option B click)
+2026-04-30 23:42:08,401 [DEBUG] browser: Clicking Next
+2026-04-30 23:42:08,402 [DEBUG] browser: sleep 2.0s (before Next)
+2026-04-30 23:42:10,442 [DEBUG] browser: sleep 2.0s (after Next)
+2026-04-30 23:42:12,455 [DEBUG] browser: Question number: 8  (header text: 'Question 8 of 48')
+2026-04-30 23:42:12,469 [DEBUG] browser: Question meta: type='Matching'  subject='Chemistry'
+2026-04-30 23:42:12,614 [DEBUG] browser: Screenshot taken (155468 bytes)
+2026-04-30 23:42:14,616 [DEBUG] vlm: Sending mcq-single question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 23:42:16,742 [INFO] vlm: VLM parsed result: {'answer': 'A', 'confidence': 95}
+2026-04-30 23:42:16,742 [DEBUG] exam_runner: Q8: type='Matching' subject='Chemistry' vlm={'answer': 'A', 'confidence': 95, '_type': 'mcq-single'}
+2026-04-30 23:42:16,742 [DEBUG] browser: Attempting to click option 'A'
+2026-04-30 23:42:16,800 [INFO] browser: Clicked option A via selector: .mcq-option[data-option='A']
+2026-04-30 23:42:16,800 [DEBUG] browser: sleep 2.0s (after option A click)
+2026-04-30 23:42:18,801 [DEBUG] browser: Clicking Next
+2026-04-30 23:42:18,801 [DEBUG] browser: sleep 2.0s (before Next)
+2026-04-30 23:42:20,836 [DEBUG] browser: sleep 2.0s (after Next)
+2026-04-30 23:42:22,839 [DEBUG] browser: Question number: 9  (header text: 'Question 9 of 48')
+2026-04-30 23:42:22,855 [DEBUG] browser: Question meta: type='Matching'  subject='Chemistry'
+2026-04-30 23:42:22,991 [DEBUG] browser: Screenshot taken (182615 bytes)
+2026-04-30 23:42:25,001 [DEBUG] vlm: Sending mcq-single question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 23:42:26,962 [INFO] vlm: VLM parsed result: {'answer': 'B', 'confidence': 95}
+2026-04-30 23:42:26,962 [DEBUG] exam_runner: Q9: type='Matching' subject='Chemistry' vlm={'answer': 'B', 'confidence': 95, '_type': 'mcq-single'}
+2026-04-30 23:42:26,962 [DEBUG] browser: Attempting to click option 'B'
+2026-04-30 23:42:27,012 [INFO] browser: Clicked option B via selector: .mcq-option[data-option='B']
+2026-04-30 23:42:27,012 [DEBUG] browser: sleep 2.0s (after option B click)
+2026-04-30 23:42:29,013 [DEBUG] browser: Clicking Next
+2026-04-30 23:42:29,013 [DEBUG] browser: sleep 2.0s (before Next)
+2026-04-30 23:42:31,040 [DEBUG] browser: sleep 2.0s (after Next)
+2026-04-30 23:42:33,055 [DEBUG] browser: Question number: 10  (header text: 'Question 10 of 48')
+2026-04-30 23:42:33,058 [DEBUG] browser: Question meta: type='Matching'  subject='Chemistry'
+2026-04-30 23:42:33,200 [DEBUG] browser: Screenshot taken (177578 bytes)
+2026-04-30 23:42:35,201 [DEBUG] vlm: Sending mcq-single question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 23:42:37,443 [INFO] vlm: VLM parsed result: {'answer': 'A', 'confidence': 95}
+2026-04-30 23:42:37,443 [DEBUG] exam_runner: Q10: type='Matching' subject='Chemistry' vlm={'answer': 'A', 'confidence': 95, '_type': 'mcq-single'}
+2026-04-30 23:42:37,443 [DEBUG] browser: Attempting to click option 'A'
+2026-04-30 23:42:37,491 [INFO] browser: Clicked option A via selector: .mcq-option[data-option='A']
+2026-04-30 23:42:37,492 [DEBUG] browser: sleep 2.0s (after option A click)
+2026-04-30 23:42:39,493 [DEBUG] browser: Clicking Next
+2026-04-30 23:42:39,493 [DEBUG] browser: sleep 2.0s (before Next)
+2026-04-30 23:42:41,522 [DEBUG] browser: sleep 2.0s (after Next)
+2026-04-30 23:42:43,533 [DEBUG] browser: Question number: 11  (header text: 'Question 11 of 48')
+2026-04-30 23:42:43,543 [DEBUG] browser: Question meta: type='Numerical'  subject='Chemistry'
+2026-04-30 23:42:43,663 [DEBUG] browser: Screenshot taken (115523 bytes)
+2026-04-30 23:42:45,673 [DEBUG] vlm: Sending numerical question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 23:42:47,106 [INFO] vlm: VLM parsed result: {'answer': '100', 'confidence': 90}
+2026-04-30 23:42:47,106 [DEBUG] exam_runner: Q11: type='Numerical' subject='Chemistry' vlm={'answer': '100', 'confidence': 90, '_type': 'numerical'}
+2026-04-30 23:42:47,106 [DEBUG] browser: Entering numerical answer: '100'
+2026-04-30 23:42:48,623 [DEBUG] browser: Numpad trigger selector failed (input[placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("input[placeholder^='Text']").first to be visible
+
+2026-04-30 23:42:50,141 [DEBUG] browser: Numpad trigger selector failed ([placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[placeholder^='Text']").first to be visible
+
+2026-04-30 23:42:51,653 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text..')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text..')").first to be visible
+
+2026-04-30 23:42:53,160 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text...')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text...')").first to be visible
+
+2026-04-30 23:42:54,666 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-trigger']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-trigger']").first to be visible
+
+2026-04-30 23:42:56,183 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-input']").first to be visible
+
+2026-04-30 23:42:57,697 [DEBUG] browser: Numpad trigger selector failed ([class*='answer-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='answer-input']").first to be visible
+
+2026-04-30 23:42:57,735 [DEBUG] browser: Numpad trigger clicked via selector: [class*='numerical-input']
+2026-04-30 23:42:57,735 [DEBUG] browser: sleep 2.0s (after numpad trigger click)
+2026-04-30 23:42:59,736 [DEBUG] browser: Numpad modal opened
+2026-04-30 23:42:59,781 [DEBUG] browser: Cleared existing numpad value
+2026-04-30 23:42:59,781 [DEBUG] browser: sleep 2.0s (after clear)
+2026-04-30 23:43:01,807 [DEBUG] browser:   Numpad pressed: data-value='1'
+2026-04-30 23:43:01,807 [DEBUG] browser: sleep 2.0s (after numpad 1)
+2026-04-30 23:43:03,832 [DEBUG] browser:   Numpad pressed: data-value='0'
+2026-04-30 23:43:03,833 [DEBUG] browser: sleep 2.0s (after numpad 0)
+2026-04-30 23:43:05,855 [DEBUG] browser:   Numpad pressed: data-value='0'
+2026-04-30 23:43:05,855 [DEBUG] browser: sleep 2.0s (after numpad 0)
+2026-04-30 23:43:07,883 [DEBUG] browser:   Numpad pressed: data-value='ok'
+2026-04-30 23:43:07,884 [DEBUG] browser: sleep 2.0s (after numpad ok)
+2026-04-30 23:43:09,893 [INFO] browser: Numerical answer submitted: '100'
+2026-04-30 23:43:09,893 [DEBUG] browser: Clicking Next
+2026-04-30 23:43:09,893 [DEBUG] browser: sleep 2.0s (before Next)
+2026-04-30 23:43:11,926 [DEBUG] browser: sleep 2.0s (after Next)
+2026-04-30 23:43:13,935 [DEBUG] browser: Question number: 12  (header text: 'Question 12 of 48')
+2026-04-30 23:43:13,944 [DEBUG] browser: Question meta: type='Numerical'  subject='Chemistry'
+2026-04-30 23:43:14,058 [DEBUG] browser: Screenshot taken (120587 bytes)
+2026-04-30 23:43:16,066 [DEBUG] vlm: Sending numerical question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 23:43:17,937 [INFO] vlm: VLM parsed result: {'answer': '2', 'confidence': 90}
+2026-04-30 23:43:17,943 [DEBUG] exam_runner: Q12: type='Numerical' subject='Chemistry' vlm={'answer': '2', 'confidence': 90, '_type': 'numerical'}
+2026-04-30 23:43:17,943 [DEBUG] browser: Entering numerical answer: '2'
+2026-04-30 23:43:19,452 [DEBUG] browser: Numpad trigger selector failed (input[placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("input[placeholder^='Text']").first to be visible
+
+2026-04-30 23:43:20,967 [DEBUG] browser: Numpad trigger selector failed ([placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[placeholder^='Text']").first to be visible
+
+2026-04-30 23:43:22,480 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text..')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text..')").first to be visible
+
+2026-04-30 23:43:23,994 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text...')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text...')").first to be visible
+
+2026-04-30 23:43:25,503 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-trigger']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-trigger']").first to be visible
+
+2026-04-30 23:43:27,018 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-input']").first to be visible
+
+2026-04-30 23:43:28,525 [DEBUG] browser: Numpad trigger selector failed ([class*='answer-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='answer-input']").first to be visible
+
+2026-04-30 23:43:28,559 [DEBUG] browser: Numpad trigger clicked via selector: [class*='numerical-input']
+2026-04-30 23:43:28,559 [DEBUG] browser: sleep 2.0s (after numpad trigger click)
+2026-04-30 23:43:30,570 [DEBUG] browser: Numpad modal opened
+2026-04-30 23:43:30,605 [DEBUG] browser: Cleared existing numpad value
+2026-04-30 23:43:30,605 [DEBUG] browser: sleep 2.0s (after clear)
+2026-04-30 23:43:32,632 [DEBUG] browser:   Numpad pressed: data-value='2'
+2026-04-30 23:43:32,632 [DEBUG] browser: sleep 2.0s (after numpad 2)
+2026-04-30 23:43:34,659 [DEBUG] browser:   Numpad pressed: data-value='ok'
+2026-04-30 23:43:34,659 [DEBUG] browser: sleep 2.0s (after numpad ok)
+2026-04-30 23:43:36,664 [INFO] browser: Numerical answer submitted: '2'
+2026-04-30 23:43:36,664 [DEBUG] browser: Clicking Next
+2026-04-30 23:43:36,664 [DEBUG] browser: sleep 2.0s (before Next)
+2026-04-30 23:43:38,694 [DEBUG] browser: sleep 2.0s (after Next)
+2026-04-30 23:43:40,703 [DEBUG] browser: Question number: 13  (header text: 'Question 13 of 48')
+2026-04-30 23:43:40,703 [DEBUG] browser: Question meta: type='Numerical'  subject='Chemistry'
+2026-04-30 23:43:40,834 [DEBUG] browser: Screenshot taken (139098 bytes)
+2026-04-30 23:43:42,845 [DEBUG] vlm: Sending numerical question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 23:43:45,134 [INFO] vlm: VLM parsed result: {'answer': '7.1', 'confidence': 90}
+2026-04-30 23:43:45,134 [DEBUG] exam_runner: Q13: type='Numerical' subject='Chemistry' vlm={'answer': '7.1', 'confidence': 90, '_type': 'numerical'}
+2026-04-30 23:43:45,134 [DEBUG] browser: Entering numerical answer: '7.1'
+2026-04-30 23:43:46,656 [DEBUG] browser: Numpad trigger selector failed (input[placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("input[placeholder^='Text']").first to be visible
+
+2026-04-30 23:43:48,161 [DEBUG] browser: Numpad trigger selector failed ([placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[placeholder^='Text']").first to be visible
+
+2026-04-30 23:43:49,666 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text..')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text..')").first to be visible
+
+2026-04-30 23:43:51,176 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text...')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text...')").first to be visible
+
+2026-04-30 23:43:52,687 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-trigger']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-trigger']").first to be visible
+
+2026-04-30 23:43:54,207 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-input']").first to be visible
+
+2026-04-30 23:43:55,716 [DEBUG] browser: Numpad trigger selector failed ([class*='answer-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='answer-input']").first to be visible
+
+2026-04-30 23:43:55,751 [DEBUG] browser: Numpad trigger clicked via selector: [class*='numerical-input']
+2026-04-30 23:43:55,751 [DEBUG] browser: sleep 2.0s (after numpad trigger click)
+2026-04-30 23:43:57,755 [DEBUG] browser: Numpad modal opened
+2026-04-30 23:43:57,804 [DEBUG] browser: Cleared existing numpad value
+2026-04-30 23:43:57,804 [DEBUG] browser: sleep 2.0s (after clear)
+2026-04-30 23:43:59,836 [DEBUG] browser:   Numpad pressed: data-value='7'
+2026-04-30 23:43:59,836 [DEBUG] browser: sleep 2.0s (after numpad 7)
+2026-04-30 23:44:01,860 [DEBUG] browser:   Numpad pressed: data-value='.'
+2026-04-30 23:44:01,861 [DEBUG] browser: sleep 2.0s (after numpad .)
+2026-04-30 23:44:03,886 [DEBUG] browser:   Numpad pressed: data-value='1'
+2026-04-30 23:44:03,887 [DEBUG] browser: sleep 2.0s (after numpad 1)
+2026-04-30 23:44:05,912 [DEBUG] browser:   Numpad pressed: data-value='ok'
+2026-04-30 23:44:05,912 [DEBUG] browser: sleep 2.0s (after numpad ok)
+2026-04-30 23:44:07,914 [INFO] browser: Numerical answer submitted: '7.1'
+2026-04-30 23:44:07,914 [DEBUG] browser: Clicking Next
+2026-04-30 23:44:07,914 [DEBUG] browser: sleep 2.0s (before Next)
+2026-04-30 23:44:09,948 [DEBUG] browser: sleep 2.0s (after Next)
+2026-04-30 23:44:11,953 [DEBUG] browser: Question number: 14  (header text: 'Question 14 of 48')
+2026-04-30 23:44:11,976 [DEBUG] browser: Question meta: type='Numerical'  subject='Chemistry'
+2026-04-30 23:44:12,094 [DEBUG] browser: Screenshot taken (120156 bytes)
+2026-04-30 23:44:14,101 [DEBUG] vlm: Sending numerical question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 23:44:15,864 [INFO] vlm: VLM parsed result: {'answer': '29.88', 'confidence': 90}
+2026-04-30 23:44:15,864 [DEBUG] exam_runner: Q14: type='Numerical' subject='Chemistry' vlm={'answer': '29.88', 'confidence': 90, '_type': 'numerical'}
+2026-04-30 23:44:15,864 [DEBUG] browser: Entering numerical answer: '29.88'
+2026-04-30 23:44:17,385 [DEBUG] browser: Numpad trigger selector failed (input[placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("input[placeholder^='Text']").first to be visible
+
+2026-04-30 23:44:18,894 [DEBUG] browser: Numpad trigger selector failed ([placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[placeholder^='Text']").first to be visible
+
+2026-04-30 23:44:20,406 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text..')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text..')").first to be visible
+
+2026-04-30 23:44:21,917 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text...')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text...')").first to be visible
+
+2026-04-30 23:44:23,422 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-trigger']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-trigger']").first to be visible
+
+2026-04-30 23:44:24,934 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-input']").first to be visible
+
+2026-04-30 23:44:26,450 [DEBUG] browser: Numpad trigger selector failed ([class*='answer-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='answer-input']").first to be visible
+
+2026-04-30 23:44:26,485 [DEBUG] browser: Numpad trigger clicked via selector: [class*='numerical-input']
+2026-04-30 23:44:26,486 [DEBUG] browser: sleep 2.0s (after numpad trigger click)
+2026-04-30 23:44:28,495 [DEBUG] browser: Numpad modal opened
+2026-04-30 23:44:28,533 [DEBUG] browser: Cleared existing numpad value
+2026-04-30 23:44:28,534 [DEBUG] browser: sleep 2.0s (after clear)
+2026-04-30 23:44:30,563 [DEBUG] browser:   Numpad pressed: data-value='2'
+2026-04-30 23:44:30,563 [DEBUG] browser: sleep 2.0s (after numpad 2)
+2026-04-30 23:44:32,596 [DEBUG] browser:   Numpad pressed: data-value='9'
+2026-04-30 23:44:32,596 [DEBUG] browser: sleep 2.0s (after numpad 9)
+2026-04-30 23:44:34,619 [DEBUG] browser:   Numpad pressed: data-value='.'
+2026-04-30 23:44:34,619 [DEBUG] browser: sleep 2.0s (after numpad .)
+2026-04-30 23:44:36,646 [DEBUG] browser:   Numpad pressed: data-value='8'
+2026-04-30 23:44:36,647 [DEBUG] browser: sleep 2.0s (after numpad 8)
+2026-04-30 23:44:38,670 [DEBUG] browser:   Numpad pressed: data-value='8'
+2026-04-30 23:44:38,670 [DEBUG] browser: sleep 2.0s (after numpad 8)
+2026-04-30 23:44:40,700 [DEBUG] browser:   Numpad pressed: data-value='ok'
+2026-04-30 23:44:40,700 [DEBUG] browser: sleep 2.0s (after numpad ok)
+2026-04-30 23:44:42,706 [INFO] browser: Numerical answer submitted: '29.88'
+2026-04-30 23:44:42,712 [DEBUG] browser: Clicking Next
+2026-04-30 23:44:42,712 [DEBUG] browser: sleep 2.0s (before Next)
+2026-04-30 23:44:44,745 [DEBUG] browser: sleep 2.0s (after Next)
+2026-04-30 23:44:46,755 [DEBUG] browser: Question number: 15  (header text: 'Question 15 of 48')
+2026-04-30 23:44:46,767 [DEBUG] browser: Question meta: type='Numerical'  subject='Chemistry'
+2026-04-30 23:44:46,891 [DEBUG] browser: Screenshot taken (117470 bytes)
+2026-04-30 23:44:48,898 [DEBUG] vlm: Sending numerical question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 23:44:50,955 [INFO] vlm: VLM parsed result: {'answer': '560', 'confidence': 90}
+2026-04-30 23:44:50,957 [DEBUG] exam_runner: Q15: type='Numerical' subject='Chemistry' vlm={'answer': '560', 'confidence': 90, '_type': 'numerical'}
+2026-04-30 23:44:50,957 [DEBUG] browser: Entering numerical answer: '560'
+2026-04-30 23:44:52,462 [DEBUG] browser: Numpad trigger selector failed (input[placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("input[placeholder^='Text']").first to be visible
+
+2026-04-30 23:44:53,975 [DEBUG] browser: Numpad trigger selector failed ([placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[placeholder^='Text']").first to be visible
+
+2026-04-30 23:44:55,491 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text..')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text..')").first to be visible
+
+2026-04-30 23:44:57,007 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text...')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text...')").first to be visible
+
+2026-04-30 23:44:58,516 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-trigger']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-trigger']").first to be visible
+
+2026-04-30 23:45:00,026 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-input']").first to be visible
+
+2026-04-30 23:45:01,546 [DEBUG] browser: Numpad trigger selector failed ([class*='answer-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='answer-input']").first to be visible
+
+2026-04-30 23:45:01,580 [DEBUG] browser: Numpad trigger clicked via selector: [class*='numerical-input']
+2026-04-30 23:45:01,581 [DEBUG] browser: sleep 2.0s (after numpad trigger click)
+2026-04-30 23:45:03,586 [DEBUG] browser: Numpad modal opened
+2026-04-30 23:45:03,622 [DEBUG] browser: Cleared existing numpad value
+2026-04-30 23:45:03,623 [DEBUG] browser: sleep 2.0s (after clear)
+2026-04-30 23:45:05,648 [DEBUG] browser:   Numpad pressed: data-value='5'
+2026-04-30 23:45:05,649 [DEBUG] browser: sleep 2.0s (after numpad 5)
+2026-04-30 23:45:07,672 [DEBUG] browser:   Numpad pressed: data-value='6'
+2026-04-30 23:45:07,674 [DEBUG] browser: sleep 2.0s (after numpad 6)
+2026-04-30 23:45:09,699 [DEBUG] browser:   Numpad pressed: data-value='0'
+2026-04-30 23:45:09,700 [DEBUG] browser: sleep 2.0s (after numpad 0)
+2026-04-30 23:45:11,726 [DEBUG] browser:   Numpad pressed: data-value='ok'
+2026-04-30 23:45:11,726 [DEBUG] browser: sleep 2.0s (after numpad ok)
+2026-04-30 23:45:13,734 [INFO] browser: Numerical answer submitted: '560'
+2026-04-30 23:45:13,734 [DEBUG] browser: Clicking Next
+2026-04-30 23:45:13,734 [DEBUG] browser: sleep 2.0s (before Next)
+2026-04-30 23:45:15,769 [DEBUG] browser: sleep 2.0s (after Next)
+2026-04-30 23:45:17,772 [DEBUG] browser: Question number: 16  (header text: 'Question 16 of 48')
+2026-04-30 23:45:17,790 [DEBUG] browser: Question meta: type='Numerical'  subject='Chemistry'
+2026-04-30 23:45:17,908 [DEBUG] browser: Screenshot taken (155478 bytes)
+2026-04-30 23:45:19,910 [DEBUG] vlm: Sending numerical question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 23:45:22,016 [INFO] vlm: VLM parsed result: {'answer': '166', 'confidence': 90}
+2026-04-30 23:45:22,016 [DEBUG] exam_runner: Q16: type='Numerical' subject='Chemistry' vlm={'answer': '166', 'confidence': 90, '_type': 'numerical'}
+2026-04-30 23:45:22,016 [DEBUG] browser: Entering numerical answer: '166'
+2026-04-30 23:45:23,534 [DEBUG] browser: Numpad trigger selector failed (input[placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("input[placeholder^='Text']").first to be visible
+
+2026-04-30 23:45:25,043 [DEBUG] browser: Numpad trigger selector failed ([placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[placeholder^='Text']").first to be visible
+
+2026-04-30 23:45:26,547 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text..')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text..')").first to be visible
+
+2026-04-30 23:45:28,056 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text...')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text...')").first to be visible
+
+2026-04-30 23:45:29,569 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-trigger']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-trigger']").first to be visible
+
+2026-04-30 23:45:31,076 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-input']").first to be visible
+
+2026-04-30 23:45:32,590 [DEBUG] browser: Numpad trigger selector failed ([class*='answer-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='answer-input']").first to be visible
+
+2026-04-30 23:45:32,627 [DEBUG] browser: Numpad trigger clicked via selector: [class*='numerical-input']
+2026-04-30 23:45:32,627 [DEBUG] browser: sleep 2.0s (after numpad trigger click)
+2026-04-30 23:45:34,638 [DEBUG] browser: Numpad modal opened
+2026-04-30 23:45:34,667 [DEBUG] browser: Cleared existing numpad value
+2026-04-30 23:45:34,667 [DEBUG] browser: sleep 2.0s (after clear)
+2026-04-30 23:45:36,692 [DEBUG] browser:   Numpad pressed: data-value='1'
+2026-04-30 23:45:36,692 [DEBUG] browser: sleep 2.0s (after numpad 1)
+2026-04-30 23:45:38,718 [DEBUG] browser:   Numpad pressed: data-value='6'
+2026-04-30 23:45:38,719 [DEBUG] browser: sleep 2.0s (after numpad 6)
+2026-04-30 23:45:40,743 [DEBUG] browser:   Numpad pressed: data-value='6'
+2026-04-30 23:45:40,743 [DEBUG] browser: sleep 2.0s (after numpad 6)
+2026-04-30 23:45:42,769 [DEBUG] browser:   Numpad pressed: data-value='ok'
+2026-04-30 23:45:42,770 [DEBUG] browser: sleep 2.0s (after numpad ok)
+2026-04-30 23:45:44,775 [INFO] browser: Numerical answer submitted: '166'
+2026-04-30 23:45:44,775 [DEBUG] browser: Clicking Next
+2026-04-30 23:45:44,775 [DEBUG] browser: sleep 2.0s (before Next)
+2026-04-30 23:45:46,805 [DEBUG] browser: sleep 2.0s (after Next)
+2026-04-30 23:45:48,816 [DEBUG] browser: Question number: 17  (header text: 'Question 17 of 48')
+2026-04-30 23:45:48,826 [DEBUG] browser: Question meta: type='MCQ-Multiple'  subject='Mathematics'
+2026-04-30 23:45:48,952 [DEBUG] browser: Screenshot taken (172876 bytes)
+2026-04-30 23:45:50,955 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 23:45:51,608 [INFO] vlm: VLM parsed result: {'A': 80, 'B': 100, 'C': 30, 'D': 95}
+2026-04-30 23:45:51,608 [DEBUG] exam_runner: Q17: type='MCQ-Multiple' subject='Mathematics' vlm={'A': 80, 'B': 100, 'C': 30, 'D': 95, '_type': 'mcq-multiple'}
+2026-04-30 23:45:51,608 [DEBUG] browser: Attempting to click option 'B'
+2026-04-30 23:45:51,664 [INFO] browser: Clicked option B via selector: .mcq-option[data-option='B']
+2026-04-30 23:45:51,665 [DEBUG] browser: sleep 2.0s (after option B click)
+2026-04-30 23:45:53,666 [DEBUG] browser: Attempting to click option 'D'
+2026-04-30 23:45:53,709 [INFO] browser: Clicked option D via selector: .mcq-option[data-option='D']
+2026-04-30 23:45:53,710 [DEBUG] browser: sleep 2.0s (after option D click)
+2026-04-30 23:45:55,711 [DEBUG] browser: Clicking Next
+2026-04-30 23:45:55,711 [DEBUG] browser: sleep 2.0s (before Next)
+2026-04-30 23:45:57,736 [DEBUG] browser: sleep 2.0s (after Next)
+2026-04-30 23:45:59,749 [DEBUG] browser: Question number: 18  (header text: 'Question 18 of 48')
+2026-04-30 23:45:59,749 [DEBUG] browser: Question meta: type='MCQ-Multiple'  subject='Mathematics'
+2026-04-30 23:45:59,909 [DEBUG] browser: Screenshot taken (164036 bytes)
+2026-04-30 23:46:01,911 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 23:46:02,558 [INFO] vlm: VLM parsed result: {'A': 80, 'B': 100, 'C': 30, 'D': 95}
+2026-04-30 23:46:02,558 [DEBUG] exam_runner: Q18: type='MCQ-Multiple' subject='Mathematics' vlm={'A': 80, 'B': 100, 'C': 30, 'D': 95, '_type': 'mcq-multiple'}
+2026-04-30 23:46:02,558 [DEBUG] browser: Attempting to click option 'B'
+2026-04-30 23:46:02,613 [INFO] browser: Clicked option B via selector: .mcq-option[data-option='B']
+2026-04-30 23:46:02,614 [DEBUG] browser: sleep 2.0s (after option B click)
+2026-04-30 23:46:04,615 [DEBUG] browser: Attempting to click option 'D'
+2026-04-30 23:46:04,676 [INFO] browser: Clicked option D via selector: .mcq-option[data-option='D']
+2026-04-30 23:46:04,676 [DEBUG] browser: sleep 2.0s (after option D click)
+2026-04-30 23:46:06,679 [DEBUG] browser: Clicking Next
+2026-04-30 23:46:06,679 [DEBUG] browser: sleep 2.0s (before Next)
+2026-04-30 23:46:08,709 [DEBUG] browser: sleep 2.0s (after Next)
+2026-04-30 23:46:10,722 [DEBUG] browser: Question number: 19  (header text: 'Question 19 of 48')
+2026-04-30 23:46:10,722 [DEBUG] browser: Question meta: type='MCQ-Multiple'  subject='Mathematics'
+2026-04-30 23:46:10,861 [DEBUG] browser: Screenshot taken (138235 bytes)
+2026-04-30 23:46:12,862 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 23:46:13,467 [INFO] vlm: VLM parsed result: {'A': 0, 'B': 100, 'C': 100, 'D': 0}
+2026-04-30 23:46:13,467 [DEBUG] exam_runner: Q19: type='MCQ-Multiple' subject='Mathematics' vlm={'A': 0, 'B': 100, 'C': 100, 'D': 0, '_type': 'mcq-multiple'}
+2026-04-30 23:46:13,467 [DEBUG] browser: Attempting to click option 'B'
+2026-04-30 23:46:13,522 [INFO] browser: Clicked option B via selector: .mcq-option[data-option='B']
+2026-04-30 23:46:13,522 [DEBUG] browser: sleep 2.0s (after option B click)
+2026-04-30 23:46:15,524 [DEBUG] browser: Attempting to click option 'C'
+2026-04-30 23:46:15,572 [INFO] browser: Clicked option C via selector: .mcq-option[data-option='C']
+2026-04-30 23:46:15,573 [DEBUG] browser: sleep 2.0s (after option C click)
+2026-04-30 23:46:17,574 [DEBUG] browser: Clicking Next
+2026-04-30 23:46:17,574 [DEBUG] browser: sleep 2.0s (before Next)
+2026-04-30 23:46:19,599 [DEBUG] browser: sleep 2.0s (after Next)
+2026-04-30 23:46:21,610 [DEBUG] browser: Question number: 20  (header text: 'Question 20 of 48')
+2026-04-30 23:46:21,619 [DEBUG] browser: Question meta: type='MCQ-Single'  subject='Mathematics'
+2026-04-30 23:46:21,742 [DEBUG] browser: Screenshot taken (134220 bytes)
+2026-04-30 23:46:23,743 [DEBUG] vlm: Sending mcq-single question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 23:46:27,877 [INFO] vlm: VLM parsed result: {'answer': 'D', 'confidence': 95}
+2026-04-30 23:46:27,877 [DEBUG] exam_runner: Q20: type='MCQ-Single' subject='Mathematics' vlm={'answer': 'D', 'confidence': 95, '_type': 'mcq-single'}
+2026-04-30 23:46:27,877 [DEBUG] browser: Attempting to click option 'D'
+2026-04-30 23:46:27,924 [INFO] browser: Clicked option D via selector: .mcq-option[data-option='D']
+2026-04-30 23:46:27,925 [DEBUG] browser: sleep 2.0s (after option D click)
+2026-04-30 23:46:29,926 [DEBUG] browser: Clicking Next
+2026-04-30 23:46:29,926 [DEBUG] browser: sleep 2.0s (before Next)
+2026-04-30 23:46:31,961 [DEBUG] browser: sleep 2.0s (after Next)
+2026-04-30 23:46:33,965 [DEBUG] browser: Question number: 21  (header text: 'Question 21 of 48')
+2026-04-30 23:46:33,983 [DEBUG] browser: Question meta: type='MCQ-Single'  subject='Mathematics'
+2026-04-30 23:46:34,107 [DEBUG] browser: Screenshot taken (155320 bytes)
+2026-04-30 23:46:36,116 [DEBUG] vlm: Sending mcq-single question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 23:46:36,730 [INFO] vlm: VLM parsed result: {'answer': 'C', 'confidence': 95}
+2026-04-30 23:46:36,730 [DEBUG] exam_runner: Q21: type='MCQ-Single' subject='Mathematics' vlm={'answer': 'C', 'confidence': 95, '_type': 'mcq-single'}
+2026-04-30 23:46:36,730 [DEBUG] browser: Attempting to click option 'C'
+2026-04-30 23:46:36,782 [INFO] browser: Clicked option C via selector: .mcq-option[data-option='C']
+2026-04-30 23:46:36,782 [DEBUG] browser: sleep 2.0s (after option C click)
+2026-04-30 23:46:38,784 [DEBUG] browser: Clicking Next
+2026-04-30 23:46:38,784 [DEBUG] browser: sleep 2.0s (before Next)
+2026-04-30 23:46:40,808 [DEBUG] browser: sleep 2.0s (after Next)
+2026-04-30 23:46:42,817 [DEBUG] browser: Question number: 22  (header text: 'Question 22 of 48')
+2026-04-30 23:46:42,826 [DEBUG] browser: Question meta: type='MCQ-Single'  subject='Mathematics'
+2026-04-30 23:46:42,952 [DEBUG] browser: Screenshot taken (146241 bytes)
+2026-04-30 23:46:44,953 [DEBUG] vlm: Sending mcq-single question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 23:46:47,507 [INFO] vlm: VLM parsed result: {'answer': 'C', 'confidence': 95}
+2026-04-30 23:46:47,515 [DEBUG] exam_runner: Q22: type='MCQ-Single' subject='Mathematics' vlm={'answer': 'C', 'confidence': 95, '_type': 'mcq-single'}
+2026-04-30 23:46:47,515 [DEBUG] browser: Attempting to click option 'C'
+2026-04-30 23:46:47,563 [INFO] browser: Clicked option C via selector: .mcq-option[data-option='C']
+2026-04-30 23:46:47,563 [DEBUG] browser: sleep 2.0s (after option C click)
+2026-04-30 23:46:49,565 [DEBUG] browser: Clicking Next
+2026-04-30 23:46:49,565 [DEBUG] browser: sleep 2.0s (before Next)
+2026-04-30 23:46:51,588 [DEBUG] browser: sleep 2.0s (after Next)
+2026-04-30 23:46:53,599 [ERROR] exam_runner: Unhandled error on Q-1 (?); advancing to next
+Traceback (most recent call last):
+  File "C:\Users\Soham\Documents\NGMI26\bigomegaswork\src\exam_runner.py", line 117, in run_paper
+    q_num = get_question_number(page)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Soham\Documents\NGMI26\bigomegaswork\src\browser.py", line 52, in get_question_number
+    header_text = page.locator("text=/Question \\d+ of \\d+/").first.text_content()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\sync_api\_generated.py", line 18429, in text_content
+    self._sync(self._impl_obj.text_content(timeout=timeout))
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_locator.py", line 660, in text_content
+    return await self._frame.text_content(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_frame.py", line 705, in text_content
+    return await self._channel.send(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: Locator.text_content: Target page, context or browser has been closed
+2026-04-30 23:46:53,601 [DEBUG] browser: Clicking Next
+2026-04-30 23:46:53,602 [DEBUG] browser: sleep 2.0s (before Next)
+2026-04-30 23:46:55,605 [ERROR] exam_runner: click_next failed after Q-1; continuing anyway
+Traceback (most recent call last):
+  File "C:\Users\Soham\Documents\NGMI26\bigomegaswork\src\exam_runner.py", line 181, in run_paper
+    click_next(page)
+  File "C:\Users\Soham\Documents\NGMI26\bigomegaswork\src\browser.py", line 229, in click_next
+    page.locator("button:has-text('Next')").click()
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\sync_api\_generated.py", line 16196, in click
+    self._sync(
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_locator.py", line 162, in click
+    return await self._frame._click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_frame.py", line 566, in _click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: Locator.click: Target page, context or browser has been closed
+2026-04-30 23:46:55,607 [ERROR] exam_runner: Unhandled error on Q-1 (?); advancing to next
+Traceback (most recent call last):
+  File "C:\Users\Soham\Documents\NGMI26\bigomegaswork\src\exam_runner.py", line 117, in run_paper
+    q_num = get_question_number(page)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Soham\Documents\NGMI26\bigomegaswork\src\browser.py", line 52, in get_question_number
+    header_text = page.locator("text=/Question \\d+ of \\d+/").first.text_content()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\sync_api\_generated.py", line 18429, in text_content
+    self._sync(self._impl_obj.text_content(timeout=timeout))
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_locator.py", line 660, in text_content
+    return await self._frame.text_content(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_frame.py", line 705, in text_content
+    return await self._channel.send(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: Locator.text_content: Target page, context or browser has been closed
+2026-04-30 23:46:55,613 [DEBUG] browser: Clicking Next
+2026-04-30 23:46:55,613 [DEBUG] browser: sleep 2.0s (before Next)
+2026-04-30 23:46:57,618 [ERROR] exam_runner: click_next failed after Q-1; continuing anyway
+Traceback (most recent call last):
+  File "C:\Users\Soham\Documents\NGMI26\bigomegaswork\src\exam_runner.py", line 181, in run_paper
+    click_next(page)
+  File "C:\Users\Soham\Documents\NGMI26\bigomegaswork\src\browser.py", line 229, in click_next
+    page.locator("button:has-text('Next')").click()
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\sync_api\_generated.py", line 16196, in click
+    self._sync(
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_locator.py", line 162, in click
+    return await self._frame._click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_frame.py", line 566, in _click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: Locator.click: Target page, context or browser has been closed
+2026-04-30 23:46:57,626 [ERROR] exam_runner: Unhandled error on Q-1 (?); advancing to next
+Traceback (most recent call last):
+  File "C:\Users\Soham\Documents\NGMI26\bigomegaswork\src\exam_runner.py", line 117, in run_paper
+    q_num = get_question_number(page)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Soham\Documents\NGMI26\bigomegaswork\src\browser.py", line 52, in get_question_number
+    header_text = page.locator("text=/Question \\d+ of \\d+/").first.text_content()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\sync_api\_generated.py", line 18429, in text_content
+    self._sync(self._impl_obj.text_content(timeout=timeout))
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_locator.py", line 660, in text_content
+    return await self._frame.text_content(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_frame.py", line 705, in text_content
+    return await self._channel.send(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: Locator.text_content: Target page, context or browser has been closed
+2026-04-30 23:46:57,628 [DEBUG] browser: Clicking Next
+2026-04-30 23:46:57,628 [DEBUG] browser: sleep 2.0s (before Next)
+2026-04-30 23:46:59,632 [ERROR] exam_runner: click_next failed after Q-1; continuing anyway
+Traceback (most recent call last):
+  File "C:\Users\Soham\Documents\NGMI26\bigomegaswork\src\exam_runner.py", line 181, in run_paper
+    click_next(page)
+  File "C:\Users\Soham\Documents\NGMI26\bigomegaswork\src\browser.py", line 229, in click_next
+    page.locator("button:has-text('Next')").click()
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\sync_api\_generated.py", line 16196, in click
+    self._sync(
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_locator.py", line 162, in click
+    return await self._frame._click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_frame.py", line 566, in _click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: Locator.click: Target page, context or browser has been closed
+2026-04-30 23:46:59,637 [ERROR] exam_runner: Unhandled error on Q-1 (?); advancing to next
+Traceback (most recent call last):
+  File "C:\Users\Soham\Documents\NGMI26\bigomegaswork\src\exam_runner.py", line 117, in run_paper
+    q_num = get_question_number(page)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Soham\Documents\NGMI26\bigomegaswork\src\browser.py", line 52, in get_question_number
+    header_text = page.locator("text=/Question \\d+ of \\d+/").first.text_content()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\sync_api\_generated.py", line 18429, in text_content
+    self._sync(self._impl_obj.text_content(timeout=timeout))
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_locator.py", line 660, in text_content
+    return await self._frame.text_content(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_frame.py", line 705, in text_content
+    return await self._channel.send(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: Locator.text_content: Target page, context or browser has been closed
+2026-04-30 23:46:59,639 [DEBUG] browser: Clicking Next
+2026-04-30 23:46:59,640 [DEBUG] browser: sleep 2.0s (before Next)
+2026-04-30 23:47:01,643 [ERROR] exam_runner: click_next failed after Q-1; continuing anyway
+Traceback (most recent call last):
+  File "C:\Users\Soham\Documents\NGMI26\bigomegaswork\src\exam_runner.py", line 181, in run_paper
+    click_next(page)
+  File "C:\Users\Soham\Documents\NGMI26\bigomegaswork\src\browser.py", line 229, in click_next
+    page.locator("button:has-text('Next')").click()
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\sync_api\_generated.py", line 16196, in click
+    self._sync(
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_locator.py", line 162, in click
+    return await self._frame._click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_frame.py", line 566, in _click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: Locator.click: Target page, context or browser has been closed
+2026-04-30 23:47:01,648 [ERROR] exam_runner: Unhandled error on Q-1 (?); advancing to next
+Traceback (most recent call last):
+  File "C:\Users\Soham\Documents\NGMI26\bigomegaswork\src\exam_runner.py", line 117, in run_paper
+    q_num = get_question_number(page)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Soham\Documents\NGMI26\bigomegaswork\src\browser.py", line 52, in get_question_number
+    header_text = page.locator("text=/Question \\d+ of \\d+/").first.text_content()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\sync_api\_generated.py", line 18429, in text_content
+    self._sync(self._impl_obj.text_content(timeout=timeout))
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_locator.py", line 660, in text_content
+    return await self._frame.text_content(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_frame.py", line 705, in text_content
+    return await self._channel.send(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: Locator.text_content: Target page, context or browser has been closed
+2026-04-30 23:47:01,648 [DEBUG] browser: Clicking Next
+2026-04-30 23:47:01,648 [DEBUG] browser: sleep 2.0s (before Next)
+2026-04-30 23:47:03,652 [ERROR] exam_runner: click_next failed after Q-1; continuing anyway
+Traceback (most recent call last):
+  File "C:\Users\Soham\Documents\NGMI26\bigomegaswork\src\exam_runner.py", line 181, in run_paper
+    click_next(page)
+  File "C:\Users\Soham\Documents\NGMI26\bigomegaswork\src\browser.py", line 229, in click_next
+    page.locator("button:has-text('Next')").click()
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\sync_api\_generated.py", line 16196, in click
+    self._sync(
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_locator.py", line 162, in click
+    return await self._frame._click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_frame.py", line 566, in _click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: Locator.click: Target page, context or browser has been closed
+2026-04-30 23:47:03,657 [ERROR] exam_runner: Unhandled error on Q-1 (?); advancing to next
+Traceback (most recent call last):
+  File "C:\Users\Soham\Documents\NGMI26\bigomegaswork\src\exam_runner.py", line 117, in run_paper
+    q_num = get_question_number(page)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Soham\Documents\NGMI26\bigomegaswork\src\browser.py", line 52, in get_question_number
+    header_text = page.locator("text=/Question \\d+ of \\d+/").first.text_content()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\sync_api\_generated.py", line 18429, in text_content
+    self._sync(self._impl_obj.text_content(timeout=timeout))
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_locator.py", line 660, in text_content
+    return await self._frame.text_content(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_frame.py", line 705, in text_content
+    return await self._channel.send(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: Locator.text_content: Target page, context or browser has been closed
+2026-04-30 23:47:03,657 [DEBUG] browser: Clicking Next
+2026-04-30 23:47:03,657 [DEBUG] browser: sleep 2.0s (before Next)
+2026-04-30 23:47:05,662 [ERROR] exam_runner: click_next failed after Q-1; continuing anyway
+Traceback (most recent call last):
+  File "C:\Users\Soham\Documents\NGMI26\bigomegaswork\src\exam_runner.py", line 181, in run_paper
+    click_next(page)
+  File "C:\Users\Soham\Documents\NGMI26\bigomegaswork\src\browser.py", line 229, in click_next
+    page.locator("button:has-text('Next')").click()
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\sync_api\_generated.py", line 16196, in click
+    self._sync(
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_locator.py", line 162, in click
+    return await self._frame._click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_frame.py", line 566, in _click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: Locator.click: Target page, context or browser has been closed
+2026-04-30 23:47:05,666 [ERROR] exam_runner: Unhandled error on Q-1 (?); advancing to next
+Traceback (most recent call last):
+  File "C:\Users\Soham\Documents\NGMI26\bigomegaswork\src\exam_runner.py", line 117, in run_paper
+    q_num = get_question_number(page)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Soham\Documents\NGMI26\bigomegaswork\src\browser.py", line 52, in get_question_number
+    header_text = page.locator("text=/Question \\d+ of \\d+/").first.text_content()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\sync_api\_generated.py", line 18429, in text_content
+    self._sync(self._impl_obj.text_content(timeout=timeout))
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_locator.py", line 660, in text_content
+    return await self._frame.text_content(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_frame.py", line 705, in text_content
+    return await self._channel.send(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: Locator.text_content: Target page, context or browser has been closed
+2026-04-30 23:47:05,666 [DEBUG] browser: Clicking Next
+2026-04-30 23:47:05,666 [DEBUG] browser: sleep 2.0s (before Next)
+2026-04-30 23:47:07,675 [ERROR] exam_runner: click_next failed after Q-1; continuing anyway
+Traceback (most recent call last):
+  File "C:\Users\Soham\Documents\NGMI26\bigomegaswork\src\exam_runner.py", line 181, in run_paper
+    click_next(page)
+  File "C:\Users\Soham\Documents\NGMI26\bigomegaswork\src\browser.py", line 229, in click_next
+    page.locator("button:has-text('Next')").click()
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\sync_api\_generated.py", line 16196, in click
+    self._sync(
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_locator.py", line 162, in click
+    return await self._frame._click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_frame.py", line 566, in _click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: Locator.click: Target page, context or browser has been closed
+2026-04-30 23:47:07,677 [ERROR] exam_runner: Unhandled error on Q-1 (?); advancing to next
+Traceback (most recent call last):
+  File "C:\Users\Soham\Documents\NGMI26\bigomegaswork\src\exam_runner.py", line 117, in run_paper
+    q_num = get_question_number(page)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Soham\Documents\NGMI26\bigomegaswork\src\browser.py", line 52, in get_question_number
+    header_text = page.locator("text=/Question \\d+ of \\d+/").first.text_content()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\sync_api\_generated.py", line 18429, in text_content
+    self._sync(self._impl_obj.text_content(timeout=timeout))
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_locator.py", line 660, in text_content
+    return await self._frame.text_content(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_frame.py", line 705, in text_content
+    return await self._channel.send(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: Locator.text_content: Target page, context or browser has been closed
+2026-04-30 23:47:07,683 [DEBUG] browser: Clicking Next
+2026-04-30 23:47:07,683 [DEBUG] browser: sleep 2.0s (before Next)
+2026-04-30 23:47:10,198 [DEBUG] asyncio: Using proactor: IocpProactor

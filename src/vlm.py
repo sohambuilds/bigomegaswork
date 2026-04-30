@@ -8,33 +8,53 @@ from .config import config
 
 log = logging.getLogger("vlm")
 
+_DECISION_PROCESS = (
+    "Use an internal three-step decision process before writing JSON: "
+    "1) solve the problem from the screenshot, "
+    "2) independently verify the proposed answer against the visible options/question, "
+    "3) arbitrate to the final highest-scoring answer. "
+    "Do not reveal this reasoning. Output only the final JSON object. "
+)
+
 _PROMPTS = {
     "mcq-single": (
         "You are solving a JEE Advanced exam question. "
         "Look at this screenshot carefully — the question text and all four options (A, B, C, D) are visible. "
-        "This is a SINGLE-CORRECT MCQ: exactly one option is correct. "
-        "Identify which option is correct and state your confidence. "
-        "Respond ONLY with valid JSON, no other text: "
-        '{\"answer\": \"A\", \"confidence\": 95} '
-        "where answer is one of A/B/C/D and confidence is 0–100."
+        "This is a SINGLE-CORRECT MCQ or matching-style question: exactly one option is correct. "
+        "You MUST choose exactly one option. Never skip, never return blank, never say unknown. "
+        "If uncertain, choose the highest-probability option after verification. "
+        + _DECISION_PROCESS
+        + "Respond ONLY with valid JSON, no other text: "
+        '{\"answer\": \"A\", \"ranking\": [\"A\", \"C\", \"B\", \"D\"], '
+        '\"probabilities\": {\"A\": 0.62, \"B\": 0.08, \"C\": 0.22, \"D\": 0.08}} '
+        "where answer is one of A/B/C/D, ranking contains all four options from most likely to least likely, "
+        "and probabilities are relative likelihoods from 0 to 1."
     ),
     "mcq-multiple": (
         "You are solving a JEE Advanced exam question. "
         "Look at this screenshot carefully — the question text and all four options (A, B, C, D) are visible. "
         "This is a MULTIPLE-CORRECT MCQ: one or more options may be correct. "
-        "For each option independently, decide whether it is correct and state your confidence. "
-        "Respond ONLY with valid JSON, no other text: "
-        '{\"confidences\": {\"A\": 80, \"B\": 100, \"C\": 30, \"D\": 95}} '
-        "where each value is your 0–100 confidence that option is correct."
+        "Select the highest-probability correct options. "
+        "You MUST return either one or two options only. Never return zero options. Never return three or four options. "
+        "Prefer two options only when both are strongly supported by the verified solution; otherwise return only the best option. "
+        + _DECISION_PROCESS
+        + "Respond ONLY with valid JSON, no other text: "
+        '{\"answers\": [\"B\", \"D\"], \"ranking\": [\"B\", \"D\", \"A\", \"C\"], '
+        '\"probabilities\": {\"A\": 0.35, \"B\": 0.78, \"C\": 0.12, \"D\": 0.64}} '
+        "where answers has one or two option letters, ranking contains all four options from most likely to least likely, "
+        "and probabilities are relative likelihoods from 0 to 1."
     ),
     "numerical": (
         "You are solving a JEE Advanced exam question. "
         "Look at this screenshot carefully — the full question is visible. "
         "This is a NUMERICAL answer question: compute the exact numerical value. "
-        "The answer must be a non-negative number (integer or decimal). "
-        "Respond ONLY with valid JSON, no other text: "
-        '{\"answer\": \"21\", \"confidence\": 90} '
-        "where answer is the computed number as a string and confidence is 0–100."
+        "You MUST always provide exactly one answer. Never skip, never return blank, never say unknown. "
+        "If uncertain, compute the best possible estimate from the screenshot and still return it. "
+        "The answer must be a non-negative number (integer or decimal), with no units and no extra text. "
+        + _DECISION_PROCESS
+        + "Respond ONLY with valid JSON, no other text: "
+        '{\"answer\": \"21\"} '
+        "where answer is the computed number as a string."
     ),
 }
 
@@ -50,7 +70,7 @@ def _normalize_type(question_type: str) -> str:
     return "mcq-single"
 
 
-_RELEVANT_KEYS = ("answer", "confidence", "confidences")
+_RELEVANT_KEYS = ("answer", "answers", "ranking", "probabilities", "confidences")
 
 
 def _try_parse(blob: str) -> dict | None:
@@ -73,25 +93,41 @@ def _try_parse(blob: str) -> dict | None:
 
 def _extract_json(text: str) -> dict:
     """
-    The model often returns a long chain-of-thought followed by the JSON answer
-    at the end. LaTeX in the reasoning contains `{...}` braces, so a greedy
-    regex captures garbage. We instead enumerate every non-nested `{...}` block
-    and return the LAST one that parses as a dict containing one of our keys.
+    The model may return markdown, nested JSON, or reasoning text despite the
+    prompt. Extract the last parseable dict containing a relevant answer key.
     """
     cleaned = re.sub(r"```(?:json)?\s*", "", text, flags=re.IGNORECASE).replace("```", "")
-    candidates = re.findall(r"\{[^{}]*\}", cleaned, flags=re.DOTALL)
+    candidates: list[dict] = []
+
+    decoder = json.JSONDecoder()
+    for index, char in enumerate(cleaned):
+        if char != "{":
+            continue
+        try:
+            value, _ = decoder.raw_decode(cleaned[index:])
+        except json.JSONDecodeError:
+            continue
+        if isinstance(value, dict):
+            candidates.append(value)
+
+    stack: list[int] = []
+    for index, char in enumerate(cleaned):
+        if char == "{":
+            stack.append(index)
+        elif char == "}" and stack:
+            start = stack.pop()
+            parsed = _try_parse(cleaned[start : index + 1])
+            if parsed:
+                candidates.append(parsed)
 
     # Walk from end → start, pick first parseable dict with a relevant key
-    for blob in reversed(candidates):
-        parsed = _try_parse(blob)
-        if parsed and any(k in parsed for k in _RELEVANT_KEYS):
+    for parsed in reversed(candidates):
+        if any(k in parsed for k in _RELEVANT_KEYS):
             return parsed
 
     # Fallback: any parseable dict (may still be useful)
-    for blob in reversed(candidates):
-        parsed = _try_parse(blob)
-        if parsed:
-            return parsed
+    if candidates:
+        return candidates[-1]
 
     raise ValueError(f"Could not parse JSON from VLM response: {text!r}")
 
@@ -100,8 +136,9 @@ def query_vlm(screenshot_b64: str, question_type: str) -> dict:
     """
     Send a screenshot to the VLM and return a parsed answer dict.
 
-    Returns for MCQ-single/numerical:  {"answer": "A", "confidence": 95}
-    Returns for MCQ-multiple:          {"confidences": {"A": 80, "B": 100, "C": 30, "D": 95}}
+    Returns for MCQ-single:            {"answer": "A", "ranking": [...], "probabilities": {...}}
+    Returns for MCQ-multiple:          {"answers": ["B", "D"], "ranking": [...], "probabilities": {...}}
+    Returns for numerical:             {"answer": "21"}
     On failure returns:                {"error": "<message>", "raw": "<raw response>"}
     """
     key = _normalize_type(question_type)

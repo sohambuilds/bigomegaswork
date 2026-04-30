@@ -1,10 +1,9 @@
 import json
 import logging
+import re
 import time
 from typing import IO
 from playwright.sync_api import Page
-
-from .config import config
 
 VLM_DELAY = 2.0  # seconds — pause before each VLM call
 
@@ -23,6 +22,8 @@ from .browser import (
 )
 from .vlm import query_vlm
 
+OPTIONS = ("A", "B", "C", "D")
+
 
 def _submit_after_question(paper_label: str, total_questions: int) -> int:
     """Return the question number where this paper should be submitted."""
@@ -34,9 +35,112 @@ def _submit_after_question(paper_label: str, total_questions: int) -> int:
     return total_questions
 
 
+def _normalize_option(value: object) -> str:
+    text = str(value).strip().upper()
+    if text in OPTIONS:
+        return text
+    match = re.search(r"\b([ABCD])\b", text)
+    return match.group(1) if match else ""
+
+
+def _dedupe_options(values: list[str]) -> list[str]:
+    selected: list[str] = []
+    for value in values:
+        option = _normalize_option(value)
+        if option and option not in selected:
+            selected.append(option)
+    return selected
+
+
+def _options_from_sequence(value: object) -> list[str]:
+    if isinstance(value, str):
+        return _dedupe_options(re.findall(r"[ABCD]", value.upper()))
+    if isinstance(value, (list, tuple)):
+        return _dedupe_options([str(item) for item in value])
+    return []
+
+
+def _score_to_float(value: object) -> float:
+    try:
+        return float(str(value).strip().rstrip("%"))
+    except (TypeError, ValueError):
+        return 0.0
+
+
+def _ranked_options_from_mapping(value: object) -> list[str]:
+    if not isinstance(value, dict):
+        return []
+    scored = [
+        (option, _score_to_float(value.get(option, 0)))
+        for option in OPTIONS
+        if option in value
+    ]
+    scored.sort(key=lambda item: item[1], reverse=True)
+    return [option for option, _ in scored]
+
+
+def _best_single_answer(result: dict) -> str:
+    answer = _normalize_option(result.get("answer", ""))
+    if answer:
+        return answer
+
+    answers = _options_from_sequence(result.get("answers", []))
+    if answers:
+        return answers[0]
+
+    ranking = _options_from_sequence(result.get("ranking", []))
+    if ranking:
+        return ranking[0]
+
+    for key in ("probabilities", "confidences"):
+        ranked = _ranked_options_from_mapping(result.get(key, {}))
+        if ranked:
+            return ranked[0]
+
+    flat_scores = {option: result.get(option) for option in OPTIONS if option in result}
+    ranked = _ranked_options_from_mapping(flat_scores)
+    return ranked[0] if ranked else ""
+
+
+def _best_multiple_answers(result: dict) -> list[str]:
+    answers = _options_from_sequence(result.get("answers", []))
+    if answers:
+        return answers[:2]
+
+    answer = _normalize_option(result.get("answer", ""))
+    if answer:
+        return [answer]
+
+    ranking = _options_from_sequence(result.get("ranking", []))
+    if ranking:
+        return ranking[:2]
+
+    for key in ("probabilities", "confidences"):
+        ranked = _ranked_options_from_mapping(result.get(key, {}))
+        if ranked:
+            return ranked[:2]
+
+    flat_scores = {option: result.get(option) for option in OPTIONS if option in result}
+    ranked = _ranked_options_from_mapping(flat_scores)
+    return ranked[:2]
+
+
+def _normalize_numerical_answer(value: object) -> str:
+    text = str(value).strip().replace(",", "")
+    if not text:
+        return "0"
+
+    if text.startswith("-"):
+        log.warning(f"Negative numerical answer returned; falling back to 0: {text!r}")
+        return "0"
+
+    match = re.search(r"\d+(?:\.\d+)?", text)
+    return match.group(0) if match else "0"
+
+
 def _apply_strategy(page: Page, result: dict, q_type: str = "") -> list[str]:
     """
-    Decide which actions to take based on VLM result and confidence thresholds.
+    Decide which actions to take based on the VLM's final answer.
     Returns a list of action strings for logging.
     """
     q_type = result.get("_type", "")
@@ -47,35 +151,23 @@ def _apply_strategy(page: Page, result: dict, q_type: str = "") -> list[str]:
         return [f"skip:vlm_error({result['error'][:80]})"]
 
     if q_type == "mcq-single":
-        answer = result.get("answer", "")
-        confidence = result.get("confidence", 0)
-        if answer in ("A", "B", "C", "D") and confidence >= config.mcq_single_threshold:
+        answer = _best_single_answer(result)
+        if answer:
             click_mcq_option(page, answer)
-            actions.append(f"selected:{answer}(conf={confidence})")
+            actions.append(f"selected:{answer}")
         else:
-            actions.append(f"skip:confidence_too_low(conf={confidence})")
+            actions.append("skip:no_valid_option")
 
     elif q_type == "mcq-multiple":
-        confidences = result.get("confidences")
-        if not isinstance(confidences, dict):
-            confidences = {letter: result.get(letter, 0) for letter in ("A", "B", "C", "D")}
-        selected = []
-        for letter in ("A", "B", "C", "D"):
-            conf = confidences.get(letter, 0)
-            if conf >= config.mcq_multi_threshold:
-                click_mcq_option(page, letter)
-                selected.append(f"{letter}(conf={conf})")
-        actions.append(f"selected:[{','.join(selected)}]" if selected else "skip:no_option_met_threshold")
+        selected = _best_multiple_answers(result)
+        for letter in selected:
+            click_mcq_option(page, letter)
+        actions.append(f"selected:[{','.join(selected)}]" if selected else "skip:no_valid_option")
 
     elif q_type == "numerical":
-        answer = str(result.get("answer", "")).strip()
-        if answer.startswith("-"):
-            actions.append(f"skip:negative_answer_unsupported(value={answer})")
-        elif answer:
-            enter_numerical(page, answer)
-            actions.append(f"entered:{answer}(conf={result.get('confidence', '?')})")
-        else:
-            actions.append("skip:empty_answer")
+        answer = _normalize_numerical_answer(result.get("answer", ""))
+        enter_numerical(page, answer)
+        actions.append(f"entered:{answer}")
 
     return actions if actions else ["skip:unknown"]
 
