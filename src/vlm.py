@@ -1,3 +1,4 @@
+import ast
 import json
 import logging
 import re
@@ -49,11 +50,50 @@ def _normalize_type(question_type: str) -> str:
     return "mcq-single"
 
 
+_RELEVANT_KEYS = ("answer", "confidence", "confidences")
+
+
+def _try_parse(blob: str) -> dict | None:
+    try:
+        v = json.loads(blob)
+        return v if isinstance(v, dict) else None
+    except json.JSONDecodeError:
+        pass
+    try:
+        v = ast.literal_eval(blob)
+        return v if isinstance(v, dict) else None
+    except (ValueError, SyntaxError):
+        pass
+    try:
+        v = json.loads(blob.replace("'", '"'))
+        return v if isinstance(v, dict) else None
+    except json.JSONDecodeError:
+        return None
+
+
 def _extract_json(text: str) -> dict:
-    match = re.search(r"\{.*\}", text, re.DOTALL)
-    if not match:
-        raise ValueError(f"No JSON object found in VLM response: {text!r}")
-    return json.loads(match.group())
+    """
+    The model often returns a long chain-of-thought followed by the JSON answer
+    at the end. LaTeX in the reasoning contains `{...}` braces, so a greedy
+    regex captures garbage. We instead enumerate every non-nested `{...}` block
+    and return the LAST one that parses as a dict containing one of our keys.
+    """
+    cleaned = re.sub(r"```(?:json)?\s*", "", text, flags=re.IGNORECASE).replace("```", "")
+    candidates = re.findall(r"\{[^{}]*\}", cleaned, flags=re.DOTALL)
+
+    # Walk from end → start, pick first parseable dict with a relevant key
+    for blob in reversed(candidates):
+        parsed = _try_parse(blob)
+        if parsed and any(k in parsed for k in _RELEVANT_KEYS):
+            return parsed
+
+    # Fallback: any parseable dict (may still be useful)
+    for blob in reversed(candidates):
+        parsed = _try_parse(blob)
+        if parsed:
+            return parsed
+
+    raise ValueError(f"Could not parse JSON from VLM response: {text!r}")
 
 
 def query_vlm(screenshot_b64: str, question_type: str) -> dict:
@@ -84,9 +124,8 @@ def query_vlm(screenshot_b64: str, question_type: str) -> dict:
     try:
         response = litellm.completion(model=config.model, messages=messages)
         raw = response.choices[0].message.content or ""
-        log.debug(f"VLM raw response: {raw!r}")
         result = _extract_json(raw)
-        log.info(f"VLM parsed result: {result}")
+        log.info(f"VLM parsed result: { {k: v for k, v in result.items() if k != '_raw'} }")
         result["_type"] = key
         result["_raw"] = raw
         return result

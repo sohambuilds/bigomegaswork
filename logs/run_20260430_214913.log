@@ -1,0 +1,46 @@
+2026-04-30 21:49:13,081 [INFO] main: Model : groq/meta-llama/llama-4-scout-17b-16e-instruct
+2026-04-30 21:49:13,081 [INFO] main: JSONL : logs\run_20260430_214913.jsonl
+2026-04-30 21:49:13,081 [INFO] main: Papers: 4
+2026-04-30 21:49:13,081 [DEBUG] asyncio: Using proactor: IocpProactor
+2026-04-30 21:49:14,512 [INFO] browser: Navigating to https://jee-image.onrender.com
+2026-04-30 21:49:15,531 [DEBUG] browser: Filling login form
+2026-04-30 21:49:15,598 [DEBUG] browser: Selecting paper: 2025 – Paper 1 – English
+2026-04-30 21:49:15,678 [INFO] browser: Logged in — paper: 2025 – Paper 1 – English
+2026-04-30 21:49:15,678 [DEBUG] browser: Zooming out (Ctrl+Minus x5)
+2026-04-30 21:49:15,689 [DEBUG] browser:   Ctrl+Minus press 1/5
+2026-04-30 21:49:15,696 [DEBUG] browser:   Ctrl+Minus press 2/5
+2026-04-30 21:49:15,704 [DEBUG] browser:   Ctrl+Minus press 3/5
+2026-04-30 21:49:15,709 [DEBUG] browser:   Ctrl+Minus press 4/5
+2026-04-30 21:49:15,711 [DEBUG] browser:   Ctrl+Minus press 5/5
+2026-04-30 21:49:16,786 [INFO] browser: Total questions in paper: 60
+2026-04-30 21:49:16,790 [DEBUG] browser: Question number: 1  (header text: 'Question 1 of 60')
+2026-04-30 21:49:17,629 [DEBUG] browser: Question meta: type='MCQ-Multiple'  subject='Chemistry'
+2026-04-30 21:49:17,748 [DEBUG] browser: Screenshot taken (86202 bytes)
+2026-04-30 21:49:19,750 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 21:49:20,394 [INFO] vlm: VLM parsed result: {'A': 0, 'B': 0, 'C': 0, 'D': 0}
+2026-04-30 21:49:20,394 [DEBUG] exam_runner: Q1: type='MCQ-Multiple' subject='Chemistry' vlm={'A': 0, 'B': 0, 'C': 0, 'D': 0, '_type': 'mcq-multiple'}
+2026-04-30 21:49:20,394 [INFO] exam_runner: Last question reached (Q1); breaking loop to submit
+2026-04-30 21:49:20,394 [INFO] browser: Clicking Submit Exam
+2026-04-30 21:49:23,441 [INFO] browser: Exam submitted
+2026-04-30 21:49:23,449 [INFO] browser: Navigating to https://jee-image.onrender.com
+2026-04-30 21:49:24,279 [DEBUG] browser: Filling login form
+2026-04-30 21:49:24,325 [DEBUG] browser: Selecting paper: 2025 – Paper 2 – English
+2026-04-30 21:49:24,391 [INFO] browser: Logged in — paper: 2025 – Paper 2 – English
+2026-04-30 21:49:24,391 [DEBUG] browser: Zooming out (Ctrl+Minus x5)
+2026-04-30 21:49:24,401 [DEBUG] browser:   Ctrl+Minus press 1/5
+2026-04-30 21:49:24,410 [DEBUG] browser:   Ctrl+Minus press 2/5
+2026-04-30 21:49:24,416 [DEBUG] browser:   Ctrl+Minus press 3/5
+2026-04-30 21:49:24,425 [DEBUG] browser:   Ctrl+Minus press 4/5
+2026-04-30 21:49:24,431 [DEBUG] browser:   Ctrl+Minus press 5/5
+2026-04-30 21:49:25,629 [INFO] browser: Total questions in paper: 60
+2026-04-30 21:49:25,646 [DEBUG] browser: Question number: 1  (header text: 'Question 1 of 60')
+2026-04-30 21:49:26,480 [DEBUG] browser: Question meta: type='MCQ-Multiple'  subject='Chemistry'
+2026-04-30 21:49:26,592 [DEBUG] browser: Screenshot taken (85773 bytes)
+2026-04-30 21:49:28,594 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 21:49:29,213 [INFO] vlm: VLM parsed result: {'A': 0, 'B': 0, 'C': 0, 'D': 0}
+2026-04-30 21:49:29,214 [DEBUG] exam_runner: Q1: type='MCQ-Multiple' subject='Chemistry' vlm={'A': 0, 'B': 0, 'C': 0, 'D': 0, '_type': 'mcq-multiple'}
+2026-04-30 21:49:29,215 [INFO] exam_runner: Last question reached (Q1); breaking loop to submit
+2026-04-30 21:49:29,215 [INFO] browser: Clicking Submit Exam
+2026-04-30 21:49:31,790 [INFO] browser: Exam submitted
+2026-04-30 21:49:31,790 [INFO] browser: Navigating to https://jee-image.onrender.com
+2026-04-30 21:49:32,235 [DEBUG] asyncio: Using proactor: IocpProactor

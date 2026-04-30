@@ -1,0 +1,1 @@
+{"paper": "2025 \u2013 Paper 1 \u2013 English", "q_num": 1, "q_type": "MCQ-Multiple", "subject": "Chemistry", "vlm_result": {"confidences": {"A": 0, "B": 0, "C": 0, "D": 0}, "_type": "mcq-multiple", "_raw": "{\"confidences\": {\"A\": 0, \"B\": 0, \"C\": 0, \"D\": 0}}"}, "actions": ["skip:no_option_met_threshold"]}

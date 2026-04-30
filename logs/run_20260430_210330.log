@@ -1,0 +1,28 @@
+2026-04-30 21:03:30,892 [INFO] main: Model : groq/meta-llama/llama-4-scout-17b-16e-instruct
+2026-04-30 21:03:30,892 [INFO] main: JSONL : logs\run_20260430_210330.jsonl
+2026-04-30 21:03:30,892 [INFO] main: Papers: 4
+2026-04-30 21:03:30,892 [DEBUG] asyncio: Using proactor: IocpProactor
+2026-04-30 21:03:32,584 [INFO] browser: Navigating to https://jee-image.onrender.com
+2026-04-30 21:03:34,098 [DEBUG] browser: Filling login form
+2026-04-30 21:03:34,192 [DEBUG] browser: Selecting paper: 2025 – Paper 1 – English
+2026-04-30 21:03:34,297 [INFO] browser: Logged in — paper: 2025 – Paper 1 – English
+2026-04-30 21:03:34,301 [DEBUG] browser: Zooming out (Ctrl+Minus x5)
+2026-04-30 21:03:34,315 [DEBUG] browser:   Ctrl+Minus press 1/5
+2026-04-30 21:03:34,329 [DEBUG] browser:   Ctrl+Minus press 2/5
+2026-04-30 21:03:34,332 [DEBUG] browser:   Ctrl+Minus press 3/5
+2026-04-30 21:03:34,349 [DEBUG] browser:   Ctrl+Minus press 4/5
+2026-04-30 21:03:34,349 [DEBUG] browser:   Ctrl+Minus press 5/5
+2026-04-30 21:03:35,419 [INFO] browser: Total questions in paper: 60
+2026-04-30 21:03:35,426 [DEBUG] browser: Question number: 1  (header text: 'Question 1 of 60')
+2026-04-30 21:03:36,761 [DEBUG] browser: Question meta: type='MCQ-Multiple'  subject='Chemistry'
+2026-04-30 21:03:36,962 [DEBUG] browser: Screenshot taken (86061 bytes)
+2026-04-30 21:03:38,969 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 21:03:39,662 [INFO] vlm: VLM parsed result: {'confidences': {'A': 0, 'B': 0, 'C': 0, 'D': 0}}
+2026-04-30 21:03:39,662 [DEBUG] exam_runner: Q1: type='MCQ-Multiple' subject='Chemistry' vlm={'confidences': {'A': 0, 'B': 0, 'C': 0, 'D': 0}, '_type': 'mcq-multiple'}
+2026-04-30 21:03:39,662 [DEBUG] browser: Clicking Next
+2026-04-30 21:03:39,662 [DEBUG] browser: sleep 2.0s (before Next)
+2026-04-30 21:03:41,716 [DEBUG] browser: sleep 2.0s (after Next)
+2026-04-30 21:03:43,723 [DEBUG] browser: Question number: 1  (header text: 'Question 1 of 48')
+2026-04-30 21:03:43,736 [DEBUG] browser: Question meta: type='MCQ-Multiple'  subject='Chemistry'
+2026-04-30 21:03:43,897 [DEBUG] browser: Screenshot taken (132183 bytes)
+2026-04-30 21:03:44,643 [DEBUG] asyncio: Using proactor: IocpProactor

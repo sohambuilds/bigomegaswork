@@ -1,0 +1,114 @@
+2026-04-30 20:49:48,896 [INFO] main: Model : groq/meta-llama/llama-4-scout-17b-16e-instruct
+2026-04-30 20:49:48,898 [INFO] main: JSONL : logs\run_20260430_204948.jsonl
+2026-04-30 20:49:48,898 [INFO] main: Papers: 4
+2026-04-30 20:49:48,899 [DEBUG] asyncio: Using proactor: IocpProactor
+2026-04-30 20:49:50,695 [INFO] browser: Navigating to https://jee-image.onrender.com
+2026-04-30 20:49:51,841 [DEBUG] browser: Filling login form
+2026-04-30 20:49:51,926 [DEBUG] browser: Selecting paper: 2025 – Paper 1 – English
+2026-04-30 20:49:52,038 [INFO] browser: Logged in — paper: 2025 – Paper 1 – English
+2026-04-30 20:49:52,040 [DEBUG] browser: Zooming out (Ctrl+Minus x5)
+2026-04-30 20:49:52,046 [DEBUG] browser:   Ctrl+Minus press 1/5
+2026-04-30 20:49:52,062 [DEBUG] browser:   Ctrl+Minus press 2/5
+2026-04-30 20:49:52,068 [DEBUG] browser:   Ctrl+Minus press 3/5
+2026-04-30 20:49:52,081 [DEBUG] browser:   Ctrl+Minus press 4/5
+2026-04-30 20:49:52,090 [DEBUG] browser:   Ctrl+Minus press 5/5
+2026-04-30 20:49:53,175 [INFO] browser: Total questions in paper: 60
+2026-04-30 20:49:53,177 [DEBUG] browser: Question number: 1  (header text: 'Question 1 of 60')
+2026-04-30 20:49:54,524 [DEBUG] browser: Question meta: type='MCQ-Multiple'  subject='Chemistry'
+2026-04-30 20:49:54,722 [DEBUG] browser: Screenshot taken (86061 bytes)
+2026-04-30 20:49:54,722 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 20:49:55,408 [INFO] vlm: VLM parsed result: {'confidences': {'A': 0, 'B': 0, 'C': 0, 'D': 0}}
+2026-04-30 20:49:55,409 [DEBUG] exam_runner: Q1: type='MCQ-Multiple' subject='Chemistry' vlm={'confidences': {'A': 0, 'B': 0, 'C': 0, 'D': 0}, '_type': 'mcq-multiple'}
+2026-04-30 20:49:55,409 [DEBUG] browser: Clicking Next
+2026-04-30 20:49:57,066 [DEBUG] browser: Question number: 2  (header text: 'Question 2 of 48')
+2026-04-30 20:49:57,089 [DEBUG] browser: Question meta: type='MCQ-Multiple'  subject='Chemistry'
+2026-04-30 20:49:57,292 [DEBUG] browser: Screenshot taken (102237 bytes)
+2026-04-30 20:49:57,292 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 20:49:57,752 [INFO] vlm: VLM parsed result: {'confidences': {'A': 80, 'B': 100, 'C': 30, 'D': 95}}
+2026-04-30 20:49:57,752 [DEBUG] exam_runner: Q2: type='MCQ-Multiple' subject='Chemistry' vlm={'confidences': {'A': 80, 'B': 100, 'C': 30, 'D': 95}, '_type': 'mcq-multiple'}
+2026-04-30 20:49:57,752 [DEBUG] browser: Attempting to click option 'B'
+2026-04-30 20:49:57,794 [INFO] browser: Clicked option B via exact-text match
+2026-04-30 20:49:57,804 [DEBUG] browser: Clicking Next
+2026-04-30 20:49:57,871 [DEBUG] browser: Question number: 2  (header text: 'Question 2 of 48')
+2026-04-30 20:49:57,891 [DEBUG] browser: Question meta: type='MCQ-Multiple'  subject='Chemistry'
+2026-04-30 20:49:58,041 [DEBUG] browser: Screenshot taken (102097 bytes)
+2026-04-30 20:49:58,043 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 20:49:58,678 [INFO] vlm: VLM parsed result: {'confidences': {'A': 80, 'B': 100, 'C': 30, 'D': 95}}
+2026-04-30 20:49:58,678 [DEBUG] exam_runner: Q2: type='MCQ-Multiple' subject='Chemistry' vlm={'confidences': {'A': 80, 'B': 100, 'C': 30, 'D': 95}, '_type': 'mcq-multiple'}
+2026-04-30 20:49:58,678 [DEBUG] browser: Attempting to click option 'B'
+2026-04-30 20:49:58,726 [INFO] browser: Clicked option B via exact-text match
+2026-04-30 20:49:58,726 [DEBUG] browser: Clicking Next
+2026-04-30 20:49:58,812 [DEBUG] browser: Question number: 3  (header text: 'Question 3 of 48')
+2026-04-30 20:49:58,832 [DEBUG] browser: Question meta: type='MCQ-Multiple'  subject='Chemistry'
+2026-04-30 20:49:58,990 [DEBUG] browser: Screenshot taken (99223 bytes)
+2026-04-30 20:49:58,990 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 20:49:59,513 [INFO] vlm: VLM parsed result: {'confidences': {'A': 80, 'B': 0, 'C': 0, 'D': 0}}
+2026-04-30 20:49:59,513 [DEBUG] exam_runner: Q3: type='MCQ-Multiple' subject='Chemistry' vlm={'confidences': {'A': 80, 'B': 0, 'C': 0, 'D': 0}, '_type': 'mcq-multiple'}
+2026-04-30 20:49:59,517 [DEBUG] browser: Clicking Next
+2026-04-30 20:49:59,591 [DEBUG] browser: Question number: 4  (header text: 'Question 4 of 48')
+2026-04-30 20:49:59,610 [DEBUG] browser: Question meta: type='MCQ-Single'  subject='Chemistry'
+2026-04-30 20:49:59,779 [DEBUG] browser: Screenshot taken (89183 bytes)
+2026-04-30 20:49:59,781 [DEBUG] vlm: Sending mcq-single question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 20:50:00,161 [INFO] vlm: VLM parsed result: {'answer': 'A', 'confidence': 0}
+2026-04-30 20:50:00,163 [DEBUG] exam_runner: Q4: type='MCQ-Single' subject='Chemistry' vlm={'answer': 'A', 'confidence': 0, '_type': 'mcq-single'}
+2026-04-30 20:50:00,163 [DEBUG] browser: Clicking Next
+2026-04-30 20:50:00,239 [DEBUG] browser: Question number: 5  (header text: 'Question 5 of 48')
+2026-04-30 20:50:00,261 [DEBUG] browser: Question meta: type='MCQ-Single'  subject='Chemistry'
+2026-04-30 20:50:00,432 [DEBUG] browser: Screenshot taken (89281 bytes)
+2026-04-30 20:50:00,432 [DEBUG] vlm: Sending mcq-single question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 20:50:01,115 [INFO] vlm: VLM parsed result: {'answer': 'A', 'confidence': 0}
+2026-04-30 20:50:01,117 [DEBUG] exam_runner: Q5: type='MCQ-Single' subject='Chemistry' vlm={'answer': 'A', 'confidence': 0, '_type': 'mcq-single'}
+2026-04-30 20:50:01,117 [DEBUG] browser: Clicking Next
+2026-04-30 20:50:01,176 [DEBUG] browser: Question number: 6  (header text: 'Question 6 of 48')
+2026-04-30 20:50:01,192 [DEBUG] browser: Question meta: type='MCQ-Single'  subject='Chemistry'
+2026-04-30 20:50:01,372 [DEBUG] browser: Screenshot taken (93773 bytes)
+2026-04-30 20:50:01,372 [DEBUG] vlm: Sending mcq-single question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 20:50:01,749 [INFO] vlm: VLM parsed result: {'answer': 'B', 'confidence': 100}
+2026-04-30 20:50:01,752 [DEBUG] exam_runner: Q6: type='MCQ-Single' subject='Chemistry' vlm={'answer': 'B', 'confidence': 100, '_type': 'mcq-single'}
+2026-04-30 20:50:01,752 [DEBUG] browser: Attempting to click option 'B'
+2026-04-30 20:50:01,813 [INFO] browser: Clicked option B via exact-text match
+2026-04-30 20:50:01,815 [DEBUG] browser: Clicking Next
+2026-04-30 20:50:01,897 [DEBUG] browser: Question number: 7  (header text: 'Question 7 of 48')
+2026-04-30 20:50:01,914 [DEBUG] browser: Question meta: type='MCQ-Single'  subject='Chemistry'
+2026-04-30 20:50:02,087 [DEBUG] browser: Screenshot taken (89664 bytes)
+2026-04-30 20:50:02,087 [DEBUG] vlm: Sending mcq-single question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 20:50:02,463 [INFO] vlm: VLM parsed result: {'answer': 'B', 'confidence': 100}
+2026-04-30 20:50:02,463 [DEBUG] exam_runner: Q7: type='MCQ-Single' subject='Chemistry' vlm={'answer': 'B', 'confidence': 100, '_type': 'mcq-single'}
+2026-04-30 20:50:02,463 [DEBUG] browser: Attempting to click option 'B'
+2026-04-30 20:50:02,527 [INFO] browser: Clicked option B via exact-text match
+2026-04-30 20:50:02,527 [DEBUG] browser: Clicking Next
+2026-04-30 20:50:02,611 [DEBUG] browser: Question number: 8  (header text: 'Question 8 of 48')
+2026-04-30 20:50:02,632 [DEBUG] browser: Question meta: type='Matching'  subject='Chemistry'
+2026-04-30 20:50:02,801 [DEBUG] browser: Screenshot taken (89184 bytes)
+2026-04-30 20:50:02,801 [DEBUG] vlm: Sending mcq-single question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 20:50:03,194 [INFO] vlm: VLM parsed result: {'answer': 'B', 'confidence': 100}
+2026-04-30 20:50:03,195 [DEBUG] exam_runner: Q8: type='Matching' subject='Chemistry' vlm={'answer': 'B', 'confidence': 100, '_type': 'mcq-single'}
+2026-04-30 20:50:03,195 [DEBUG] browser: Attempting to click option 'B'
+2026-04-30 20:50:03,262 [INFO] browser: Clicked option B via exact-text match
+2026-04-30 20:50:03,262 [DEBUG] browser: Clicking Next
+2026-04-30 20:50:03,341 [DEBUG] browser: Question number: 9  (header text: 'Question 9 of 48')
+2026-04-30 20:50:03,362 [DEBUG] browser: Question meta: type='Matching'  subject='Chemistry'
+2026-04-30 20:50:03,547 [DEBUG] browser: Screenshot taken (89952 bytes)
+2026-04-30 20:50:03,548 [DEBUG] vlm: Sending mcq-single question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 20:50:03,997 [INFO] vlm: VLM parsed result: {'answer': 'B', 'confidence': 100}
+2026-04-30 20:50:03,998 [DEBUG] exam_runner: Q9: type='Matching' subject='Chemistry' vlm={'answer': 'B', 'confidence': 100, '_type': 'mcq-single'}
+2026-04-30 20:50:03,998 [DEBUG] browser: Attempting to click option 'B'
+2026-04-30 20:50:04,054 [INFO] browser: Clicked option B via exact-text match
+2026-04-30 20:50:04,054 [DEBUG] browser: Clicking Next
+2026-04-30 20:50:04,113 [DEBUG] browser: Question number: 10  (header text: 'Question 10 of 48')
+2026-04-30 20:50:04,127 [DEBUG] browser: Question meta: type='Matching'  subject='Chemistry'
+2026-04-30 20:50:04,267 [DEBUG] browser: Screenshot taken (89457 bytes)
+2026-04-30 20:50:04,267 [DEBUG] vlm: Sending mcq-single question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 20:50:04,617 [INFO] vlm: VLM parsed result: {'answer': 'B', 'confidence': 100}
+2026-04-30 20:50:04,621 [DEBUG] exam_runner: Q10: type='Matching' subject='Chemistry' vlm={'answer': 'B', 'confidence': 100, '_type': 'mcq-single'}
+2026-04-30 20:50:04,622 [DEBUG] browser: Attempting to click option 'B'
+2026-04-30 20:50:04,670 [INFO] browser: Clicked option B via exact-text match
+2026-04-30 20:50:04,670 [DEBUG] browser: Clicking Next
+2026-04-30 20:50:04,717 [DEBUG] browser: Question number: 11  (header text: 'Question 11 of 48')
+2026-04-30 20:50:04,734 [DEBUG] browser: Question meta: type='Numerical'  subject='Chemistry'
+2026-04-30 20:50:04,866 [DEBUG] browser: Screenshot taken (87044 bytes)
+2026-04-30 20:50:04,869 [DEBUG] vlm: Sending numerical question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 20:50:05,253 [INFO] vlm: VLM parsed result: {'answer': '21', 'confidence': 90}
+2026-04-30 20:50:05,257 [DEBUG] exam_runner: Q11: type='Numerical' subject='Chemistry' vlm={'answer': '21', 'confidence': 90, '_type': 'numerical'}
+2026-04-30 20:50:05,257 [DEBUG] browser: Entering numerical answer: '21'
+2026-04-30 20:50:35,859 [DEBUG] asyncio: Using proactor: IocpProactor

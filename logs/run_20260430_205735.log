@@ -1,0 +1,210 @@
+2026-04-30 20:57:35,649 [INFO] main: Model : groq/meta-llama/llama-4-scout-17b-16e-instruct
+2026-04-30 20:57:35,650 [INFO] main: JSONL : logs\run_20260430_205735.jsonl
+2026-04-30 20:57:35,650 [INFO] main: Papers: 4
+2026-04-30 20:57:35,651 [DEBUG] asyncio: Using proactor: IocpProactor
+2026-04-30 20:57:37,258 [INFO] browser: Navigating to https://jee-image.onrender.com
+2026-04-30 20:57:38,264 [DEBUG] browser: Filling login form
+2026-04-30 20:57:38,357 [DEBUG] browser: Selecting paper: 2025 – Paper 1 – English
+2026-04-30 20:57:38,475 [INFO] browser: Logged in — paper: 2025 – Paper 1 – English
+2026-04-30 20:57:38,477 [DEBUG] browser: Zooming out (Ctrl+Minus x5)
+2026-04-30 20:57:38,485 [DEBUG] browser:   Ctrl+Minus press 1/5
+2026-04-30 20:57:38,494 [DEBUG] browser:   Ctrl+Minus press 2/5
+2026-04-30 20:57:38,501 [DEBUG] browser:   Ctrl+Minus press 3/5
+2026-04-30 20:57:38,511 [DEBUG] browser:   Ctrl+Minus press 4/5
+2026-04-30 20:57:38,519 [DEBUG] browser:   Ctrl+Minus press 5/5
+2026-04-30 20:57:40,047 [INFO] browser: Total questions in paper: 60
+2026-04-30 20:57:40,057 [DEBUG] browser: Question number: 1  (header text: 'Question 1 of 60')
+2026-04-30 20:57:40,895 [DEBUG] browser: Question meta: type='MCQ-Multiple'  subject='Chemistry'
+2026-04-30 20:57:41,077 [DEBUG] browser: Screenshot taken (86265 bytes)
+2026-04-30 20:57:41,077 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 20:57:41,795 [INFO] vlm: VLM parsed result: {'confidences': {'A': 0, 'B': 0, 'C': 0, 'D': 0}}
+2026-04-30 20:57:41,795 [DEBUG] exam_runner: Q1: type='MCQ-Multiple' subject='Chemistry' vlm={'confidences': {'A': 0, 'B': 0, 'C': 0, 'D': 0}, '_type': 'mcq-multiple'}
+2026-04-30 20:57:41,795 [DEBUG] browser: Clicking Next
+2026-04-30 20:57:43,736 [DEBUG] browser: Question number: 2  (header text: 'Question 2 of 48')
+2026-04-30 20:57:43,749 [DEBUG] browser: Question meta: type='MCQ-Multiple'  subject='Chemistry'
+2026-04-30 20:57:43,916 [DEBUG] browser: Screenshot taken (102168 bytes)
+2026-04-30 20:57:43,916 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 20:57:44,718 [INFO] vlm: VLM parsed result: {'confidences': {'A': 80, 'B': 100, 'C': 30, 'D': 95}}
+2026-04-30 20:57:44,718 [DEBUG] exam_runner: Q2: type='MCQ-Multiple' subject='Chemistry' vlm={'confidences': {'A': 80, 'B': 100, 'C': 30, 'D': 95}, '_type': 'mcq-multiple'}
+2026-04-30 20:57:44,718 [DEBUG] browser: Attempting to click option 'B'
+2026-04-30 20:57:44,762 [INFO] browser: Clicked option B via exact-text match
+2026-04-30 20:57:44,762 [DEBUG] browser: Clicking Next
+2026-04-30 20:57:45,190 [DEBUG] browser: Question number: 2  (header text: 'Question 2 of 48')
+2026-04-30 20:57:45,205 [DEBUG] browser: Question meta: type='MCQ-Multiple'  subject='Chemistry'
+2026-04-30 20:57:45,348 [DEBUG] browser: Screenshot taken (102840 bytes)
+2026-04-30 20:57:45,348 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 20:57:46,066 [INFO] vlm: VLM parsed result: {'confidences': {'A': 80, 'B': 100, 'C': 30, 'D': 95}}
+2026-04-30 20:57:46,066 [DEBUG] exam_runner: Q2: type='MCQ-Multiple' subject='Chemistry' vlm={'confidences': {'A': 80, 'B': 100, 'C': 30, 'D': 95}, '_type': 'mcq-multiple'}
+2026-04-30 20:57:46,066 [DEBUG] browser: Attempting to click option 'B'
+2026-04-30 20:57:46,117 [INFO] browser: Clicked option B via exact-text match
+2026-04-30 20:57:46,124 [DEBUG] browser: Clicking Next
+2026-04-30 20:57:46,545 [DEBUG] browser: Question number: 3  (header text: 'Question 3 of 48')
+2026-04-30 20:57:46,565 [DEBUG] browser: Question meta: type='MCQ-Multiple'  subject='Chemistry'
+2026-04-30 20:57:46,716 [DEBUG] browser: Screenshot taken (158249 bytes)
+2026-04-30 20:57:46,716 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 20:57:47,958 [INFO] vlm: VLM parsed result: {'confidences': {'A': 80, 'B': 100, 'C': 30, 'D': 95}}
+2026-04-30 20:57:47,961 [DEBUG] exam_runner: Q3: type='MCQ-Multiple' subject='Chemistry' vlm={'confidences': {'A': 80, 'B': 100, 'C': 30, 'D': 95}, '_type': 'mcq-multiple'}
+2026-04-30 20:57:47,961 [DEBUG] browser: Attempting to click option 'B'
+2026-04-30 20:57:47,990 [INFO] browser: Clicked option B via exact-text match
+2026-04-30 20:57:47,992 [DEBUG] browser: Clicking Next
+2026-04-30 20:57:48,398 [DEBUG] browser: Question number: 4  (header text: 'Question 4 of 48')
+2026-04-30 20:57:48,414 [DEBUG] browser: Question meta: type='MCQ-Single'  subject='Chemistry'
+2026-04-30 20:57:48,550 [DEBUG] browser: Screenshot taken (124231 bytes)
+2026-04-30 20:57:48,553 [DEBUG] vlm: Sending mcq-single question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 20:57:49,740 [ERROR] vlm: VLM call failed: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2026-04-30 20:57:49,742 [DEBUG] exam_runner: Q4: type='MCQ-Single' subject='Chemistry' vlm={'error': 'Expecting property name enclosed in double quotes: line 1 column 2 (char 1)', '_type': 'mcq-single'}
+2026-04-30 20:57:49,742 [ERROR] exam_runner: VLM error for mcq-single: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2026-04-30 20:57:49,743 [DEBUG] browser: Clicking Next
+2026-04-30 20:57:49,782 [DEBUG] browser: Question number: 5  (header text: 'Question 5 of 48')
+2026-04-30 20:57:49,794 [DEBUG] browser: Question meta: type='MCQ-Single'  subject='Chemistry'
+2026-04-30 20:57:49,944 [DEBUG] browser: Screenshot taken (155070 bytes)
+2026-04-30 20:57:49,944 [DEBUG] vlm: Sending mcq-single question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 20:57:53,313 [ERROR] vlm: VLM call failed: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2026-04-30 20:57:53,316 [DEBUG] exam_runner: Q5: type='MCQ-Single' subject='Chemistry' vlm={'error': 'Expecting property name enclosed in double quotes: line 1 column 2 (char 1)', '_type': 'mcq-single'}
+2026-04-30 20:57:53,316 [ERROR] exam_runner: VLM error for mcq-single: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2026-04-30 20:57:53,316 [DEBUG] browser: Clicking Next
+2026-04-30 20:57:53,360 [DEBUG] browser: Question number: 6  (header text: 'Question 6 of 48')
+2026-04-30 20:57:53,376 [DEBUG] browser: Question meta: type='MCQ-Single'  subject='Chemistry'
+2026-04-30 20:57:53,517 [DEBUG] browser: Screenshot taken (106561 bytes)
+2026-04-30 20:57:53,517 [DEBUG] vlm: Sending mcq-single question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 20:57:54,146 [INFO] vlm: VLM parsed result: {'answer': 'B', 'confidence': 95}
+2026-04-30 20:57:54,148 [DEBUG] exam_runner: Q6: type='MCQ-Single' subject='Chemistry' vlm={'answer': 'B', 'confidence': 95, '_type': 'mcq-single'}
+2026-04-30 20:57:54,148 [DEBUG] browser: Attempting to click option 'B'
+2026-04-30 20:57:54,192 [INFO] browser: Clicked option B via exact-text match
+2026-04-30 20:57:54,192 [DEBUG] browser: Clicking Next
+2026-04-30 20:57:54,646 [DEBUG] browser: Question number: 7  (header text: 'Question 7 of 48')
+2026-04-30 20:57:54,661 [DEBUG] browser: Question meta: type='MCQ-Single'  subject='Chemistry'
+2026-04-30 20:57:54,820 [DEBUG] browser: Screenshot taken (119484 bytes)
+2026-04-30 20:57:54,822 [DEBUG] vlm: Sending mcq-single question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 20:57:57,277 [INFO] vlm: VLM parsed result: {'answer': 'B', 'confidence': 95}
+2026-04-30 20:57:57,277 [DEBUG] exam_runner: Q7: type='MCQ-Single' subject='Chemistry' vlm={'answer': 'B', 'confidence': 95, '_type': 'mcq-single'}
+2026-04-30 20:57:57,277 [DEBUG] browser: Attempting to click option 'B'
+2026-04-30 20:57:57,334 [INFO] browser: Clicked option B via exact-text match
+2026-04-30 20:57:57,334 [DEBUG] browser: Clicking Next
+2026-04-30 20:57:57,741 [DEBUG] browser: Question number: 8  (header text: 'Question 8 of 48')
+2026-04-30 20:57:57,760 [DEBUG] browser: Question meta: type='Matching'  subject='Chemistry'
+2026-04-30 20:57:57,912 [DEBUG] browser: Screenshot taken (157062 bytes)
+2026-04-30 20:57:57,912 [DEBUG] vlm: Sending mcq-single question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 20:58:00,780 [ERROR] vlm: VLM call failed: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2026-04-30 20:58:00,780 [DEBUG] exam_runner: Q8: type='Matching' subject='Chemistry' vlm={'error': 'Expecting property name enclosed in double quotes: line 1 column 2 (char 1)', '_type': 'mcq-single'}
+2026-04-30 20:58:00,780 [ERROR] exam_runner: VLM error for mcq-single: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2026-04-30 20:58:00,780 [DEBUG] browser: Clicking Next
+2026-04-30 20:58:00,828 [DEBUG] browser: Question number: 9  (header text: 'Question 9 of 48')
+2026-04-30 20:58:00,842 [DEBUG] browser: Question meta: type='Matching'  subject='Chemistry'
+2026-04-30 20:58:00,986 [DEBUG] browser: Screenshot taken (182625 bytes)
+2026-04-30 20:58:00,986 [DEBUG] vlm: Sending mcq-single question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 20:58:02,772 [INFO] vlm: VLM parsed result: {'answer': 'A', 'confidence': 95}
+2026-04-30 20:58:02,774 [DEBUG] exam_runner: Q9: type='Matching' subject='Chemistry' vlm={'answer': 'A', 'confidence': 95, '_type': 'mcq-single'}
+2026-04-30 20:58:02,774 [DEBUG] browser: Attempting to click option 'A'
+2026-04-30 20:58:02,809 [INFO] browser: Clicked option A via exact-text match
+2026-04-30 20:58:02,810 [DEBUG] browser: Clicking Next
+2026-04-30 20:58:03,230 [DEBUG] browser: Question number: 10  (header text: 'Question 10 of 48')
+2026-04-30 20:58:03,242 [DEBUG] browser: Question meta: type='Matching'  subject='Chemistry'
+2026-04-30 20:58:03,409 [DEBUG] browser: Screenshot taken (178965 bytes)
+2026-04-30 20:58:03,409 [DEBUG] vlm: Sending mcq-single question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 20:58:05,205 [INFO] vlm: VLM parsed result: {'answer': 'A', 'confidence': 95}
+2026-04-30 20:58:05,209 [DEBUG] exam_runner: Q10: type='Matching' subject='Chemistry' vlm={'answer': 'A', 'confidence': 95, '_type': 'mcq-single'}
+2026-04-30 20:58:05,210 [DEBUG] browser: Attempting to click option 'A'
+2026-04-30 20:58:08,224 [WARNING] browser: Exact-text click failed for 'A': Locator.click: Timeout 3000ms exceeded.
+Call log:
+  - waiting for get_by_text("A", exact=True).first
+
+2026-04-30 20:58:11,240 [ERROR] browser: All click strategies failed for option 'A': Locator.click: Timeout 3000ms exceeded.
+Call log:
+  - waiting for locator(".option-label:text-is('A'), [class*='option']:text-is('A')").first
+
+2026-04-30 20:58:11,241 [DEBUG] browser: Clicking Next
+2026-04-30 20:58:11,286 [DEBUG] browser: Question number: 11  (header text: 'Question 11 of 48')
+2026-04-30 20:58:11,296 [DEBUG] browser: Question meta: type='Numerical'  subject='Chemistry'
+2026-04-30 20:58:11,468 [DEBUG] browser: Screenshot taken (115405 bytes)
+2026-04-30 20:58:11,468 [DEBUG] vlm: Sending numerical question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 20:58:12,989 [ERROR] vlm: VLM call failed: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2026-04-30 20:58:12,993 [DEBUG] exam_runner: Q11: type='Numerical' subject='Chemistry' vlm={'error': 'Expecting property name enclosed in double quotes: line 1 column 2 (char 1)', '_type': 'numerical'}
+2026-04-30 20:58:12,993 [ERROR] exam_runner: VLM error for numerical: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2026-04-30 20:58:12,995 [DEBUG] browser: Clicking Next
+2026-04-30 20:58:13,050 [DEBUG] browser: Question number: 12  (header text: 'Question 12 of 48')
+2026-04-30 20:58:13,068 [DEBUG] browser: Question meta: type='Numerical'  subject='Chemistry'
+2026-04-30 20:58:13,224 [DEBUG] browser: Screenshot taken (120760 bytes)
+2026-04-30 20:58:13,224 [DEBUG] vlm: Sending numerical question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 20:58:15,586 [ERROR] vlm: VLM call failed: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2026-04-30 20:58:15,586 [DEBUG] exam_runner: Q12: type='Numerical' subject='Chemistry' vlm={'error': 'Expecting property name enclosed in double quotes: line 1 column 2 (char 1)', '_type': 'numerical'}
+2026-04-30 20:58:15,586 [ERROR] exam_runner: VLM error for numerical: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2026-04-30 20:58:15,586 [DEBUG] browser: Clicking Next
+2026-04-30 20:58:15,632 [DEBUG] browser: Question number: 13  (header text: 'Question 13 of 48')
+2026-04-30 20:58:15,646 [DEBUG] browser: Question meta: type='Numerical'  subject='Chemistry'
+2026-04-30 20:58:15,768 [DEBUG] browser: Screenshot taken (139083 bytes)
+2026-04-30 20:58:15,768 [DEBUG] vlm: Sending numerical question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 20:58:18,032 [ERROR] vlm: VLM call failed: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2026-04-30 20:58:18,032 [DEBUG] exam_runner: Q13: type='Numerical' subject='Chemistry' vlm={'error': 'Expecting property name enclosed in double quotes: line 1 column 2 (char 1)', '_type': 'numerical'}
+2026-04-30 20:58:18,032 [ERROR] exam_runner: VLM error for numerical: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2026-04-30 20:58:18,035 [DEBUG] browser: Clicking Next
+2026-04-30 20:58:18,091 [DEBUG] browser: Question number: 14  (header text: 'Question 14 of 48')
+2026-04-30 20:58:18,102 [DEBUG] browser: Question meta: type='Numerical'  subject='Chemistry'
+2026-04-30 20:58:18,241 [DEBUG] browser: Screenshot taken (120179 bytes)
+2026-04-30 20:58:18,241 [DEBUG] vlm: Sending numerical question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-04-30 20:58:19,936 [INFO] vlm: VLM parsed result: {'answer': '29.88', 'confidence': 90}
+2026-04-30 20:58:19,936 [DEBUG] exam_runner: Q14: type='Numerical' subject='Chemistry' vlm={'answer': '29.88', 'confidence': 90, '_type': 'numerical'}
+2026-04-30 20:58:19,936 [DEBUG] browser: Entering numerical answer: '29.88'
+2026-04-30 20:58:21,453 [DEBUG] browser: Numpad trigger selector failed (input[placeholder='Text...']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("input[placeholder='Text...']").first to be visible
+
+2026-04-30 20:58:22,971 [DEBUG] browser: Numpad trigger selector failed (input[placeholder*='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("input[placeholder*='Text']").first to be visible
+
+2026-04-30 20:58:24,481 [DEBUG] browser: Numpad trigger selector failed ([placeholder='Text...']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[placeholder='Text...']").first to be visible
+
+2026-04-30 20:58:25,991 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text...')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text...')").first to be visible
+
+2026-04-30 20:58:27,510 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-trigger']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-trigger']").first to be visible
+
+2026-04-30 20:58:29,020 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-input']").first to be visible
+
+2026-04-30 20:58:30,538 [DEBUG] browser: Numpad trigger selector failed ([class*='answer-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='answer-input']").first to be visible
+
+2026-04-30 20:58:33,066 [DEBUG] browser: Numpad trigger selector failed ([class*='numerical-input']): Locator.click: Timeout 2500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numerical-input']").first
+    - locator resolved to <div data-value="" id="numerical-input" class="numerical-input-box active"></div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="modal" id="numpad-modal">…</div> intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="modal" id="numpad-modal">…</div> intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    4 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="modal" id="numpad-modal">…</div> intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+
+2026-04-30 20:58:33,116 [DEBUG] browser: Numpad trigger clicked via selector: input[readonly]:visible
+2026-04-30 20:58:33,130 [DEBUG] browser: Numpad modal opened
+2026-04-30 20:58:33,203 [DEBUG] browser: Cleared existing numpad value
+2026-04-30 20:59:03,657 [DEBUG] asyncio: Using proactor: IocpProactor
