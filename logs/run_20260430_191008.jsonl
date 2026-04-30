@@ -1,0 +1,1 @@
+{"paper": "2025 \u2013 Paper 1 \u2013 English", "q_num": 1, "q_type": "Unknown", "subject": "Unknown", "vlm_result": {"error": "litellm.BadRequestError: GroqException - {\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n", "_type": "mcq-single"}, "actions": ["skip:vlm_error"]}
