@@ -1,0 +1,2081 @@
+2026-05-01 13:43:10,383 [INFO] main: Model : groq/meta-llama/llama-4-scout-17b-16e-instruct
+2026-05-01 13:43:10,385 [INFO] main: JSONL : logs\run_20260501_134310.jsonl
+2026-05-01 13:43:10,385 [INFO] main: Papers: 4
+2026-05-01 13:43:10,386 [DEBUG] asyncio: Using proactor: IocpProactor
+2026-05-01 13:43:26,991 [INFO] browser: Navigating to https://jee-image.onrender.com
+2026-05-01 13:43:28,322 [DEBUG] browser: Filling login form
+2026-05-01 13:43:28,431 [DEBUG] browser: Selecting paper: 2025 – Paper 1 – English
+2026-05-01 13:43:28,579 [INFO] browser: Logged in — paper: 2025 – Paper 1 – English
+2026-05-01 13:43:28,581 [DEBUG] browser: Zooming out (Ctrl+Minus x5)
+2026-05-01 13:43:28,613 [DEBUG] browser:   Ctrl+Minus press 1/5
+2026-05-01 13:43:28,626 [DEBUG] browser:   Ctrl+Minus press 2/5
+2026-05-01 13:43:28,631 [DEBUG] browser:   Ctrl+Minus press 3/5
+2026-05-01 13:43:28,643 [DEBUG] browser:   Ctrl+Minus press 4/5
+2026-05-01 13:43:28,652 [DEBUG] browser:   Ctrl+Minus press 5/5
+2026-05-01 13:43:30,015 [INFO] browser: Total questions in paper: 60
+2026-05-01 13:43:30,015 [INFO] exam_runner: Submit target for 2025 – Paper 1 – English: Q48
+2026-05-01 13:43:30,079 [DEBUG] browser: Question number: 1  (header text: 'Question 1 of 60')
+2026-05-01 13:43:31,432 [DEBUG] browser: Question meta: type='MCQ-Multiple'  subject='Chemistry'
+2026-05-01 13:43:31,650 [DEBUG] browser: Screenshot taken (86223 bytes)
+2026-05-01 13:43:33,652 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:43:35,241 [INFO] vlm: VLM parsed result: {'answers': ['A', 'C']}
+2026-05-01 13:43:35,241 [DEBUG] exam_runner: Q1: type='MCQ-Multiple' subject='Chemistry' vlm={'answers': ['A', 'C'], '_type': 'mcq-multiple'}
+2026-05-01 13:43:35,241 [DEBUG] browser: Attempting to click option 'A'
+2026-05-01 13:43:35,411 [INFO] browser: Clicked option A via selector: .mcq-option[data-option='A']
+2026-05-01 13:43:35,414 [DEBUG] browser: sleep 2.0s (after option A click)
+2026-05-01 13:43:37,416 [DEBUG] browser: Attempting to click option 'C'
+2026-05-01 13:43:37,510 [INFO] browser: Clicked option C via selector: .mcq-option[data-option='C']
+2026-05-01 13:43:37,510 [DEBUG] browser: sleep 2.0s (after option C click)
+2026-05-01 13:43:39,513 [DEBUG] browser: Clicking Next
+2026-05-01 13:43:39,513 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:43:41,580 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 13:43:43,602 [DEBUG] browser: Question number: 2  (header text: 'Question 2 of 48')
+2026-05-01 13:43:43,624 [DEBUG] browser: Question meta: type='MCQ-Multiple'  subject='Chemistry'
+2026-05-01 13:43:43,792 [DEBUG] browser: Screenshot taken (100834 bytes)
+2026-05-01 13:43:45,797 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:43:48,356 [INFO] vlm: VLM parsed result: {'answers': ['A', 'B']}
+2026-05-01 13:43:48,360 [DEBUG] exam_runner: Q2: type='MCQ-Multiple' subject='Chemistry' vlm={'answers': ['A', 'B'], '_type': 'mcq-multiple'}
+2026-05-01 13:43:48,360 [DEBUG] browser: Attempting to click option 'A'
+2026-05-01 13:43:48,485 [INFO] browser: Clicked option A via selector: .mcq-option[data-option='A']
+2026-05-01 13:43:48,485 [DEBUG] browser: sleep 2.0s (after option A click)
+2026-05-01 13:43:50,486 [DEBUG] browser: Attempting to click option 'B'
+2026-05-01 13:43:50,575 [INFO] browser: Clicked option B via selector: .mcq-option[data-option='B']
+2026-05-01 13:43:50,577 [DEBUG] browser: sleep 2.0s (after option B click)
+2026-05-01 13:43:52,579 [DEBUG] browser: Clicking Next
+2026-05-01 13:43:52,579 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:43:54,631 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 13:43:56,648 [DEBUG] browser: Question number: 3  (header text: 'Question 3 of 48')
+2026-05-01 13:43:56,672 [DEBUG] browser: Question meta: type='MCQ-Multiple'  subject='Chemistry'
+2026-05-01 13:43:56,855 [DEBUG] browser: Screenshot taken (155670 bytes)
+2026-05-01 13:43:58,858 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:44:01,344 [INFO] vlm: VLM parsed result: {'answers': ['B', 'D']}
+2026-05-01 13:44:01,353 [DEBUG] exam_runner: Q3: type='MCQ-Multiple' subject='Chemistry' vlm={'answers': ['B', 'D'], '_type': 'mcq-multiple'}
+2026-05-01 13:44:01,353 [DEBUG] browser: Attempting to click option 'B'
+2026-05-01 13:44:01,447 [INFO] browser: Clicked option B via selector: .mcq-option[data-option='B']
+2026-05-01 13:44:01,447 [DEBUG] browser: sleep 2.0s (after option B click)
+2026-05-01 13:44:03,450 [DEBUG] browser: Attempting to click option 'D'
+2026-05-01 13:44:03,532 [INFO] browser: Clicked option D via selector: .mcq-option[data-option='D']
+2026-05-01 13:44:03,532 [DEBUG] browser: sleep 2.0s (after option D click)
+2026-05-01 13:44:05,536 [DEBUG] browser: Clicking Next
+2026-05-01 13:44:05,536 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:44:07,606 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 13:44:09,625 [DEBUG] browser: Question number: 4  (header text: 'Question 4 of 48')
+2026-05-01 13:44:09,646 [DEBUG] browser: Question meta: type='MCQ-Single'  subject='Chemistry'
+2026-05-01 13:44:09,852 [DEBUG] browser: Screenshot taken (122979 bytes)
+2026-05-01 13:44:11,856 [DEBUG] vlm: Sending mcq-single question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:44:14,047 [INFO] vlm: VLM parsed result: {'answer': 'A'}
+2026-05-01 13:44:14,047 [DEBUG] exam_runner: Q4: type='MCQ-Single' subject='Chemistry' vlm={'answer': 'A', '_type': 'mcq-single'}
+2026-05-01 13:44:14,047 [DEBUG] browser: Attempting to click option 'A'
+2026-05-01 13:44:14,149 [INFO] browser: Clicked option A via selector: .mcq-option[data-option='A']
+2026-05-01 13:44:14,149 [DEBUG] browser: sleep 2.0s (after option A click)
+2026-05-01 13:44:16,152 [DEBUG] browser: Clicking Next
+2026-05-01 13:44:16,153 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:44:18,210 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 13:44:20,231 [DEBUG] browser: Question number: 5  (header text: 'Question 5 of 48')
+2026-05-01 13:44:20,250 [DEBUG] browser: Question meta: type='MCQ-Single'  subject='Chemistry'
+2026-05-01 13:44:20,456 [DEBUG] browser: Screenshot taken (155014 bytes)
+2026-05-01 13:44:22,457 [DEBUG] vlm: Sending mcq-single question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:44:25,532 [INFO] vlm: VLM parsed result: {'answer': 'C'}
+2026-05-01 13:44:25,534 [DEBUG] exam_runner: Q5: type='MCQ-Single' subject='Chemistry' vlm={'answer': 'C', '_type': 'mcq-single'}
+2026-05-01 13:44:25,534 [DEBUG] browser: Attempting to click option 'C'
+2026-05-01 13:44:25,638 [INFO] browser: Clicked option C via selector: .mcq-option[data-option='C']
+2026-05-01 13:44:25,639 [DEBUG] browser: sleep 2.0s (after option C click)
+2026-05-01 13:44:27,642 [DEBUG] browser: Clicking Next
+2026-05-01 13:44:27,642 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:44:29,696 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 13:44:31,718 [DEBUG] browser: Question number: 6  (header text: 'Question 6 of 48')
+2026-05-01 13:44:31,735 [DEBUG] browser: Question meta: type='MCQ-Single'  subject='Chemistry'
+2026-05-01 13:44:31,930 [DEBUG] browser: Screenshot taken (106196 bytes)
+2026-05-01 13:44:33,931 [DEBUG] vlm: Sending mcq-single question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:44:35,407 [INFO] vlm: VLM parsed result: {'answer': 'A'}
+2026-05-01 13:44:35,407 [DEBUG] exam_runner: Q6: type='MCQ-Single' subject='Chemistry' vlm={'answer': 'A', '_type': 'mcq-single'}
+2026-05-01 13:44:35,407 [DEBUG] browser: Attempting to click option 'A'
+2026-05-01 13:44:35,516 [INFO] browser: Clicked option A via selector: .mcq-option[data-option='A']
+2026-05-01 13:44:35,516 [DEBUG] browser: sleep 2.0s (after option A click)
+2026-05-01 13:44:37,519 [DEBUG] browser: Clicking Next
+2026-05-01 13:44:37,519 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:44:39,571 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 13:44:41,586 [DEBUG] browser: Question number: 7  (header text: 'Question 7 of 48')
+2026-05-01 13:44:41,607 [DEBUG] browser: Question meta: type='MCQ-Single'  subject='Chemistry'
+2026-05-01 13:44:41,787 [DEBUG] browser: Screenshot taken (116529 bytes)
+2026-05-01 13:44:43,791 [DEBUG] vlm: Sending mcq-single question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:44:45,627 [INFO] vlm: VLM parsed result: {'answer': 'B'}
+2026-05-01 13:44:45,629 [DEBUG] exam_runner: Q7: type='MCQ-Single' subject='Chemistry' vlm={'answer': 'B', '_type': 'mcq-single'}
+2026-05-01 13:44:45,631 [DEBUG] browser: Attempting to click option 'B'
+2026-05-01 13:44:45,732 [INFO] browser: Clicked option B via selector: .mcq-option[data-option='B']
+2026-05-01 13:44:45,732 [DEBUG] browser: sleep 2.0s (after option B click)
+2026-05-01 13:44:47,735 [DEBUG] browser: Clicking Next
+2026-05-01 13:44:47,736 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:44:49,791 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 13:44:51,813 [DEBUG] browser: Question number: 8  (header text: 'Question 8 of 48')
+2026-05-01 13:44:51,833 [DEBUG] browser: Question meta: type='Matching'  subject='Chemistry'
+2026-05-01 13:44:52,040 [DEBUG] browser: Screenshot taken (154841 bytes)
+2026-05-01 13:44:54,043 [DEBUG] vlm: Sending matching question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:44:56,953 [INFO] vlm: VLM parsed result: {'answer': 'A'}
+2026-05-01 13:44:56,953 [DEBUG] exam_runner: Q8: type='Matching' subject='Chemistry' vlm={'answer': 'A', '_type': 'mcq-single'}
+2026-05-01 13:44:56,953 [DEBUG] browser: Attempting to click option 'A'
+2026-05-01 13:44:57,049 [INFO] browser: Clicked option A via selector: .mcq-option[data-option='A']
+2026-05-01 13:44:57,051 [DEBUG] browser: sleep 2.0s (after option A click)
+2026-05-01 13:44:59,054 [DEBUG] browser: Clicking Next
+2026-05-01 13:44:59,054 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:45:01,112 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 13:45:03,143 [DEBUG] browser: Question number: 9  (header text: 'Question 9 of 48')
+2026-05-01 13:45:03,155 [DEBUG] browser: Question meta: type='Matching'  subject='Chemistry'
+2026-05-01 13:45:03,365 [DEBUG] browser: Screenshot taken (182281 bytes)
+2026-05-01 13:45:05,367 [DEBUG] vlm: Sending matching question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:45:08,117 [INFO] vlm: VLM parsed result: {'answer': 'D'}
+2026-05-01 13:45:08,119 [DEBUG] exam_runner: Q9: type='Matching' subject='Chemistry' vlm={'answer': 'D', '_type': 'mcq-single'}
+2026-05-01 13:45:08,119 [DEBUG] browser: Attempting to click option 'D'
+2026-05-01 13:45:08,203 [INFO] browser: Clicked option D via selector: .mcq-option[data-option='D']
+2026-05-01 13:45:08,203 [DEBUG] browser: sleep 2.0s (after option D click)
+2026-05-01 13:45:10,207 [DEBUG] browser: Clicking Next
+2026-05-01 13:45:10,207 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:45:12,259 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 13:45:14,277 [DEBUG] browser: Question number: 10  (header text: 'Question 10 of 48')
+2026-05-01 13:45:14,299 [DEBUG] browser: Question meta: type='Matching'  subject='Chemistry'
+2026-05-01 13:45:14,503 [DEBUG] browser: Screenshot taken (176724 bytes)
+2026-05-01 13:45:16,504 [DEBUG] vlm: Sending matching question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:45:18,882 [INFO] vlm: VLM parsed result: {'answer': 'A'}
+2026-05-01 13:45:18,885 [DEBUG] exam_runner: Q10: type='Matching' subject='Chemistry' vlm={'answer': 'A', '_type': 'mcq-single'}
+2026-05-01 13:45:18,885 [DEBUG] browser: Attempting to click option 'A'
+2026-05-01 13:45:18,981 [INFO] browser: Clicked option A via selector: .mcq-option[data-option='A']
+2026-05-01 13:45:18,983 [DEBUG] browser: sleep 2.0s (after option A click)
+2026-05-01 13:45:20,985 [DEBUG] browser: Clicking Next
+2026-05-01 13:45:20,985 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:45:23,040 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 13:45:25,061 [DEBUG] browser: Question number: 11  (header text: 'Question 11 of 48')
+2026-05-01 13:45:25,079 [DEBUG] browser: Question meta: type='Numerical'  subject='Chemistry'
+2026-05-01 13:45:25,247 [DEBUG] browser: Screenshot taken (114736 bytes)
+2026-05-01 13:45:27,248 [DEBUG] vlm: Sending numerical question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:45:29,503 [INFO] vlm: VLM parsed result: {'answer': '100'}
+2026-05-01 13:45:29,506 [DEBUG] exam_runner: Q11: type='Numerical' subject='Chemistry' vlm={'answer': '100', '_type': 'numerical'}
+2026-05-01 13:45:29,508 [DEBUG] browser: Entering numerical answer: '100'
+2026-05-01 13:45:31,024 [DEBUG] browser: Numpad trigger selector failed (input[placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("input[placeholder^='Text']").first to be visible
+
+2026-05-01 13:45:32,544 [DEBUG] browser: Numpad trigger selector failed ([placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[placeholder^='Text']").first to be visible
+
+2026-05-01 13:45:34,055 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text..')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text..')").first to be visible
+
+2026-05-01 13:45:35,566 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text...')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text...')").first to be visible
+
+2026-05-01 13:45:37,076 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-trigger']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-trigger']").first to be visible
+
+2026-05-01 13:45:38,591 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-input']").first to be visible
+
+2026-05-01 13:45:40,105 [DEBUG] browser: Numpad trigger selector failed ([class*='answer-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='answer-input']").first to be visible
+
+2026-05-01 13:45:40,176 [DEBUG] browser: Numpad trigger clicked via selector: [class*='numerical-input']
+2026-05-01 13:45:40,178 [DEBUG] browser: sleep 2.0s (after numpad trigger click)
+2026-05-01 13:45:42,195 [DEBUG] browser: Numpad modal opened
+2026-05-01 13:45:42,270 [DEBUG] browser: Cleared existing numpad value
+2026-05-01 13:45:42,270 [DEBUG] browser: sleep 2.0s (after clear)
+2026-05-01 13:45:44,320 [DEBUG] browser:   Numpad pressed: data-value='1'
+2026-05-01 13:45:44,320 [DEBUG] browser: sleep 2.0s (after numpad 1)
+2026-05-01 13:45:46,359 [DEBUG] browser:   Numpad pressed: data-value='0'
+2026-05-01 13:45:46,359 [DEBUG] browser: sleep 2.0s (after numpad 0)
+2026-05-01 13:45:48,396 [DEBUG] browser:   Numpad pressed: data-value='0'
+2026-05-01 13:45:48,398 [DEBUG] browser: sleep 2.0s (after numpad 0)
+2026-05-01 13:45:50,465 [DEBUG] browser:   Numpad pressed: data-value='ok'
+2026-05-01 13:45:50,465 [DEBUG] browser: sleep 2.0s (after numpad ok)
+2026-05-01 13:45:52,477 [INFO] browser: Numerical answer submitted: '100'
+2026-05-01 13:45:52,477 [DEBUG] browser: Clicking Next
+2026-05-01 13:45:52,477 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:45:54,528 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 13:45:56,546 [DEBUG] browser: Question number: 12  (header text: 'Question 12 of 48')
+2026-05-01 13:45:56,566 [DEBUG] browser: Question meta: type='Numerical'  subject='Chemistry'
+2026-05-01 13:45:56,717 [DEBUG] browser: Screenshot taken (120266 bytes)
+2026-05-01 13:45:58,720 [DEBUG] vlm: Sending numerical question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:46:01,290 [INFO] vlm: VLM parsed result: {'answer': '2'}
+2026-05-01 13:46:01,291 [DEBUG] exam_runner: Q12: type='Numerical' subject='Chemistry' vlm={'answer': '2', '_type': 'numerical'}
+2026-05-01 13:46:01,291 [DEBUG] browser: Entering numerical answer: '2'
+2026-05-01 13:46:02,801 [DEBUG] browser: Numpad trigger selector failed (input[placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("input[placeholder^='Text']").first to be visible
+
+2026-05-01 13:46:04,320 [DEBUG] browser: Numpad trigger selector failed ([placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[placeholder^='Text']").first to be visible
+
+2026-05-01 13:46:05,832 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text..')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text..')").first to be visible
+
+2026-05-01 13:46:07,351 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text...')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text...')").first to be visible
+
+2026-05-01 13:46:08,868 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-trigger']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-trigger']").first to be visible
+
+2026-05-01 13:46:10,384 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-input']").first to be visible
+
+2026-05-01 13:46:11,908 [DEBUG] browser: Numpad trigger selector failed ([class*='answer-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='answer-input']").first to be visible
+
+2026-05-01 13:46:11,970 [DEBUG] browser: Numpad trigger clicked via selector: [class*='numerical-input']
+2026-05-01 13:46:11,970 [DEBUG] browser: sleep 2.0s (after numpad trigger click)
+2026-05-01 13:46:13,989 [DEBUG] browser: Numpad modal opened
+2026-05-01 13:46:14,056 [DEBUG] browser: Cleared existing numpad value
+2026-05-01 13:46:14,058 [DEBUG] browser: sleep 2.0s (after clear)
+2026-05-01 13:46:16,094 [DEBUG] browser:   Numpad pressed: data-value='2'
+2026-05-01 13:46:16,094 [DEBUG] browser: sleep 2.0s (after numpad 2)
+2026-05-01 13:46:18,133 [DEBUG] browser:   Numpad pressed: data-value='ok'
+2026-05-01 13:46:18,134 [DEBUG] browser: sleep 2.0s (after numpad ok)
+2026-05-01 13:46:20,147 [INFO] browser: Numerical answer submitted: '2'
+2026-05-01 13:46:20,147 [DEBUG] browser: Clicking Next
+2026-05-01 13:46:20,150 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:46:22,204 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 13:46:24,232 [DEBUG] browser: Question number: 13  (header text: 'Question 13 of 48')
+2026-05-01 13:46:24,252 [DEBUG] browser: Question meta: type='Numerical'  subject='Chemistry'
+2026-05-01 13:46:24,429 [DEBUG] browser: Screenshot taken (138568 bytes)
+2026-05-01 13:46:26,431 [DEBUG] vlm: Sending numerical question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:46:29,226 [INFO] vlm: VLM parsed result: {'answer': '-0.141'}
+2026-05-01 13:46:29,229 [DEBUG] exam_runner: Q13: type='Numerical' subject='Chemistry' vlm={'answer': '-0.141', '_type': 'numerical'}
+2026-05-01 13:46:29,229 [WARNING] exam_runner: Negative numerical answer returned; falling back to 0: '-0.141'
+2026-05-01 13:46:29,231 [DEBUG] browser: Entering numerical answer: '0'
+2026-05-01 13:46:30,753 [DEBUG] browser: Numpad trigger selector failed (input[placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("input[placeholder^='Text']").first to be visible
+
+2026-05-01 13:46:32,264 [DEBUG] browser: Numpad trigger selector failed ([placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[placeholder^='Text']").first to be visible
+
+2026-05-01 13:46:33,779 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text..')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text..')").first to be visible
+
+2026-05-01 13:46:35,299 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text...')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text...')").first to be visible
+
+2026-05-01 13:46:36,813 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-trigger']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-trigger']").first to be visible
+
+2026-05-01 13:46:38,322 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-input']").first to be visible
+
+2026-05-01 13:46:39,832 [DEBUG] browser: Numpad trigger selector failed ([class*='answer-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='answer-input']").first to be visible
+
+2026-05-01 13:46:39,902 [DEBUG] browser: Numpad trigger clicked via selector: [class*='numerical-input']
+2026-05-01 13:46:39,902 [DEBUG] browser: sleep 2.0s (after numpad trigger click)
+2026-05-01 13:46:41,925 [DEBUG] browser: Numpad modal opened
+2026-05-01 13:46:41,982 [DEBUG] browser: Cleared existing numpad value
+2026-05-01 13:46:41,982 [DEBUG] browser: sleep 2.0s (after clear)
+2026-05-01 13:46:44,039 [DEBUG] browser:   Numpad pressed: data-value='0'
+2026-05-01 13:46:44,039 [DEBUG] browser: sleep 2.0s (after numpad 0)
+2026-05-01 13:46:46,082 [DEBUG] browser:   Numpad pressed: data-value='ok'
+2026-05-01 13:46:46,084 [DEBUG] browser: sleep 2.0s (after numpad ok)
+2026-05-01 13:46:48,097 [INFO] browser: Numerical answer submitted: '0'
+2026-05-01 13:46:48,098 [DEBUG] browser: Clicking Next
+2026-05-01 13:46:48,098 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:46:50,135 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 13:46:52,149 [DEBUG] browser: Question number: 14  (header text: 'Question 14 of 48')
+2026-05-01 13:46:52,162 [DEBUG] browser: Question meta: type='Numerical'  subject='Chemistry'
+2026-05-01 13:46:52,286 [DEBUG] browser: Screenshot taken (119625 bytes)
+2026-05-01 13:46:54,289 [DEBUG] vlm: Sending numerical question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:46:56,258 [INFO] vlm: VLM parsed result: {'answer': '-29.9'}
+2026-05-01 13:46:56,260 [DEBUG] exam_runner: Q14: type='Numerical' subject='Chemistry' vlm={'answer': '-29.9', '_type': 'numerical'}
+2026-05-01 13:46:56,260 [WARNING] exam_runner: Negative numerical answer returned; falling back to 0: '-29.9'
+2026-05-01 13:46:56,260 [DEBUG] browser: Entering numerical answer: '0'
+2026-05-01 13:46:57,780 [DEBUG] browser: Numpad trigger selector failed (input[placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("input[placeholder^='Text']").first to be visible
+
+2026-05-01 13:46:59,297 [DEBUG] browser: Numpad trigger selector failed ([placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[placeholder^='Text']").first to be visible
+
+2026-05-01 13:47:00,808 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text..')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text..')").first to be visible
+
+2026-05-01 13:47:02,325 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text...')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text...')").first to be visible
+
+2026-05-01 13:47:03,846 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-trigger']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-trigger']").first to be visible
+
+2026-05-01 13:47:05,371 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-input']").first to be visible
+
+2026-05-01 13:47:06,877 [DEBUG] browser: Numpad trigger selector failed ([class*='answer-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='answer-input']").first to be visible
+
+2026-05-01 13:47:06,932 [DEBUG] browser: Numpad trigger clicked via selector: [class*='numerical-input']
+2026-05-01 13:47:06,932 [DEBUG] browser: sleep 2.0s (after numpad trigger click)
+2026-05-01 13:47:08,946 [DEBUG] browser: Numpad modal opened
+2026-05-01 13:47:09,005 [DEBUG] browser: Cleared existing numpad value
+2026-05-01 13:47:09,005 [DEBUG] browser: sleep 2.0s (after clear)
+2026-05-01 13:47:11,046 [DEBUG] browser:   Numpad pressed: data-value='0'
+2026-05-01 13:47:11,048 [DEBUG] browser: sleep 2.0s (after numpad 0)
+2026-05-01 13:47:13,105 [DEBUG] browser:   Numpad pressed: data-value='ok'
+2026-05-01 13:47:13,105 [DEBUG] browser: sleep 2.0s (after numpad ok)
+2026-05-01 13:47:15,117 [INFO] browser: Numerical answer submitted: '0'
+2026-05-01 13:47:15,117 [DEBUG] browser: Clicking Next
+2026-05-01 13:47:15,117 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:47:17,176 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 13:47:19,193 [DEBUG] browser: Question number: 15  (header text: 'Question 15 of 48')
+2026-05-01 13:47:19,204 [DEBUG] browser: Question meta: type='Numerical'  subject='Chemistry'
+2026-05-01 13:47:19,350 [DEBUG] browser: Screenshot taken (117079 bytes)
+2026-05-01 13:47:21,356 [DEBUG] vlm: Sending numerical question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:47:23,190 [INFO] vlm: VLM parsed result: {'answer': '280'}
+2026-05-01 13:47:23,193 [DEBUG] exam_runner: Q15: type='Numerical' subject='Chemistry' vlm={'answer': '280', '_type': 'numerical'}
+2026-05-01 13:47:23,193 [DEBUG] browser: Entering numerical answer: '280'
+2026-05-01 13:47:24,712 [DEBUG] browser: Numpad trigger selector failed (input[placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("input[placeholder^='Text']").first to be visible
+
+2026-05-01 13:47:26,219 [DEBUG] browser: Numpad trigger selector failed ([placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[placeholder^='Text']").first to be visible
+
+2026-05-01 13:47:27,728 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text..')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text..')").first to be visible
+
+2026-05-01 13:47:29,242 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text...')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text...')").first to be visible
+
+2026-05-01 13:47:30,763 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-trigger']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-trigger']").first to be visible
+
+2026-05-01 13:47:32,277 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-input']").first to be visible
+
+2026-05-01 13:47:33,786 [DEBUG] browser: Numpad trigger selector failed ([class*='answer-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='answer-input']").first to be visible
+
+2026-05-01 13:47:33,854 [DEBUG] browser: Numpad trigger clicked via selector: [class*='numerical-input']
+2026-05-01 13:47:33,854 [DEBUG] browser: sleep 2.0s (after numpad trigger click)
+2026-05-01 13:47:35,875 [DEBUG] browser: Numpad modal opened
+2026-05-01 13:47:35,936 [DEBUG] browser: Cleared existing numpad value
+2026-05-01 13:47:35,937 [DEBUG] browser: sleep 2.0s (after clear)
+2026-05-01 13:47:37,986 [DEBUG] browser:   Numpad pressed: data-value='2'
+2026-05-01 13:47:37,988 [DEBUG] browser: sleep 2.0s (after numpad 2)
+2026-05-01 13:47:40,047 [DEBUG] browser:   Numpad pressed: data-value='8'
+2026-05-01 13:47:40,049 [DEBUG] browser: sleep 2.0s (after numpad 8)
+2026-05-01 13:47:42,079 [DEBUG] browser:   Numpad pressed: data-value='0'
+2026-05-01 13:47:42,079 [DEBUG] browser: sleep 2.0s (after numpad 0)
+2026-05-01 13:47:44,121 [DEBUG] browser:   Numpad pressed: data-value='ok'
+2026-05-01 13:47:44,121 [DEBUG] browser: sleep 2.0s (after numpad ok)
+2026-05-01 13:47:46,137 [INFO] browser: Numerical answer submitted: '280'
+2026-05-01 13:47:46,137 [DEBUG] browser: Clicking Next
+2026-05-01 13:47:46,140 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:47:48,199 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 13:47:50,218 [DEBUG] browser: Question number: 16  (header text: 'Question 16 of 48')
+2026-05-01 13:47:50,242 [DEBUG] browser: Question meta: type='Numerical'  subject='Chemistry'
+2026-05-01 13:47:50,429 [DEBUG] browser: Screenshot taken (155181 bytes)
+2026-05-01 13:47:52,432 [DEBUG] vlm: Sending numerical question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:47:55,236 [INFO] vlm: VLM parsed result: {'answer': '144'}
+2026-05-01 13:47:55,236 [DEBUG] exam_runner: Q16: type='Numerical' subject='Chemistry' vlm={'answer': '144', '_type': 'numerical'}
+2026-05-01 13:47:55,236 [DEBUG] browser: Entering numerical answer: '144'
+2026-05-01 13:47:56,751 [DEBUG] browser: Numpad trigger selector failed (input[placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("input[placeholder^='Text']").first to be visible
+
+2026-05-01 13:47:58,262 [DEBUG] browser: Numpad trigger selector failed ([placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[placeholder^='Text']").first to be visible
+
+2026-05-01 13:47:59,779 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text..')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text..')").first to be visible
+
+2026-05-01 13:48:01,296 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text...')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text...')").first to be visible
+
+2026-05-01 13:48:02,809 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-trigger']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-trigger']").first to be visible
+
+2026-05-01 13:48:04,325 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-input']").first to be visible
+
+2026-05-01 13:48:05,834 [DEBUG] browser: Numpad trigger selector failed ([class*='answer-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='answer-input']").first to be visible
+
+2026-05-01 13:48:05,903 [DEBUG] browser: Numpad trigger clicked via selector: [class*='numerical-input']
+2026-05-01 13:48:05,905 [DEBUG] browser: sleep 2.0s (after numpad trigger click)
+2026-05-01 13:48:07,921 [DEBUG] browser: Numpad modal opened
+2026-05-01 13:48:07,979 [DEBUG] browser: Cleared existing numpad value
+2026-05-01 13:48:07,983 [DEBUG] browser: sleep 2.0s (after clear)
+2026-05-01 13:48:10,037 [DEBUG] browser:   Numpad pressed: data-value='1'
+2026-05-01 13:48:10,037 [DEBUG] browser: sleep 2.0s (after numpad 1)
+2026-05-01 13:48:12,086 [DEBUG] browser:   Numpad pressed: data-value='4'
+2026-05-01 13:48:12,088 [DEBUG] browser: sleep 2.0s (after numpad 4)
+2026-05-01 13:48:14,130 [DEBUG] browser:   Numpad pressed: data-value='4'
+2026-05-01 13:48:14,130 [DEBUG] browser: sleep 2.0s (after numpad 4)
+2026-05-01 13:48:16,182 [DEBUG] browser:   Numpad pressed: data-value='ok'
+2026-05-01 13:48:16,184 [DEBUG] browser: sleep 2.0s (after numpad ok)
+2026-05-01 13:48:18,194 [INFO] browser: Numerical answer submitted: '144'
+2026-05-01 13:48:18,196 [DEBUG] browser: Clicking Next
+2026-05-01 13:48:18,196 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:48:20,228 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 13:48:22,252 [DEBUG] browser: Question number: 17  (header text: 'Question 17 of 48')
+2026-05-01 13:48:22,269 [DEBUG] browser: Question meta: type='MCQ-Multiple'  subject='Mathematics'
+2026-05-01 13:48:22,504 [DEBUG] browser: Screenshot taken (172422 bytes)
+2026-05-01 13:48:24,506 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:48:29,307 [INFO] vlm: VLM parsed result: {'answers': ['A']}
+2026-05-01 13:48:29,307 [DEBUG] exam_runner: Q17: type='MCQ-Multiple' subject='Mathematics' vlm={'answers': ['A'], '_type': 'mcq-multiple'}
+2026-05-01 13:48:29,307 [DEBUG] browser: Attempting to click option 'A'
+2026-05-01 13:48:29,397 [INFO] browser: Clicked option A via selector: .mcq-option[data-option='A']
+2026-05-01 13:48:29,397 [DEBUG] browser: sleep 2.0s (after option A click)
+2026-05-01 13:48:31,399 [DEBUG] browser: Clicking Next
+2026-05-01 13:48:31,401 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:48:33,455 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 13:48:35,476 [DEBUG] browser: Question number: 18  (header text: 'Question 18 of 48')
+2026-05-01 13:48:35,495 [DEBUG] browser: Question meta: type='MCQ-Multiple'  subject='Mathematics'
+2026-05-01 13:48:35,691 [DEBUG] browser: Screenshot taken (144244 bytes)
+2026-05-01 13:48:37,694 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:48:41,107 [INFO] vlm: VLM parsed result: {'answers': ['A', 'C']}
+2026-05-01 13:48:41,108 [DEBUG] exam_runner: Q18: type='MCQ-Multiple' subject='Mathematics' vlm={'answers': ['A', 'C'], '_type': 'mcq-multiple'}
+2026-05-01 13:48:41,110 [DEBUG] browser: Attempting to click option 'A'
+2026-05-01 13:48:41,203 [INFO] browser: Clicked option A via selector: .mcq-option[data-option='A']
+2026-05-01 13:48:41,203 [DEBUG] browser: sleep 2.0s (after option A click)
+2026-05-01 13:48:43,205 [DEBUG] browser: Attempting to click option 'C'
+2026-05-01 13:48:43,288 [INFO] browser: Clicked option C via selector: .mcq-option[data-option='C']
+2026-05-01 13:48:43,288 [DEBUG] browser: sleep 2.0s (after option C click)
+2026-05-01 13:48:45,295 [DEBUG] browser: Clicking Next
+2026-05-01 13:48:45,295 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:48:47,339 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 13:48:49,363 [DEBUG] browser: Question number: 19  (header text: 'Question 19 of 48')
+2026-05-01 13:48:49,386 [DEBUG] browser: Question meta: type='MCQ-Multiple'  subject='Mathematics'
+2026-05-01 13:48:49,559 [DEBUG] browser: Screenshot taken (137385 bytes)
+2026-05-01 13:48:51,561 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:48:54,178 [INFO] vlm: VLM parsed result: {'answers': ['A', 'D']}
+2026-05-01 13:48:54,178 [DEBUG] exam_runner: Q19: type='MCQ-Multiple' subject='Mathematics' vlm={'answers': ['A', 'D'], '_type': 'mcq-multiple'}
+2026-05-01 13:48:54,178 [DEBUG] browser: Attempting to click option 'A'
+2026-05-01 13:48:54,266 [INFO] browser: Clicked option A via selector: .mcq-option[data-option='A']
+2026-05-01 13:48:54,267 [DEBUG] browser: sleep 2.0s (after option A click)
+2026-05-01 13:48:56,268 [DEBUG] browser: Attempting to click option 'D'
+2026-05-01 13:48:56,372 [INFO] browser: Clicked option D via selector: .mcq-option[data-option='D']
+2026-05-01 13:48:56,372 [DEBUG] browser: sleep 2.0s (after option D click)
+2026-05-01 13:48:58,374 [DEBUG] browser: Clicking Next
+2026-05-01 13:48:58,375 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:49:00,421 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 13:49:02,444 [DEBUG] browser: Question number: 20  (header text: 'Question 20 of 48')
+2026-05-01 13:49:02,460 [DEBUG] browser: Question meta: type='MCQ-Single'  subject='Mathematics'
+2026-05-01 13:49:02,652 [DEBUG] browser: Screenshot taken (133512 bytes)
+2026-05-01 13:49:04,653 [DEBUG] vlm: Sending mcq-single question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:49:08,598 [INFO] vlm: VLM parsed result: {'answer': 'D'}
+2026-05-01 13:49:08,602 [DEBUG] exam_runner: Q20: type='MCQ-Single' subject='Mathematics' vlm={'answer': 'D', '_type': 'mcq-single'}
+2026-05-01 13:49:08,602 [DEBUG] browser: Attempting to click option 'D'
+2026-05-01 13:49:10,119 [DEBUG] browser: Option D selector failed (.mcq-option[data-option='D']): Locator.scroll_into_view_if_needed: Timeout 1469ms exceeded.
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+2026-05-01 13:49:13,639 [INFO] browser: Clicked option D via selector: [data-option='D']
+2026-05-01 13:49:13,639 [DEBUG] browser: sleep 2.0s (after option D click)
+2026-05-01 13:49:15,640 [DEBUG] browser: Clicking Next
+2026-05-01 13:49:15,640 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:49:18,684 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 13:49:20,701 [DEBUG] browser: Question number: 21  (header text: 'Question 21 of 48')
+2026-05-01 13:49:20,718 [DEBUG] browser: Question meta: type='MCQ-Single'  subject='Mathematics'
+2026-05-01 13:49:22,855 [DEBUG] browser: Screenshot taken (154775 bytes)
+2026-05-01 13:49:24,858 [DEBUG] vlm: Sending mcq-single question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:49:28,009 [INFO] vlm: VLM parsed result: {'answer': 'C'}
+2026-05-01 13:49:28,009 [DEBUG] exam_runner: Q21: type='MCQ-Single' subject='Mathematics' vlm={'answer': 'C', '_type': 'mcq-single'}
+2026-05-01 13:49:28,009 [DEBUG] browser: Attempting to click option 'C'
+2026-05-01 13:49:29,520 [DEBUG] browser: Option C selector failed (.mcq-option[data-option='C']): Locator.scroll_into_view_if_needed: Timeout 1484ms exceeded.
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+2026-05-01 13:49:32,654 [INFO] browser: Clicked option C via selector: [data-option='C']
+2026-05-01 13:49:32,654 [DEBUG] browser: sleep 2.0s (after option C click)
+2026-05-01 13:49:34,658 [DEBUG] browser: Clicking Next
+2026-05-01 13:49:34,658 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:49:37,710 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 13:49:39,730 [DEBUG] browser: Question number: 22  (header text: 'Question 22 of 48')
+2026-05-01 13:49:39,750 [DEBUG] browser: Question meta: type='MCQ-Single'  subject='Mathematics'
+2026-05-01 13:49:41,890 [DEBUG] browser: Screenshot taken (145599 bytes)
+2026-05-01 13:49:43,893 [DEBUG] vlm: Sending mcq-single question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:49:46,967 [INFO] vlm: VLM parsed result: {'answer': 'D'}
+2026-05-01 13:49:46,968 [DEBUG] exam_runner: Q22: type='MCQ-Single' subject='Mathematics' vlm={'answer': 'D', '_type': 'mcq-single'}
+2026-05-01 13:49:46,968 [DEBUG] browser: Attempting to click option 'D'
+2026-05-01 13:49:48,488 [DEBUG] browser: Option D selector failed (.mcq-option[data-option='D']): Locator.scroll_into_view_if_needed: Timeout 1484ms exceeded.
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+2026-05-01 13:49:51,617 [INFO] browser: Clicked option D via selector: [data-option='D']
+2026-05-01 13:49:51,617 [DEBUG] browser: sleep 2.0s (after option D click)
+2026-05-01 13:49:53,618 [DEBUG] browser: Clicking Next
+2026-05-01 13:49:53,618 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:49:57,662 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 13:49:59,679 [DEBUG] browser: Question number: 23  (header text: 'Question 23 of 48')
+2026-05-01 13:49:59,690 [DEBUG] browser: Question meta: type='MCQ-Single'  subject='Mathematics'
+2026-05-01 13:50:01,800 [DEBUG] browser: Screenshot taken (124063 bytes)
+2026-05-01 13:50:03,801 [DEBUG] vlm: Sending mcq-single question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:50:05,858 [INFO] vlm: VLM parsed result: {'answer': 'B'}
+2026-05-01 13:50:05,858 [DEBUG] exam_runner: Q23: type='MCQ-Single' subject='Mathematics' vlm={'answer': 'B', '_type': 'mcq-single'}
+2026-05-01 13:50:05,858 [DEBUG] browser: Attempting to click option 'B'
+2026-05-01 13:50:07,366 [DEBUG] browser: Option B selector failed (.mcq-option[data-option='B']): Locator.scroll_into_view_if_needed: Timeout 1485ms exceeded.
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+2026-05-01 13:50:10,649 [INFO] browser: Clicked option B via selector: [data-option='B']
+2026-05-01 13:50:10,649 [DEBUG] browser: sleep 2.0s (after option B click)
+2026-05-01 13:50:12,661 [DEBUG] browser: Clicking Next
+2026-05-01 13:50:12,661 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:50:16,727 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 13:50:18,753 [DEBUG] browser: Question number: 24  (header text: 'Question 24 of 48')
+2026-05-01 13:50:18,774 [DEBUG] browser: Question meta: type='Matching'  subject='Mathematics'
+2026-05-01 13:50:20,927 [DEBUG] browser: Screenshot taken (188267 bytes)
+2026-05-01 13:50:22,929 [DEBUG] vlm: Sending matching question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:50:26,548 [INFO] vlm: VLM parsed result: {'answer': 'C'}
+2026-05-01 13:50:26,551 [DEBUG] exam_runner: Q24: type='Matching' subject='Mathematics' vlm={'answer': 'C', '_type': 'mcq-single'}
+2026-05-01 13:50:26,553 [DEBUG] browser: Attempting to click option 'C'
+2026-05-01 13:50:29,674 [INFO] browser: Clicked option C via selector: .mcq-option[data-option='C']
+2026-05-01 13:50:29,674 [DEBUG] browser: sleep 2.0s (after option C click)
+2026-05-01 13:50:31,676 [DEBUG] browser: Clicking Next
+2026-05-01 13:50:31,676 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:50:35,734 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 13:50:37,758 [DEBUG] browser: Question number: 25  (header text: 'Question 25 of 48')
+2026-05-01 13:50:37,774 [DEBUG] browser: Question meta: type='Matching'  subject='Mathematics'
+2026-05-01 13:50:39,899 [DEBUG] browser: Screenshot taken (206509 bytes)
+2026-05-01 13:50:41,903 [DEBUG] vlm: Sending matching question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:50:45,925 [INFO] vlm: VLM parsed result: {'answer': 'C'}
+2026-05-01 13:50:45,929 [DEBUG] exam_runner: Q25: type='Matching' subject='Mathematics' vlm={'answer': 'C', '_type': 'mcq-single'}
+2026-05-01 13:50:45,930 [DEBUG] browser: Attempting to click option 'C'
+2026-05-01 13:50:47,439 [DEBUG] browser: Option C selector failed (.mcq-option[data-option='C']): Locator.scroll_into_view_if_needed: Timeout 1468ms exceeded.
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+2026-05-01 13:50:50,692 [INFO] browser: Clicked option C via selector: [data-option='C']
+2026-05-01 13:50:50,692 [DEBUG] browser: sleep 2.0s (after option C click)
+2026-05-01 13:50:52,695 [DEBUG] browser: Clicking Next
+2026-05-01 13:50:52,695 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:50:55,743 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 13:50:57,765 [DEBUG] browser: Question number: 26  (header text: 'Question 26 of 48')
+2026-05-01 13:50:57,782 [DEBUG] browser: Question meta: type='Matching'  subject='Mathematics'
+2026-05-01 13:50:59,925 [DEBUG] browser: Screenshot taken (173642 bytes)
+2026-05-01 13:51:01,926 [DEBUG] vlm: Sending matching question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:51:06,071 [INFO] vlm: VLM parsed result: {'answer': 'C'}
+2026-05-01 13:51:06,074 [DEBUG] exam_runner: Q26: type='Matching' subject='Mathematics' vlm={'answer': 'C', '_type': 'mcq-single'}
+2026-05-01 13:51:06,075 [DEBUG] browser: Attempting to click option 'C'
+2026-05-01 13:51:07,602 [DEBUG] browser: Option C selector failed (.mcq-option[data-option='C']): Locator.scroll_into_view_if_needed: Timeout 1485ms exceeded.
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+2026-05-01 13:51:09,097 [DEBUG] browser: Option C selector failed ([data-option='C']): Locator.scroll_into_view_if_needed: Timeout 1469ms exceeded.
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+2026-05-01 13:51:10,607 [DEBUG] browser: Option C selector failed (.mcq-option:has(:text-is('C'))): Locator.scroll_into_view_if_needed: Timeout 1469ms exceeded.
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+2026-05-01 13:51:12,123 [DEBUG] browser: Option C selector failed (label:has(:text-is('C'))): Locator.scroll_into_view_if_needed: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("label:has(:text-is('C'))").first
+
+2026-05-01 13:51:13,660 [DEBUG] browser: Option C selector failed (input[type='checkbox'][value='C'], input[type='radio'][value='C']): Locator.scroll_into_view_if_needed: Timeout 1500ms exceeded.
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+2026-05-01 13:51:15,180 [DEBUG] browser: Option C selector failed (.option-label:text-is('C'), [class*='option-label']:text-is('C')): Locator.scroll_into_view_if_needed: Timeout 1485ms exceeded.
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+2026-05-01 13:51:16,741 [INFO] browser: Clicked option C via bare-text fallback
+2026-05-01 13:51:16,741 [DEBUG] browser: sleep 2.0s (after option C click)
+2026-05-01 13:51:18,744 [DEBUG] browser: Clicking Next
+2026-05-01 13:51:18,744 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:51:21,790 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 13:51:23,804 [DEBUG] browser: Question number: 27  (header text: 'Question 27 of 48')
+2026-05-01 13:51:23,818 [DEBUG] browser: Question meta: type='Numerical'  subject='Mathematics'
+2026-05-01 13:51:25,930 [DEBUG] browser: Screenshot taken (113072 bytes)
+2026-05-01 13:51:27,932 [DEBUG] vlm: Sending numerical question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:51:29,882 [INFO] vlm: VLM parsed result: {'answer': '105'}
+2026-05-01 13:51:29,884 [DEBUG] exam_runner: Q27: type='Numerical' subject='Mathematics' vlm={'answer': '105', '_type': 'numerical'}
+2026-05-01 13:51:29,884 [DEBUG] browser: Entering numerical answer: '105'
+2026-05-01 13:51:31,395 [DEBUG] browser: Numpad trigger selector failed (input[placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("input[placeholder^='Text']").first to be visible
+
+2026-05-01 13:51:32,901 [DEBUG] browser: Numpad trigger selector failed ([placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[placeholder^='Text']").first to be visible
+
+2026-05-01 13:51:34,414 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text..')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text..')").first to be visible
+
+2026-05-01 13:51:35,930 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text...')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text...')").first to be visible
+
+2026-05-01 13:51:37,440 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-trigger']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-trigger']").first to be visible
+
+2026-05-01 13:51:38,949 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-input']").first to be visible
+
+2026-05-01 13:51:40,464 [DEBUG] browser: Numpad trigger selector failed ([class*='answer-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='answer-input']").first to be visible
+
+2026-05-01 13:51:41,803 [DEBUG] browser: Numpad trigger clicked via selector: [class*='numerical-input']
+2026-05-01 13:51:41,808 [DEBUG] browser: sleep 2.0s (after numpad trigger click)
+2026-05-01 13:51:43,823 [DEBUG] browser: Numpad modal opened
+2026-05-01 13:51:45,842 [DEBUG] browser: Cleared existing numpad value
+2026-05-01 13:51:45,842 [DEBUG] browser: sleep 2.0s (after clear)
+2026-05-01 13:51:49,879 [DEBUG] browser:   Numpad pressed: data-value='1'
+2026-05-01 13:51:49,879 [DEBUG] browser: sleep 2.0s (after numpad 1)
+2026-05-01 13:51:53,899 [DEBUG] browser:   Numpad pressed: data-value='0'
+2026-05-01 13:51:53,900 [DEBUG] browser: sleep 2.0s (after numpad 0)
+2026-05-01 13:51:57,965 [DEBUG] browser:   Numpad pressed: data-value='5'
+2026-05-01 13:51:57,965 [DEBUG] browser: sleep 2.0s (after numpad 5)
+2026-05-01 13:52:01,981 [DEBUG] browser:   Numpad pressed: data-value='ok'
+2026-05-01 13:52:01,981 [DEBUG] browser: sleep 2.0s (after numpad ok)
+2026-05-01 13:52:03,995 [INFO] browser: Numerical answer submitted: '105'
+2026-05-01 13:52:03,995 [DEBUG] browser: Clicking Next
+2026-05-01 13:52:03,995 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:52:07,062 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 13:52:09,083 [DEBUG] browser: Question number: 28  (header text: 'Question 28 of 48')
+2026-05-01 13:52:09,109 [DEBUG] browser: Question meta: type='Numerical'  subject='Mathematics'
+2026-05-01 13:52:11,220 [DEBUG] browser: Screenshot taken (142596 bytes)
+2026-05-01 13:52:13,222 [DEBUG] vlm: Sending numerical question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:52:16,028 [INFO] vlm: VLM parsed result: {'answer': '1.2'}
+2026-05-01 13:52:16,031 [DEBUG] exam_runner: Q28: type='Numerical' subject='Mathematics' vlm={'answer': '1.2', '_type': 'numerical'}
+2026-05-01 13:52:16,031 [DEBUG] browser: Entering numerical answer: '1.2'
+2026-05-01 13:52:17,538 [DEBUG] browser: Numpad trigger selector failed (input[placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("input[placeholder^='Text']").first to be visible
+
+2026-05-01 13:52:19,054 [DEBUG] browser: Numpad trigger selector failed ([placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[placeholder^='Text']").first to be visible
+
+2026-05-01 13:52:20,560 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text..')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text..')").first to be visible
+
+2026-05-01 13:52:22,077 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text...')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text...')").first to be visible
+
+2026-05-01 13:52:23,589 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-trigger']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-trigger']").first to be visible
+
+2026-05-01 13:52:25,109 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-input']").first to be visible
+
+2026-05-01 13:52:26,614 [DEBUG] browser: Numpad trigger selector failed ([class*='answer-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='answer-input']").first to be visible
+
+2026-05-01 13:52:28,691 [DEBUG] browser: Numpad trigger clicked via selector: [class*='numerical-input']
+2026-05-01 13:52:28,697 [DEBUG] browser: sleep 2.0s (after numpad trigger click)
+2026-05-01 13:52:30,709 [DEBUG] browser: Numpad modal opened
+2026-05-01 13:52:32,731 [DEBUG] browser: Cleared existing numpad value
+2026-05-01 13:52:32,733 [DEBUG] browser: sleep 2.0s (after clear)
+2026-05-01 13:52:36,746 [DEBUG] browser:   Numpad pressed: data-value='1'
+2026-05-01 13:52:36,746 [DEBUG] browser: sleep 2.0s (after numpad 1)
+2026-05-01 13:52:40,785 [DEBUG] browser:   Numpad pressed: data-value='.'
+2026-05-01 13:52:40,785 [DEBUG] browser: sleep 2.0s (after numpad .)
+2026-05-01 13:52:44,818 [DEBUG] browser:   Numpad pressed: data-value='2'
+2026-05-01 13:52:44,818 [DEBUG] browser: sleep 2.0s (after numpad 2)
+2026-05-01 13:52:48,832 [DEBUG] browser:   Numpad pressed: data-value='ok'
+2026-05-01 13:52:48,832 [DEBUG] browser: sleep 2.0s (after numpad ok)
+2026-05-01 13:52:50,843 [INFO] browser: Numerical answer submitted: '1.2'
+2026-05-01 13:52:50,845 [DEBUG] browser: Clicking Next
+2026-05-01 13:52:50,845 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:52:53,883 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 13:52:55,896 [DEBUG] browser: Question number: 29  (header text: 'Question 29 of 48')
+2026-05-01 13:52:55,909 [DEBUG] browser: Question meta: type='Numerical'  subject='Mathematics'
+2026-05-01 13:52:58,023 [DEBUG] browser: Screenshot taken (120886 bytes)
+2026-05-01 13:53:00,026 [DEBUG] vlm: Sending numerical question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:53:04,601 [INFO] vlm: VLM parsed result: {'answer': '3054'}
+2026-05-01 13:53:04,601 [DEBUG] exam_runner: Q29: type='Numerical' subject='Mathematics' vlm={'answer': '3054', '_type': 'numerical'}
+2026-05-01 13:53:04,601 [DEBUG] browser: Entering numerical answer: '3054'
+2026-05-01 13:53:06,122 [DEBUG] browser: Numpad trigger selector failed (input[placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("input[placeholder^='Text']").first to be visible
+
+2026-05-01 13:53:07,635 [DEBUG] browser: Numpad trigger selector failed ([placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[placeholder^='Text']").first to be visible
+
+2026-05-01 13:53:09,139 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text..')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text..')").first to be visible
+
+2026-05-01 13:53:10,646 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text...')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text...')").first to be visible
+
+2026-05-01 13:53:12,166 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-trigger']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-trigger']").first to be visible
+
+2026-05-01 13:53:13,676 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-input']").first to be visible
+
+2026-05-01 13:53:15,185 [DEBUG] browser: Numpad trigger selector failed ([class*='answer-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='answer-input']").first to be visible
+
+2026-05-01 13:53:16,684 [DEBUG] browser: Numpad trigger clicked via selector: [class*='numerical-input']
+2026-05-01 13:53:16,687 [DEBUG] browser: sleep 2.0s (after numpad trigger click)
+2026-05-01 13:53:18,702 [DEBUG] browser: Numpad modal opened
+2026-05-01 13:53:20,722 [DEBUG] browser: Cleared existing numpad value
+2026-05-01 13:53:20,722 [DEBUG] browser: sleep 2.0s (after clear)
+2026-05-01 13:53:24,762 [DEBUG] browser:   Numpad pressed: data-value='3'
+2026-05-01 13:53:24,762 [DEBUG] browser: sleep 2.0s (after numpad 3)
+2026-05-01 13:53:28,797 [DEBUG] browser:   Numpad pressed: data-value='0'
+2026-05-01 13:53:28,797 [DEBUG] browser: sleep 2.0s (after numpad 0)
+2026-05-01 13:53:32,839 [DEBUG] browser:   Numpad pressed: data-value='5'
+2026-05-01 13:53:32,839 [DEBUG] browser: sleep 2.0s (after numpad 5)
+2026-05-01 13:53:36,835 [DEBUG] browser:   Numpad pressed: data-value='4'
+2026-05-01 13:53:36,835 [DEBUG] browser: sleep 2.0s (after numpad 4)
+2026-05-01 13:53:40,867 [DEBUG] browser:   Numpad pressed: data-value='ok'
+2026-05-01 13:53:40,869 [DEBUG] browser: sleep 2.0s (after numpad ok)
+2026-05-01 13:53:42,875 [INFO] browser: Numerical answer submitted: '3054'
+2026-05-01 13:53:42,883 [DEBUG] browser: Clicking Next
+2026-05-01 13:53:42,884 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:53:46,925 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 13:53:48,945 [DEBUG] browser: Question number: 30  (header text: 'Question 30 of 48')
+2026-05-01 13:53:48,959 [DEBUG] browser: Question meta: type='Numerical'  subject='Mathematics'
+2026-05-01 13:53:51,072 [DEBUG] browser: Screenshot taken (109161 bytes)
+2026-05-01 13:53:53,078 [DEBUG] vlm: Sending numerical question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:53:56,600 [INFO] vlm: VLM parsed result: {'answer': '0'}
+2026-05-01 13:53:56,605 [DEBUG] exam_runner: Q30: type='Numerical' subject='Mathematics' vlm={'answer': '0', '_type': 'numerical'}
+2026-05-01 13:53:56,605 [DEBUG] browser: Entering numerical answer: '0'
+2026-05-01 13:53:58,119 [DEBUG] browser: Numpad trigger selector failed (input[placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("input[placeholder^='Text']").first to be visible
+
+2026-05-01 13:53:59,633 [DEBUG] browser: Numpad trigger selector failed ([placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[placeholder^='Text']").first to be visible
+
+2026-05-01 13:54:01,153 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text..')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text..')").first to be visible
+
+2026-05-01 13:54:02,666 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text...')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text...')").first to be visible
+
+2026-05-01 13:54:04,188 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-trigger']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-trigger']").first to be visible
+
+2026-05-01 13:54:05,694 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-input']").first to be visible
+
+2026-05-01 13:54:07,208 [DEBUG] browser: Numpad trigger selector failed ([class*='answer-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='answer-input']").first to be visible
+
+2026-05-01 13:54:08,633 [DEBUG] browser: Numpad trigger clicked via selector: [class*='numerical-input']
+2026-05-01 13:54:08,637 [DEBUG] browser: sleep 2.0s (after numpad trigger click)
+2026-05-01 13:54:10,660 [DEBUG] browser: Numpad modal opened
+2026-05-01 13:54:12,671 [DEBUG] browser: Cleared existing numpad value
+2026-05-01 13:54:12,671 [DEBUG] browser: sleep 2.0s (after clear)
+2026-05-01 13:54:16,717 [DEBUG] browser:   Numpad pressed: data-value='0'
+2026-05-01 13:54:16,718 [DEBUG] browser: sleep 2.0s (after numpad 0)
+2026-05-01 13:54:20,752 [DEBUG] browser:   Numpad pressed: data-value='ok'
+2026-05-01 13:54:20,757 [DEBUG] browser: sleep 2.0s (after numpad ok)
+2026-05-01 13:54:22,768 [INFO] browser: Numerical answer submitted: '0'
+2026-05-01 13:54:22,769 [DEBUG] browser: Clicking Next
+2026-05-01 13:54:22,769 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:54:26,784 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 13:54:28,807 [DEBUG] browser: Question number: 31  (header text: 'Question 31 of 48')
+2026-05-01 13:54:28,825 [DEBUG] browser: Question meta: type='Numerical'  subject='Mathematics'
+2026-05-01 13:54:30,963 [DEBUG] browser: Screenshot taken (131988 bytes)
+2026-05-01 13:54:32,965 [DEBUG] vlm: Sending numerical question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:54:35,759 [INFO] vlm: VLM parsed result: {'answer': '96'}
+2026-05-01 13:54:35,759 [DEBUG] exam_runner: Q31: type='Numerical' subject='Mathematics' vlm={'answer': '96', '_type': 'numerical'}
+2026-05-01 13:54:35,762 [DEBUG] browser: Entering numerical answer: '96'
+2026-05-01 13:54:37,269 [DEBUG] browser: Numpad trigger selector failed (input[placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("input[placeholder^='Text']").first to be visible
+
+2026-05-01 13:54:38,778 [DEBUG] browser: Numpad trigger selector failed ([placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[placeholder^='Text']").first to be visible
+
+2026-05-01 13:54:40,286 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text..')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text..')").first to be visible
+
+2026-05-01 13:54:41,804 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text...')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text...')").first to be visible
+
+2026-05-01 13:54:43,311 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-trigger']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-trigger']").first to be visible
+
+2026-05-01 13:54:44,824 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-input']").first to be visible
+
+2026-05-01 13:54:46,341 [DEBUG] browser: Numpad trigger selector failed ([class*='answer-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='answer-input']").first to be visible
+
+2026-05-01 13:54:47,690 [DEBUG] browser: Numpad trigger clicked via selector: [class*='numerical-input']
+2026-05-01 13:54:47,691 [DEBUG] browser: sleep 2.0s (after numpad trigger click)
+2026-05-01 13:54:49,715 [DEBUG] browser: Numpad modal opened
+2026-05-01 13:54:51,734 [DEBUG] browser: Cleared existing numpad value
+2026-05-01 13:54:51,734 [DEBUG] browser: sleep 2.0s (after clear)
+2026-05-01 13:54:55,754 [DEBUG] browser:   Numpad pressed: data-value='9'
+2026-05-01 13:54:55,757 [DEBUG] browser: sleep 2.0s (after numpad 9)
+2026-05-01 13:54:59,800 [DEBUG] browser:   Numpad pressed: data-value='6'
+2026-05-01 13:54:59,800 [DEBUG] browser: sleep 2.0s (after numpad 6)
+2026-05-01 13:55:03,837 [DEBUG] browser:   Numpad pressed: data-value='ok'
+2026-05-01 13:55:03,837 [DEBUG] browser: sleep 2.0s (after numpad ok)
+2026-05-01 13:55:05,853 [INFO] browser: Numerical answer submitted: '96'
+2026-05-01 13:55:05,854 [DEBUG] browser: Clicking Next
+2026-05-01 13:55:05,856 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:55:09,893 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 13:55:11,912 [DEBUG] browser: Question number: 32  (header text: 'Question 32 of 48')
+2026-05-01 13:55:11,934 [DEBUG] browser: Question meta: type='Numerical'  subject='Mathematics'
+2026-05-01 13:55:14,059 [DEBUG] browser: Screenshot taken (132696 bytes)
+2026-05-01 13:55:16,063 [DEBUG] vlm: Sending numerical question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:55:20,950 [INFO] vlm: VLM parsed result: {'answer': '2'}
+2026-05-01 13:55:20,955 [DEBUG] exam_runner: Q32: type='Numerical' subject='Mathematics' vlm={'answer': '2', '_type': 'numerical'}
+2026-05-01 13:55:20,955 [DEBUG] browser: Entering numerical answer: '2'
+2026-05-01 13:55:22,466 [DEBUG] browser: Numpad trigger selector failed (input[placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("input[placeholder^='Text']").first to be visible
+
+2026-05-01 13:55:23,986 [DEBUG] browser: Numpad trigger selector failed ([placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[placeholder^='Text']").first to be visible
+
+2026-05-01 13:55:25,499 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text..')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text..')").first to be visible
+
+2026-05-01 13:55:27,005 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text...')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text...')").first to be visible
+
+2026-05-01 13:55:28,521 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-trigger']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-trigger']").first to be visible
+
+2026-05-01 13:55:30,029 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-input']").first to be visible
+
+2026-05-01 13:55:31,539 [DEBUG] browser: Numpad trigger selector failed ([class*='answer-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='answer-input']").first to be visible
+
+2026-05-01 13:55:32,764 [DEBUG] browser: Numpad trigger clicked via selector: [class*='numerical-input']
+2026-05-01 13:55:32,767 [DEBUG] browser: sleep 2.0s (after numpad trigger click)
+2026-05-01 13:55:34,783 [DEBUG] browser: Numpad modal opened
+2026-05-01 13:55:36,804 [DEBUG] browser: Cleared existing numpad value
+2026-05-01 13:55:36,804 [DEBUG] browser: sleep 2.0s (after clear)
+2026-05-01 13:55:40,855 [DEBUG] browser:   Numpad pressed: data-value='2'
+2026-05-01 13:55:40,855 [DEBUG] browser: sleep 2.0s (after numpad 2)
+2026-05-01 13:55:43,904 [DEBUG] browser:   Numpad pressed: data-value='ok'
+2026-05-01 13:55:43,906 [DEBUG] browser: sleep 2.0s (after numpad ok)
+2026-05-01 13:55:45,917 [INFO] browser: Numerical answer submitted: '2'
+2026-05-01 13:55:45,917 [DEBUG] browser: Clicking Next
+2026-05-01 13:55:45,917 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:55:49,955 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 13:55:51,977 [DEBUG] browser: Question number: 33  (header text: 'Question 33 of 48')
+2026-05-01 13:55:51,993 [DEBUG] browser: Question meta: type='MCQ-Multiple'  subject='Physics'
+2026-05-01 13:55:54,162 [DEBUG] browser: Screenshot taken (211476 bytes)
+2026-05-01 13:55:56,165 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:55:58,801 [INFO] vlm: VLM parsed result: {'answers': ['A', 'B', 'C', 'D']}
+2026-05-01 13:55:58,801 [DEBUG] exam_runner: Q33: type='MCQ-Multiple' subject='Physics' vlm={'answers': ['A', 'B', 'C', 'D'], '_type': 'mcq-multiple'}
+2026-05-01 13:55:58,801 [DEBUG] browser: Attempting to click option 'A'
+2026-05-01 13:56:00,306 [DEBUG] browser: Option A selector failed (.mcq-option[data-option='A']): Locator.scroll_into_view_if_needed: Timeout 1484ms exceeded.
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+2026-05-01 13:56:03,665 [INFO] browser: Clicked option A via selector: [data-option='A']
+2026-05-01 13:56:03,665 [DEBUG] browser: sleep 2.0s (after option A click)
+2026-05-01 13:56:05,670 [DEBUG] browser: Attempting to click option 'B'
+2026-05-01 13:56:07,177 [DEBUG] browser: Option B selector failed (.mcq-option[data-option='B']): Locator.scroll_into_view_if_needed: Timeout 1484ms exceeded.
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+2026-05-01 13:56:08,696 [DEBUG] browser: Option B selector failed ([data-option='B']): Locator.scroll_into_view_if_needed: Timeout 1484ms exceeded.
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+2026-05-01 13:56:10,202 [DEBUG] browser: Option B selector failed (.mcq-option:has(:text-is('B'))): Locator.scroll_into_view_if_needed: Timeout 1469ms exceeded.
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+2026-05-01 13:56:11,721 [DEBUG] browser: Option B selector failed (label:has(:text-is('B'))): Locator.scroll_into_view_if_needed: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("label:has(:text-is('B'))").first
+
+2026-05-01 13:56:13,229 [DEBUG] browser: Option B selector failed (input[type='checkbox'][value='B'], input[type='radio'][value='B']): Locator.scroll_into_view_if_needed: Timeout 1484ms exceeded.
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+2026-05-01 13:56:14,769 [DEBUG] browser: Option B selector failed (.option-label:text-is('B'), [class*='option-label']:text-is('B')): Locator.scroll_into_view_if_needed: Timeout 1500ms exceeded.
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+2026-05-01 13:56:16,807 [INFO] browser: Clicked option B via bare-text fallback
+2026-05-01 13:56:16,810 [DEBUG] browser: sleep 2.0s (after option B click)
+2026-05-01 13:56:18,811 [DEBUG] browser: Clicking Next
+2026-05-01 13:56:18,811 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:56:22,852 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 13:56:24,876 [DEBUG] browser: Question number: 34  (header text: 'Question 34 of 48')
+2026-05-01 13:56:24,890 [DEBUG] browser: Question meta: type='MCQ-Multiple'  subject='Physics'
+2026-05-01 13:56:27,021 [DEBUG] browser: Screenshot taken (126942 bytes)
+2026-05-01 13:56:29,023 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:56:31,457 [INFO] vlm: VLM parsed result: {'answers': ['A', 'B']}
+2026-05-01 13:56:31,457 [DEBUG] exam_runner: Q34: type='MCQ-Multiple' subject='Physics' vlm={'answers': ['A', 'B'], '_type': 'mcq-multiple'}
+2026-05-01 13:56:31,457 [DEBUG] browser: Attempting to click option 'A'
+2026-05-01 13:56:34,665 [INFO] browser: Clicked option A via selector: .mcq-option[data-option='A']
+2026-05-01 13:56:34,665 [DEBUG] browser: sleep 2.0s (after option A click)
+2026-05-01 13:56:36,668 [DEBUG] browser: Attempting to click option 'B'
+2026-05-01 13:56:38,190 [DEBUG] browser: Option B selector failed (.mcq-option[data-option='B']): Locator.scroll_into_view_if_needed: Timeout 1484ms exceeded.
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+2026-05-01 13:56:41,720 [INFO] browser: Clicked option B via selector: [data-option='B']
+2026-05-01 13:56:41,721 [DEBUG] browser: sleep 2.0s (after option B click)
+2026-05-01 13:56:43,724 [DEBUG] browser: Clicking Next
+2026-05-01 13:56:43,724 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:56:46,794 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 13:56:48,809 [DEBUG] browser: Question number: 35  (header text: 'Question 35 of 48')
+2026-05-01 13:56:48,826 [DEBUG] browser: Question meta: type='MCQ-Multiple'  subject='Physics'
+2026-05-01 13:56:51,003 [DEBUG] browser: Screenshot taken (224499 bytes)
+2026-05-01 13:56:53,004 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:56:56,143 [INFO] vlm: VLM parsed result: {'answers': ['A', 'B', 'C']}
+2026-05-01 13:56:56,145 [DEBUG] exam_runner: Q35: type='MCQ-Multiple' subject='Physics' vlm={'answers': ['A', 'B', 'C'], '_type': 'mcq-multiple'}
+2026-05-01 13:56:56,148 [DEBUG] browser: Attempting to click option 'A'
+2026-05-01 13:56:59,672 [INFO] browser: Clicked option A via selector: .mcq-option[data-option='A']
+2026-05-01 13:56:59,672 [DEBUG] browser: sleep 2.0s (after option A click)
+2026-05-01 13:57:01,674 [DEBUG] browser: Attempting to click option 'B'
+2026-05-01 13:57:03,197 [DEBUG] browser: Option B selector failed (.mcq-option[data-option='B']): Locator.scroll_into_view_if_needed: Timeout 1484ms exceeded.
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+2026-05-01 13:57:06,736 [INFO] browser: Clicked option B via selector: [data-option='B']
+2026-05-01 13:57:06,737 [DEBUG] browser: sleep 2.0s (after option B click)
+2026-05-01 13:57:08,739 [DEBUG] browser: Clicking Next
+2026-05-01 13:57:08,739 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:57:11,789 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 13:57:13,808 [DEBUG] browser: Question number: 36  (header text: 'Question 36 of 48')
+2026-05-01 13:57:13,826 [DEBUG] browser: Question meta: type='MCQ-Single'  subject='Physics'
+2026-05-01 13:57:16,024 [DEBUG] browser: Screenshot taken (215993 bytes)
+2026-05-01 13:57:18,027 [DEBUG] vlm: Sending mcq-single question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:57:20,923 [INFO] vlm: VLM parsed result: {'answer': 'A'}
+2026-05-01 13:57:20,924 [DEBUG] exam_runner: Q36: type='MCQ-Single' subject='Physics' vlm={'answer': 'A', '_type': 'mcq-single'}
+2026-05-01 13:57:20,924 [DEBUG] browser: Attempting to click option 'A'
+2026-05-01 13:57:22,432 [DEBUG] browser: Option A selector failed (.mcq-option[data-option='A']): Locator.scroll_into_view_if_needed: Timeout 1484ms exceeded.
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+2026-05-01 13:57:25,642 [INFO] browser: Clicked option A via selector: [data-option='A']
+2026-05-01 13:57:25,642 [DEBUG] browser: sleep 2.0s (after option A click)
+2026-05-01 13:57:27,644 [DEBUG] browser: Clicking Next
+2026-05-01 13:57:27,644 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:57:31,707 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 13:57:33,725 [DEBUG] browser: Question number: 37  (header text: 'Question 37 of 48')
+2026-05-01 13:57:33,735 [DEBUG] browser: Question meta: type='MCQ-Single'  subject='Physics'
+2026-05-01 13:57:35,858 [DEBUG] browser: Screenshot taken (137265 bytes)
+2026-05-01 13:57:37,862 [DEBUG] vlm: Sending mcq-single question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:57:39,762 [INFO] vlm: VLM parsed result: {'answer': 'B'}
+2026-05-01 13:57:39,774 [DEBUG] exam_runner: Q37: type='MCQ-Single' subject='Physics' vlm={'answer': 'B', '_type': 'mcq-single'}
+2026-05-01 13:57:39,775 [DEBUG] browser: Attempting to click option 'B'
+2026-05-01 13:57:41,282 [DEBUG] browser: Option B selector failed (.mcq-option[data-option='B']): Locator.scroll_into_view_if_needed: Timeout 1469ms exceeded.
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+2026-05-01 13:57:44,650 [INFO] browser: Clicked option B via selector: [data-option='B']
+2026-05-01 13:57:44,654 [DEBUG] browser: sleep 2.0s (after option B click)
+2026-05-01 13:57:46,655 [DEBUG] browser: Clicking Next
+2026-05-01 13:57:46,655 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:57:49,697 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 13:57:51,715 [DEBUG] browser: Question number: 38  (header text: 'Question 38 of 48')
+2026-05-01 13:57:51,736 [DEBUG] browser: Question meta: type='MCQ-Single'  subject='Physics'
+2026-05-01 13:57:53,920 [DEBUG] browser: Screenshot taken (220011 bytes)
+2026-05-01 13:57:55,922 [DEBUG] vlm: Sending mcq-single question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:57:58,009 [INFO] vlm: VLM parsed result: {'answer': 'D'}
+2026-05-01 13:57:58,012 [DEBUG] exam_runner: Q38: type='MCQ-Single' subject='Physics' vlm={'answer': 'D', '_type': 'mcq-single'}
+2026-05-01 13:57:58,012 [DEBUG] browser: Attempting to click option 'D'
+2026-05-01 13:57:59,517 [DEBUG] browser: Option D selector failed (.mcq-option[data-option='D']): Locator.scroll_into_view_if_needed: Timeout 1468ms exceeded.
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+2026-05-01 13:58:02,727 [INFO] browser: Clicked option D via selector: [data-option='D']
+2026-05-01 13:58:02,727 [DEBUG] browser: sleep 2.0s (after option D click)
+2026-05-01 13:58:04,728 [DEBUG] browser: Clicking Next
+2026-05-01 13:58:04,730 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:58:08,775 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 13:58:10,797 [DEBUG] browser: Question number: 39  (header text: 'Question 39 of 48')
+2026-05-01 13:58:10,815 [DEBUG] browser: Question meta: type='MCQ-Single'  subject='Physics'
+2026-05-01 13:58:12,937 [DEBUG] browser: Screenshot taken (130028 bytes)
+2026-05-01 13:58:14,939 [DEBUG] vlm: Sending mcq-single question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:58:16,884 [INFO] vlm: VLM parsed result: {'answer': 'A'}
+2026-05-01 13:58:16,884 [DEBUG] exam_runner: Q39: type='MCQ-Single' subject='Physics' vlm={'answer': 'A', '_type': 'mcq-single'}
+2026-05-01 13:58:16,884 [DEBUG] browser: Attempting to click option 'A'
+2026-05-01 13:58:18,407 [DEBUG] browser: Option A selector failed (.mcq-option[data-option='A']): Locator.scroll_into_view_if_needed: Timeout 1484ms exceeded.
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+2026-05-01 13:58:21,671 [INFO] browser: Clicked option A via selector: [data-option='A']
+2026-05-01 13:58:21,673 [DEBUG] browser: sleep 2.0s (after option A click)
+2026-05-01 13:58:23,674 [DEBUG] browser: Clicking Next
+2026-05-01 13:58:23,674 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:58:27,729 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 13:58:29,748 [DEBUG] browser: Question number: 40  (header text: 'Question 40 of 48')
+2026-05-01 13:58:29,759 [DEBUG] browser: Question meta: type='Matching'  subject='Physics'
+2026-05-01 13:58:31,863 [DEBUG] browser: Screenshot taken (193644 bytes)
+2026-05-01 13:58:33,865 [DEBUG] vlm: Sending matching question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:58:36,319 [INFO] vlm: VLM parsed result: {'answer': 'A'}
+2026-05-01 13:58:36,321 [DEBUG] exam_runner: Q40: type='Matching' subject='Physics' vlm={'answer': 'A', '_type': 'mcq-single'}
+2026-05-01 13:58:36,321 [DEBUG] browser: Attempting to click option 'A'
+2026-05-01 13:58:39,730 [INFO] browser: Clicked option A via selector: .mcq-option[data-option='A']
+2026-05-01 13:58:39,730 [DEBUG] browser: sleep 2.0s (after option A click)
+2026-05-01 13:58:41,734 [DEBUG] browser: Clicking Next
+2026-05-01 13:58:41,735 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:58:45,780 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 13:58:47,801 [DEBUG] browser: Question number: 41  (header text: 'Question 41 of 48')
+2026-05-01 13:58:47,814 [DEBUG] browser: Question meta: type='Matching'  subject='Physics'
+2026-05-01 13:58:49,961 [DEBUG] browser: Screenshot taken (199909 bytes)
+2026-05-01 13:58:51,964 [DEBUG] vlm: Sending matching question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:58:54,213 [INFO] vlm: VLM parsed result: {'answer': 'A'}
+2026-05-01 13:58:54,215 [DEBUG] exam_runner: Q41: type='Matching' subject='Physics' vlm={'answer': 'A', '_type': 'mcq-single'}
+2026-05-01 13:58:54,215 [DEBUG] browser: Attempting to click option 'A'
+2026-05-01 13:58:57,635 [INFO] browser: Clicked option A via selector: .mcq-option[data-option='A']
+2026-05-01 13:58:57,636 [DEBUG] browser: sleep 2.0s (after option A click)
+2026-05-01 13:58:59,637 [DEBUG] browser: Clicking Next
+2026-05-01 13:58:59,637 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:59:02,706 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 13:59:04,722 [DEBUG] browser: Question number: 42  (header text: 'Question 42 of 48')
+2026-05-01 13:59:04,736 [DEBUG] browser: Question meta: type='Matching'  subject='Physics'
+2026-05-01 13:59:06,881 [DEBUG] browser: Screenshot taken (204765 bytes)
+2026-05-01 13:59:08,884 [DEBUG] vlm: Sending matching question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:59:12,234 [INFO] vlm: VLM parsed result: {'answer': 'A'}
+2026-05-01 13:59:12,239 [DEBUG] exam_runner: Q42: type='Matching' subject='Physics' vlm={'answer': 'A', '_type': 'mcq-single'}
+2026-05-01 13:59:12,239 [DEBUG] browser: Attempting to click option 'A'
+2026-05-01 13:59:15,581 [INFO] browser: Clicked option A via selector: .mcq-option[data-option='A']
+2026-05-01 13:59:15,581 [DEBUG] browser: sleep 2.0s (after option A click)
+2026-05-01 13:59:17,584 [DEBUG] browser: Clicking Next
+2026-05-01 13:59:17,584 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:59:20,610 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 13:59:22,625 [DEBUG] browser: Question number: 43  (header text: 'Question 43 of 48')
+2026-05-01 13:59:22,642 [DEBUG] browser: Question meta: type='Numerical'  subject='Physics'
+2026-05-01 13:59:24,779 [DEBUG] browser: Screenshot taken (140167 bytes)
+2026-05-01 13:59:26,780 [DEBUG] vlm: Sending numerical question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 13:59:29,235 [INFO] vlm: VLM parsed result: {'answer': '1'}
+2026-05-01 13:59:29,238 [DEBUG] exam_runner: Q43: type='Numerical' subject='Physics' vlm={'answer': '1', '_type': 'numerical'}
+2026-05-01 13:59:29,238 [DEBUG] browser: Entering numerical answer: '1'
+2026-05-01 13:59:30,750 [DEBUG] browser: Numpad trigger selector failed (input[placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("input[placeholder^='Text']").first to be visible
+
+2026-05-01 13:59:32,259 [DEBUG] browser: Numpad trigger selector failed ([placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[placeholder^='Text']").first to be visible
+
+2026-05-01 13:59:33,769 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text..')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text..')").first to be visible
+
+2026-05-01 13:59:35,279 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text...')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text...')").first to be visible
+
+2026-05-01 13:59:36,790 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-trigger']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-trigger']").first to be visible
+
+2026-05-01 13:59:38,297 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-input']").first to be visible
+
+2026-05-01 13:59:39,810 [DEBUG] browser: Numpad trigger selector failed ([class*='answer-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='answer-input']").first to be visible
+
+2026-05-01 13:59:41,670 [DEBUG] browser: Numpad trigger clicked via selector: [class*='numerical-input']
+2026-05-01 13:59:41,670 [DEBUG] browser: sleep 2.0s (after numpad trigger click)
+2026-05-01 13:59:43,688 [DEBUG] browser: Numpad modal opened
+2026-05-01 13:59:45,718 [DEBUG] browser: Cleared existing numpad value
+2026-05-01 13:59:45,719 [DEBUG] browser: sleep 2.0s (after clear)
+2026-05-01 13:59:49,746 [DEBUG] browser:   Numpad pressed: data-value='1'
+2026-05-01 13:59:49,746 [DEBUG] browser: sleep 2.0s (after numpad 1)
+2026-05-01 13:59:53,787 [DEBUG] browser:   Numpad pressed: data-value='ok'
+2026-05-01 13:59:53,788 [DEBUG] browser: sleep 2.0s (after numpad ok)
+2026-05-01 13:59:55,796 [INFO] browser: Numerical answer submitted: '1'
+2026-05-01 13:59:55,796 [DEBUG] browser: Clicking Next
+2026-05-01 13:59:55,796 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 13:59:59,842 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 14:00:01,864 [DEBUG] browser: Question number: 44  (header text: 'Question 44 of 48')
+2026-05-01 14:00:01,879 [DEBUG] browser: Question meta: type='Numerical'  subject='Physics'
+2026-05-01 14:00:03,976 [DEBUG] browser: Screenshot taken (135258 bytes)
+2026-05-01 14:00:05,983 [DEBUG] vlm: Sending numerical question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 14:00:09,021 [INFO] vlm: VLM parsed result: {'answer': '7.27'}
+2026-05-01 14:00:09,022 [DEBUG] exam_runner: Q44: type='Numerical' subject='Physics' vlm={'answer': '7.27', '_type': 'numerical'}
+2026-05-01 14:00:09,024 [DEBUG] browser: Entering numerical answer: '7.27'
+2026-05-01 14:00:10,530 [DEBUG] browser: Numpad trigger selector failed (input[placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("input[placeholder^='Text']").first to be visible
+
+2026-05-01 14:00:12,041 [DEBUG] browser: Numpad trigger selector failed ([placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[placeholder^='Text']").first to be visible
+
+2026-05-01 14:00:13,550 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text..')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text..')").first to be visible
+
+2026-05-01 14:00:15,058 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text...')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text...')").first to be visible
+
+2026-05-01 14:00:16,565 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-trigger']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-trigger']").first to be visible
+
+2026-05-01 14:00:18,083 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-input']").first to be visible
+
+2026-05-01 14:00:19,599 [DEBUG] browser: Numpad trigger selector failed ([class*='answer-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='answer-input']").first to be visible
+
+2026-05-01 14:00:20,715 [DEBUG] browser: Numpad trigger clicked via selector: [class*='numerical-input']
+2026-05-01 14:00:20,719 [DEBUG] browser: sleep 2.0s (after numpad trigger click)
+2026-05-01 14:00:22,734 [DEBUG] browser: Numpad modal opened
+2026-05-01 14:00:24,746 [DEBUG] browser: Cleared existing numpad value
+2026-05-01 14:00:24,746 [DEBUG] browser: sleep 2.0s (after clear)
+2026-05-01 14:00:28,760 [DEBUG] browser:   Numpad pressed: data-value='7'
+2026-05-01 14:00:28,760 [DEBUG] browser: sleep 2.0s (after numpad 7)
+2026-05-01 14:00:32,790 [DEBUG] browser:   Numpad pressed: data-value='.'
+2026-05-01 14:00:32,792 [DEBUG] browser: sleep 2.0s (after numpad .)
+2026-05-01 14:00:36,842 [DEBUG] browser:   Numpad pressed: data-value='2'
+2026-05-01 14:00:36,842 [DEBUG] browser: sleep 2.0s (after numpad 2)
+2026-05-01 14:00:40,865 [DEBUG] browser:   Numpad pressed: data-value='7'
+2026-05-01 14:00:40,865 [DEBUG] browser: sleep 2.0s (after numpad 7)
+2026-05-01 14:00:44,909 [DEBUG] browser:   Numpad pressed: data-value='ok'
+2026-05-01 14:00:44,910 [DEBUG] browser: sleep 2.0s (after numpad ok)
+2026-05-01 14:00:46,915 [INFO] browser: Numerical answer submitted: '7.27'
+2026-05-01 14:00:46,915 [DEBUG] browser: Clicking Next
+2026-05-01 14:00:46,915 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 14:00:50,944 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 14:00:52,960 [DEBUG] browser: Question number: 45  (header text: 'Question 45 of 48')
+2026-05-01 14:00:52,976 [DEBUG] browser: Question meta: type='Numerical'  subject='Physics'
+2026-05-01 14:00:55,104 [DEBUG] browser: Screenshot taken (162818 bytes)
+2026-05-01 14:00:57,106 [DEBUG] vlm: Sending numerical question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 14:01:00,580 [INFO] vlm: VLM parsed result: {'answer': '3'}
+2026-05-01 14:01:00,580 [DEBUG] exam_runner: Q45: type='Numerical' subject='Physics' vlm={'answer': '3', '_type': 'numerical'}
+2026-05-01 14:01:00,582 [DEBUG] browser: Entering numerical answer: '3'
+2026-05-01 14:01:02,101 [DEBUG] browser: Numpad trigger selector failed (input[placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("input[placeholder^='Text']").first to be visible
+
+2026-05-01 14:01:03,609 [DEBUG] browser: Numpad trigger selector failed ([placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[placeholder^='Text']").first to be visible
+
+2026-05-01 14:01:05,127 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text..')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text..')").first to be visible
+
+2026-05-01 14:01:06,639 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text...')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text...')").first to be visible
+
+2026-05-01 14:01:08,153 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-trigger']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-trigger']").first to be visible
+
+2026-05-01 14:01:09,668 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-input']").first to be visible
+
+2026-05-01 14:01:11,184 [DEBUG] browser: Numpad trigger selector failed ([class*='answer-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='answer-input']").first to be visible
+
+2026-05-01 14:01:12,715 [DEBUG] browser: Numpad trigger clicked via selector: [class*='numerical-input']
+2026-05-01 14:01:12,715 [DEBUG] browser: sleep 2.0s (after numpad trigger click)
+2026-05-01 14:01:14,730 [DEBUG] browser: Numpad modal opened
+2026-05-01 14:01:16,751 [DEBUG] browser: Cleared existing numpad value
+2026-05-01 14:01:16,754 [DEBUG] browser: sleep 2.0s (after clear)
+2026-05-01 14:01:20,764 [DEBUG] browser:   Numpad pressed: data-value='3'
+2026-05-01 14:01:20,764 [DEBUG] browser: sleep 2.0s (after numpad 3)
+2026-05-01 14:01:24,823 [DEBUG] browser:   Numpad pressed: data-value='ok'
+2026-05-01 14:01:24,823 [DEBUG] browser: sleep 2.0s (after numpad ok)
+2026-05-01 14:01:26,837 [INFO] browser: Numerical answer submitted: '3'
+2026-05-01 14:01:26,837 [DEBUG] browser: Clicking Next
+2026-05-01 14:01:26,837 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 14:01:30,873 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 14:01:32,899 [DEBUG] browser: Question number: 46  (header text: 'Question 46 of 48')
+2026-05-01 14:01:32,917 [DEBUG] browser: Question meta: type='Numerical'  subject='Physics'
+2026-05-01 14:01:35,046 [DEBUG] browser: Screenshot taken (177286 bytes)
+2026-05-01 14:01:37,047 [DEBUG] vlm: Sending numerical question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 14:01:38,876 [INFO] vlm: VLM parsed result: {'answer': '0.5'}
+2026-05-01 14:01:38,876 [DEBUG] exam_runner: Q46: type='Numerical' subject='Physics' vlm={'answer': '0.5', '_type': 'numerical'}
+2026-05-01 14:01:38,876 [DEBUG] browser: Entering numerical answer: '0.5'
+2026-05-01 14:01:40,395 [DEBUG] browser: Numpad trigger selector failed (input[placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("input[placeholder^='Text']").first to be visible
+
+2026-05-01 14:01:41,905 [DEBUG] browser: Numpad trigger selector failed ([placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[placeholder^='Text']").first to be visible
+
+2026-05-01 14:01:43,416 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text..')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text..')").first to be visible
+
+2026-05-01 14:01:44,936 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text...')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text...')").first to be visible
+
+2026-05-01 14:01:46,448 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-trigger']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-trigger']").first to be visible
+
+2026-05-01 14:01:47,957 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-input']").first to be visible
+
+2026-05-01 14:01:49,468 [DEBUG] browser: Numpad trigger selector failed ([class*='answer-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='answer-input']").first to be visible
+
+2026-05-01 14:01:50,769 [DEBUG] browser: Numpad trigger clicked via selector: [class*='numerical-input']
+2026-05-01 14:01:50,769 [DEBUG] browser: sleep 2.0s (after numpad trigger click)
+2026-05-01 14:01:52,787 [DEBUG] browser: Numpad modal opened
+2026-05-01 14:01:54,799 [DEBUG] browser: Cleared existing numpad value
+2026-05-01 14:01:54,799 [DEBUG] browser: sleep 2.0s (after clear)
+2026-05-01 14:01:58,826 [DEBUG] browser:   Numpad pressed: data-value='0'
+2026-05-01 14:01:58,839 [DEBUG] browser: sleep 2.0s (after numpad 0)
+2026-05-01 14:02:02,865 [DEBUG] browser:   Numpad pressed: data-value='.'
+2026-05-01 14:02:02,865 [DEBUG] browser: sleep 2.0s (after numpad .)
+2026-05-01 14:02:06,905 [DEBUG] browser:   Numpad pressed: data-value='5'
+2026-05-01 14:02:06,906 [DEBUG] browser: sleep 2.0s (after numpad 5)
+2026-05-01 14:02:10,932 [DEBUG] browser:   Numpad pressed: data-value='ok'
+2026-05-01 14:02:10,932 [DEBUG] browser: sleep 2.0s (after numpad ok)
+2026-05-01 14:02:12,941 [INFO] browser: Numerical answer submitted: '0.5'
+2026-05-01 14:02:12,941 [DEBUG] browser: Clicking Next
+2026-05-01 14:02:12,941 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 14:02:16,977 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 14:02:18,989 [DEBUG] browser: Question number: 47  (header text: 'Question 47 of 48')
+2026-05-01 14:02:19,004 [DEBUG] browser: Question meta: type='Numerical'  subject='Physics'
+2026-05-01 14:02:21,177 [DEBUG] browser: Screenshot taken (155619 bytes)
+2026-05-01 14:02:23,182 [DEBUG] vlm: Sending numerical question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 14:02:25,732 [INFO] vlm: VLM parsed result: {'answer': '72'}
+2026-05-01 14:02:25,732 [DEBUG] exam_runner: Q47: type='Numerical' subject='Physics' vlm={'answer': '72', '_type': 'numerical'}
+2026-05-01 14:02:25,732 [DEBUG] browser: Entering numerical answer: '72'
+2026-05-01 14:02:27,246 [DEBUG] browser: Numpad trigger selector failed (input[placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("input[placeholder^='Text']").first to be visible
+
+2026-05-01 14:02:28,753 [DEBUG] browser: Numpad trigger selector failed ([placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[placeholder^='Text']").first to be visible
+
+2026-05-01 14:02:30,268 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text..')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text..')").first to be visible
+
+2026-05-01 14:02:31,779 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text...')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text...')").first to be visible
+
+2026-05-01 14:02:33,294 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-trigger']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-trigger']").first to be visible
+
+2026-05-01 14:02:34,815 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-input']").first to be visible
+
+2026-05-01 14:02:36,329 [DEBUG] browser: Numpad trigger selector failed ([class*='answer-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='answer-input']").first to be visible
+
+2026-05-01 14:02:37,657 [DEBUG] browser: Numpad trigger clicked via selector: [class*='numerical-input']
+2026-05-01 14:02:37,659 [DEBUG] browser: sleep 2.0s (after numpad trigger click)
+2026-05-01 14:02:39,680 [DEBUG] browser: Numpad modal opened
+2026-05-01 14:02:41,687 [DEBUG] browser: Cleared existing numpad value
+2026-05-01 14:02:41,689 [DEBUG] browser: sleep 2.0s (after clear)
+2026-05-01 14:02:44,719 [DEBUG] browser:   Numpad pressed: data-value='7'
+2026-05-01 14:02:44,721 [DEBUG] browser: sleep 2.0s (after numpad 7)
+2026-05-01 14:02:48,772 [DEBUG] browser:   Numpad pressed: data-value='2'
+2026-05-01 14:02:48,772 [DEBUG] browser: sleep 2.0s (after numpad 2)
+2026-05-01 14:02:52,807 [DEBUG] browser:   Numpad pressed: data-value='ok'
+2026-05-01 14:02:52,807 [DEBUG] browser: sleep 2.0s (after numpad ok)
+2026-05-01 14:02:54,819 [INFO] browser: Numerical answer submitted: '72'
+2026-05-01 14:02:54,821 [DEBUG] browser: Clicking Next
+2026-05-01 14:02:54,821 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 14:02:57,860 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 14:02:59,875 [DEBUG] browser: Question number: 48  (header text: 'Question 48 of 48')
+2026-05-01 14:02:59,895 [DEBUG] browser: Question meta: type='Numerical'  subject='Physics'
+2026-05-01 14:03:02,029 [DEBUG] browser: Screenshot taken (141855 bytes)
+2026-05-01 14:03:04,031 [DEBUG] vlm: Sending numerical question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 14:03:06,211 [INFO] vlm: VLM parsed result: {'answer': '72'}
+2026-05-01 14:03:06,211 [DEBUG] exam_runner: Q48: type='Numerical' subject='Physics' vlm={'answer': '72', '_type': 'numerical'}
+2026-05-01 14:03:06,211 [DEBUG] browser: Entering numerical answer: '72'
+2026-05-01 14:03:07,723 [DEBUG] browser: Numpad trigger selector failed (input[placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("input[placeholder^='Text']").first to be visible
+
+2026-05-01 14:03:09,229 [DEBUG] browser: Numpad trigger selector failed ([placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[placeholder^='Text']").first to be visible
+
+2026-05-01 14:03:10,739 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text..')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text..')").first to be visible
+
+2026-05-01 14:03:12,250 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text...')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text...')").first to be visible
+
+2026-05-01 14:03:13,763 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-trigger']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-trigger']").first to be visible
+
+2026-05-01 14:03:15,263 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-input']").first to be visible
+
+2026-05-01 14:03:16,783 [DEBUG] browser: Numpad trigger selector failed ([class*='answer-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='answer-input']").first to be visible
+
+2026-05-01 14:03:18,703 [DEBUG] browser: Numpad trigger clicked via selector: [class*='numerical-input']
+2026-05-01 14:03:18,703 [DEBUG] browser: sleep 2.0s (after numpad trigger click)
+2026-05-01 14:03:20,717 [DEBUG] browser: Numpad modal opened
+2026-05-01 14:03:22,733 [DEBUG] browser: Cleared existing numpad value
+2026-05-01 14:03:22,735 [DEBUG] browser: sleep 2.0s (after clear)
+2026-05-01 14:03:26,768 [DEBUG] browser:   Numpad pressed: data-value='7'
+2026-05-01 14:03:26,770 [DEBUG] browser: sleep 2.0s (after numpad 7)
+2026-05-01 14:03:30,806 [DEBUG] browser:   Numpad pressed: data-value='2'
+2026-05-01 14:03:30,806 [DEBUG] browser: sleep 2.0s (after numpad 2)
+2026-05-01 14:03:34,828 [DEBUG] browser:   Numpad pressed: data-value='ok'
+2026-05-01 14:03:34,828 [DEBUG] browser: sleep 2.0s (after numpad ok)
+2026-05-01 14:03:36,841 [INFO] browser: Numerical answer submitted: '72'
+2026-05-01 14:03:36,843 [INFO] exam_runner: Submit target reached (Q48); breaking loop to submit
+2026-05-01 14:03:36,843 [INFO] browser: Clicking Submit Exam
+2026-05-01 14:03:41,886 [INFO] browser: Exam submitted
+2026-05-01 14:03:41,888 [INFO] browser: Navigating to https://jee-image.onrender.com
+2026-05-01 14:03:42,804 [DEBUG] browser: Filling login form
+2026-05-01 14:03:42,866 [DEBUG] browser: Selecting paper: 2025 – Paper 2 – English
+2026-05-01 14:03:45,931 [INFO] browser: Logged in — paper: 2025 – Paper 2 – English
+2026-05-01 14:03:45,934 [DEBUG] browser: Zooming out (Ctrl+Minus x5)
+2026-05-01 14:03:45,960 [DEBUG] browser:   Ctrl+Minus press 1/5
+2026-05-01 14:03:45,979 [DEBUG] browser:   Ctrl+Minus press 2/5
+2026-05-01 14:03:45,992 [DEBUG] browser:   Ctrl+Minus press 3/5
+2026-05-01 14:03:46,002 [DEBUG] browser:   Ctrl+Minus press 4/5
+2026-05-01 14:03:46,012 [DEBUG] browser:   Ctrl+Minus press 5/5
+2026-05-01 14:03:46,844 [INFO] browser: Total questions in paper: 60
+2026-05-01 14:03:46,848 [INFO] exam_runner: Submit target for 2025 – Paper 2 – English: Q47
+2026-05-01 14:03:46,864 [DEBUG] browser: Question number: 1  (header text: 'Question 1 of 60')
+2026-05-01 14:03:48,204 [DEBUG] browser: Question meta: type='MCQ-Multiple'  subject='Chemistry'
+2026-05-01 14:03:50,086 [DEBUG] browser: Screenshot taken (147242 bytes)
+2026-05-01 14:03:52,087 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 14:03:53,748 [INFO] vlm: VLM parsed result: {'answers': ['A', 'C', 'D']}
+2026-05-01 14:03:53,750 [DEBUG] exam_runner: Q1: type='MCQ-Multiple' subject='Chemistry' vlm={'answers': ['A', 'C', 'D'], '_type': 'mcq-multiple'}
+2026-05-01 14:03:53,750 [DEBUG] browser: Attempting to click option 'A'
+2026-05-01 14:03:57,309 [INFO] browser: Clicked option A via selector: .mcq-option[data-option='A']
+2026-05-01 14:03:57,309 [DEBUG] browser: sleep 2.0s (after option A click)
+2026-05-01 14:03:59,311 [DEBUG] browser: Attempting to click option 'C'
+2026-05-01 14:04:00,834 [DEBUG] browser: Option C selector failed (.mcq-option[data-option='C']): Locator.scroll_into_view_if_needed: Timeout 1500ms exceeded.
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+2026-05-01 14:04:04,344 [INFO] browser: Clicked option C via selector: [data-option='C']
+2026-05-01 14:04:04,344 [DEBUG] browser: sleep 2.0s (after option C click)
+2026-05-01 14:04:06,345 [DEBUG] browser: Clicking Next
+2026-05-01 14:04:06,345 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 14:04:10,394 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 14:04:12,417 [DEBUG] browser: Question number: 2  (header text: 'Question 2 of 47')
+2026-05-01 14:04:12,441 [DEBUG] browser: Question meta: type='MCQ-Multiple'  subject='Chemistry'
+2026-05-01 14:04:14,561 [DEBUG] browser: Screenshot taken (100261 bytes)
+2026-05-01 14:04:16,564 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 14:04:18,225 [INFO] vlm: VLM parsed result: {'answers': ['B', 'D']}
+2026-05-01 14:04:18,227 [DEBUG] exam_runner: Q2: type='MCQ-Multiple' subject='Chemistry' vlm={'answers': ['B', 'D'], '_type': 'mcq-multiple'}
+2026-05-01 14:04:18,227 [DEBUG] browser: Attempting to click option 'B'
+2026-05-01 14:04:21,339 [INFO] browser: Clicked option B via selector: .mcq-option[data-option='B']
+2026-05-01 14:04:21,339 [DEBUG] browser: sleep 2.0s (after option B click)
+2026-05-01 14:04:23,342 [DEBUG] browser: Attempting to click option 'D'
+2026-05-01 14:04:24,855 [DEBUG] browser: Option D selector failed (.mcq-option[data-option='D']): Locator.scroll_into_view_if_needed: Timeout 1484ms exceeded.
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+2026-05-01 14:04:26,348 [DEBUG] browser: Option D selector failed ([data-option='D']): Locator.scroll_into_view_if_needed: Timeout 1469ms exceeded.
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+2026-05-01 14:04:29,421 [INFO] browser: Clicked option D via selector: .mcq-option:has(:text-is('D'))
+2026-05-01 14:04:29,421 [DEBUG] browser: sleep 2.0s (after option D click)
+2026-05-01 14:04:31,426 [DEBUG] browser: Clicking Next
+2026-05-01 14:04:31,426 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 14:04:35,461 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 14:04:37,480 [DEBUG] browser: Question number: 3  (header text: 'Question 3 of 47')
+2026-05-01 14:04:37,497 [DEBUG] browser: Question meta: type='MCQ-Multiple'  subject='Chemistry'
+2026-05-01 14:04:39,626 [DEBUG] browser: Screenshot taken (143356 bytes)
+2026-05-01 14:04:41,629 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 14:04:43,937 [INFO] vlm: VLM parsed result: {'answers': ['A', 'C', 'D']}
+2026-05-01 14:04:43,939 [DEBUG] exam_runner: Q3: type='MCQ-Multiple' subject='Chemistry' vlm={'answers': ['A', 'C', 'D'], '_type': 'mcq-multiple'}
+2026-05-01 14:04:43,939 [DEBUG] browser: Attempting to click option 'A'
+2026-05-01 14:04:47,343 [INFO] browser: Clicked option A via selector: .mcq-option[data-option='A']
+2026-05-01 14:04:47,344 [DEBUG] browser: sleep 2.0s (after option A click)
+2026-05-01 14:04:49,345 [DEBUG] browser: Attempting to click option 'C'
+2026-05-01 14:04:50,852 [DEBUG] browser: Option C selector failed (.mcq-option[data-option='C']): Locator.scroll_into_view_if_needed: Timeout 1484ms exceeded.
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+2026-05-01 14:04:52,358 [DEBUG] browser: Option C selector failed ([data-option='C']): Locator.scroll_into_view_if_needed: Timeout 1484ms exceeded.
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+2026-05-01 14:04:53,879 [DEBUG] browser: Option C selector failed (.mcq-option:has(:text-is('C'))): Locator.scroll_into_view_if_needed: Timeout 1485ms exceeded.
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+2026-05-01 14:04:55,390 [DEBUG] browser: Option C selector failed (label:has(:text-is('C'))): Locator.scroll_into_view_if_needed: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("label:has(:text-is('C'))").first
+
+2026-05-01 14:04:56,895 [DEBUG] browser: Option C selector failed (input[type='checkbox'][value='C'], input[type='radio'][value='C']): Locator.scroll_into_view_if_needed: Timeout 1484ms exceeded.
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+2026-05-01 14:04:58,405 [DEBUG] browser: Option C selector failed (.option-label:text-is('C'), [class*='option-label']:text-is('C')): Locator.scroll_into_view_if_needed: Timeout 1484ms exceeded.
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+2026-05-01 14:05:00,467 [INFO] browser: Clicked option C via bare-text fallback
+2026-05-01 14:05:00,467 [DEBUG] browser: sleep 2.0s (after option C click)
+2026-05-01 14:05:02,469 [DEBUG] browser: Clicking Next
+2026-05-01 14:05:02,469 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 14:05:06,511 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 14:05:08,535 [DEBUG] browser: Question number: 4  (header text: 'Question 4 of 47')
+2026-05-01 14:05:08,551 [DEBUG] browser: Question meta: type='MCQ-Multiple'  subject='Chemistry'
+2026-05-01 14:05:10,690 [DEBUG] browser: Screenshot taken (129975 bytes)
+2026-05-01 14:05:12,692 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 14:05:14,736 [INFO] vlm: VLM parsed result: {'answers': ['A', 'B', 'D']}
+2026-05-01 14:05:14,736 [DEBUG] exam_runner: Q4: type='MCQ-Multiple' subject='Chemistry' vlm={'answers': ['A', 'B', 'D'], '_type': 'mcq-multiple'}
+2026-05-01 14:05:14,736 [DEBUG] browser: Attempting to click option 'A'
+2026-05-01 14:05:16,248 [DEBUG] browser: Option A selector failed (.mcq-option[data-option='A']): Locator.scroll_into_view_if_needed: Timeout 1469ms exceeded.
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+2026-05-01 14:05:19,393 [INFO] browser: Clicked option A via selector: [data-option='A']
+2026-05-01 14:05:19,393 [DEBUG] browser: sleep 2.0s (after option A click)
+2026-05-01 14:05:21,398 [DEBUG] browser: Attempting to click option 'B'
+2026-05-01 14:05:22,917 [DEBUG] browser: Option B selector failed (.mcq-option[data-option='B']): Locator.scroll_into_view_if_needed: Timeout 1484ms exceeded.
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+2026-05-01 14:05:24,426 [DEBUG] browser: Option B selector failed ([data-option='B']): Locator.scroll_into_view_if_needed: Timeout 1485ms exceeded.
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+2026-05-01 14:05:25,936 [DEBUG] browser: Option B selector failed (.mcq-option:has(:text-is('B'))): Locator.scroll_into_view_if_needed: Timeout 1484ms exceeded.
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+2026-05-01 14:05:27,455 [DEBUG] browser: Option B selector failed (label:has(:text-is('B'))): Locator.scroll_into_view_if_needed: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("label:has(:text-is('B'))").first
+
+2026-05-01 14:05:28,974 [DEBUG] browser: Option B selector failed (input[type='checkbox'][value='B'], input[type='radio'][value='B']): Locator.scroll_into_view_if_needed: Timeout 1485ms exceeded.
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+2026-05-01 14:05:30,486 [DEBUG] browser: Option B selector failed (.option-label:text-is('B'), [class*='option-label']:text-is('B')): Locator.scroll_into_view_if_needed: Timeout 1484ms exceeded.
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+2026-05-01 14:05:32,529 [INFO] browser: Clicked option B via bare-text fallback
+2026-05-01 14:05:32,529 [DEBUG] browser: sleep 2.0s (after option B click)
+2026-05-01 14:05:34,530 [DEBUG] browser: Clicking Next
+2026-05-01 14:05:34,530 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 14:05:38,593 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 14:05:40,626 [DEBUG] browser: Question number: 5  (header text: 'Question 5 of 47')
+2026-05-01 14:05:40,650 [DEBUG] browser: Question meta: type='MCQ-Single'  subject='Chemistry'
+2026-05-01 14:05:42,753 [DEBUG] browser: Screenshot taken (110972 bytes)
+2026-05-01 14:05:44,753 [DEBUG] vlm: Sending mcq-single question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 14:05:46,699 [INFO] vlm: VLM parsed result: {'answer': 'D'}
+2026-05-01 14:05:46,699 [DEBUG] exam_runner: Q5: type='MCQ-Single' subject='Chemistry' vlm={'answer': 'D', '_type': 'mcq-single'}
+2026-05-01 14:05:46,701 [DEBUG] browser: Attempting to click option 'D'
+2026-05-01 14:05:48,212 [DEBUG] browser: Option D selector failed (.mcq-option[data-option='D']): Locator.scroll_into_view_if_needed: Timeout 1485ms exceeded.
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+2026-05-01 14:05:51,337 [INFO] browser: Clicked option D via selector: [data-option='D']
+2026-05-01 14:05:51,338 [DEBUG] browser: sleep 2.0s (after option D click)
+2026-05-01 14:05:53,340 [DEBUG] browser: Clicking Next
+2026-05-01 14:05:53,340 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 14:05:56,383 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 14:05:58,396 [DEBUG] browser: Question number: 6  (header text: 'Question 6 of 47')
+2026-05-01 14:05:58,417 [DEBUG] browser: Question meta: type='MCQ-Single'  subject='Chemistry'
+2026-05-01 14:06:00,545 [DEBUG] browser: Screenshot taken (111602 bytes)
+2026-05-01 14:06:02,549 [DEBUG] vlm: Sending mcq-single question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 14:06:04,469 [INFO] vlm: VLM parsed result: {'answer': 'B'}
+2026-05-01 14:06:04,473 [DEBUG] exam_runner: Q6: type='MCQ-Single' subject='Chemistry' vlm={'answer': 'B', '_type': 'mcq-single'}
+2026-05-01 14:06:04,473 [DEBUG] browser: Attempting to click option 'B'
+2026-05-01 14:06:05,982 [DEBUG] browser: Option B selector failed (.mcq-option[data-option='B']): Locator.scroll_into_view_if_needed: Timeout 1484ms exceeded.
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+2026-05-01 14:06:09,298 [INFO] browser: Clicked option B via selector: [data-option='B']
+2026-05-01 14:06:09,298 [DEBUG] browser: sleep 2.0s (after option B click)
+2026-05-01 14:06:11,301 [DEBUG] browser: Clicking Next
+2026-05-01 14:06:11,301 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 14:06:14,329 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 14:06:16,343 [DEBUG] browser: Question number: 7  (header text: 'Question 7 of 47')
+2026-05-01 14:06:16,366 [DEBUG] browser: Question meta: type='MCQ-Single'  subject='Chemistry'
+2026-05-01 14:06:18,502 [DEBUG] browser: Screenshot taken (151078 bytes)
+2026-05-01 14:06:20,504 [DEBUG] vlm: Sending mcq-single question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 14:06:22,748 [INFO] vlm: VLM parsed result: {'answer': 'C'}
+2026-05-01 14:06:22,750 [DEBUG] exam_runner: Q7: type='MCQ-Single' subject='Chemistry' vlm={'answer': 'C', '_type': 'mcq-single'}
+2026-05-01 14:06:22,750 [DEBUG] browser: Attempting to click option 'C'
+2026-05-01 14:06:24,263 [DEBUG] browser: Option C selector failed (.mcq-option[data-option='C']): Locator.scroll_into_view_if_needed: Timeout 1484ms exceeded.
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+2026-05-01 14:06:27,378 [INFO] browser: Clicked option C via selector: [data-option='C']
+2026-05-01 14:06:27,378 [DEBUG] browser: sleep 2.0s (after option C click)
+2026-05-01 14:06:29,382 [DEBUG] browser: Clicking Next
+2026-05-01 14:06:29,382 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 14:06:32,433 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 14:06:34,451 [DEBUG] browser: Question number: 8  (header text: 'Question 8 of 47')
+2026-05-01 14:06:34,473 [DEBUG] browser: Question meta: type='MCQ-Single'  subject='Chemistry'
+2026-05-01 14:06:36,569 [DEBUG] browser: Screenshot taken (124898 bytes)
+2026-05-01 14:06:38,572 [DEBUG] vlm: Sending mcq-single question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 14:06:40,302 [INFO] vlm: VLM parsed result: {'answer': 'A'}
+2026-05-01 14:06:40,305 [DEBUG] exam_runner: Q8: type='MCQ-Single' subject='Chemistry' vlm={'answer': 'A', '_type': 'mcq-single'}
+2026-05-01 14:06:40,305 [DEBUG] browser: Attempting to click option 'A'
+2026-05-01 14:06:41,813 [DEBUG] browser: Option A selector failed (.mcq-option[data-option='A']): Locator.scroll_into_view_if_needed: Timeout 1484ms exceeded.
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+2026-05-01 14:06:43,320 [DEBUG] browser: Option A selector failed ([data-option='A']): Locator.scroll_into_view_if_needed: Timeout 1484ms exceeded.
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+2026-05-01 14:06:44,827 [DEBUG] browser: Option A selector failed (.mcq-option:has(:text-is('A'))): Locator.scroll_into_view_if_needed: Timeout 1484ms exceeded.
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+2026-05-01 14:06:46,340 [DEBUG] browser: Option A selector failed (label:has(:text-is('A'))): Locator.scroll_into_view_if_needed: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("label:has(:text-is('A'))").first
+
+2026-05-01 14:06:49,441 [INFO] browser: Clicked option A via selector: input[type='checkbox'][value='A'], input[type='radio'][value='A']
+2026-05-01 14:06:49,443 [DEBUG] browser: sleep 2.0s (after option A click)
+2026-05-01 14:06:51,444 [DEBUG] browser: Clicking Next
+2026-05-01 14:06:51,445 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 14:06:55,492 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 14:06:57,508 [DEBUG] browser: Question number: 9  (header text: 'Question 9 of 47')
+2026-05-01 14:06:57,526 [DEBUG] browser: Question meta: type='Numerical'  subject='Chemistry'
+2026-05-01 14:06:59,651 [DEBUG] browser: Screenshot taken (120383 bytes)
+2026-05-01 14:07:01,652 [DEBUG] vlm: Sending numerical question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 14:07:04,044 [INFO] vlm: VLM parsed result: {'answer': '11'}
+2026-05-01 14:07:04,044 [DEBUG] exam_runner: Q9: type='Numerical' subject='Chemistry' vlm={'answer': '11', '_type': 'numerical'}
+2026-05-01 14:07:04,044 [DEBUG] browser: Entering numerical answer: '11'
+2026-05-01 14:07:05,556 [DEBUG] browser: Numpad trigger selector failed (input[placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("input[placeholder^='Text']").first to be visible
+
+2026-05-01 14:07:07,068 [DEBUG] browser: Numpad trigger selector failed ([placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[placeholder^='Text']").first to be visible
+
+2026-05-01 14:07:08,578 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text..')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text..')").first to be visible
+
+2026-05-01 14:07:10,088 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text...')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text...')").first to be visible
+
+2026-05-01 14:07:11,593 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-trigger']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-trigger']").first to be visible
+
+2026-05-01 14:07:13,098 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-input']").first to be visible
+
+2026-05-01 14:07:14,610 [DEBUG] browser: Numpad trigger selector failed ([class*='answer-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='answer-input']").first to be visible
+
+2026-05-01 14:07:16,423 [DEBUG] browser: Numpad trigger clicked via selector: [class*='numerical-input']
+2026-05-01 14:07:16,423 [DEBUG] browser: sleep 2.0s (after numpad trigger click)
+2026-05-01 14:07:18,449 [DEBUG] browser: Numpad modal opened
+2026-05-01 14:07:20,474 [DEBUG] browser: Cleared existing numpad value
+2026-05-01 14:07:20,474 [DEBUG] browser: sleep 2.0s (after clear)
+2026-05-01 14:07:24,532 [DEBUG] browser:   Numpad pressed: data-value='1'
+2026-05-01 14:07:24,536 [DEBUG] browser: sleep 2.0s (after numpad 1)
+2026-05-01 14:07:28,583 [DEBUG] browser:   Numpad pressed: data-value='1'
+2026-05-01 14:07:28,583 [DEBUG] browser: sleep 2.0s (after numpad 1)
+2026-05-01 14:07:32,625 [DEBUG] browser:   Numpad pressed: data-value='ok'
+2026-05-01 14:07:32,625 [DEBUG] browser: sleep 2.0s (after numpad ok)
+2026-05-01 14:07:34,635 [INFO] browser: Numerical answer submitted: '11'
+2026-05-01 14:07:34,635 [DEBUG] browser: Clicking Next
+2026-05-01 14:07:34,635 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 14:07:37,689 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 14:07:39,710 [DEBUG] browser: Question number: 10  (header text: 'Question 10 of 47')
+2026-05-01 14:07:39,724 [DEBUG] browser: Question meta: type='Numerical'  subject='Chemistry'
+2026-05-01 14:07:41,844 [DEBUG] browser: Screenshot taken (121965 bytes)
+2026-05-01 14:07:43,850 [DEBUG] vlm: Sending numerical question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 14:07:46,968 [INFO] vlm: VLM parsed result: {'answer': '4'}
+2026-05-01 14:07:46,970 [DEBUG] exam_runner: Q10: type='Numerical' subject='Chemistry' vlm={'answer': '4', '_type': 'numerical'}
+2026-05-01 14:07:46,970 [DEBUG] browser: Entering numerical answer: '4'
+2026-05-01 14:07:48,481 [DEBUG] browser: Numpad trigger selector failed (input[placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("input[placeholder^='Text']").first to be visible
+
+2026-05-01 14:07:49,999 [DEBUG] browser: Numpad trigger selector failed ([placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[placeholder^='Text']").first to be visible
+
+2026-05-01 14:07:51,517 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text..')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text..')").first to be visible
+
+2026-05-01 14:07:53,030 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text...')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text...')").first to be visible
+
+2026-05-01 14:07:54,540 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-trigger']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-trigger']").first to be visible
+
+2026-05-01 14:07:56,050 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-input']").first to be visible
+
+2026-05-01 14:07:57,560 [DEBUG] browser: Numpad trigger selector failed ([class*='answer-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='answer-input']").first to be visible
+
+2026-05-01 14:07:59,391 [DEBUG] browser: Numpad trigger clicked via selector: [class*='numerical-input']
+2026-05-01 14:07:59,391 [DEBUG] browser: sleep 2.0s (after numpad trigger click)
+2026-05-01 14:08:01,407 [DEBUG] browser: Numpad modal opened
+2026-05-01 14:08:03,403 [DEBUG] browser: Cleared existing numpad value
+2026-05-01 14:08:03,403 [DEBUG] browser: sleep 2.0s (after clear)
+2026-05-01 14:08:07,420 [DEBUG] browser:   Numpad pressed: data-value='4'
+2026-05-01 14:08:07,420 [DEBUG] browser: sleep 2.0s (after numpad 4)
+2026-05-01 14:08:11,473 [DEBUG] browser:   Numpad pressed: data-value='ok'
+2026-05-01 14:08:11,473 [DEBUG] browser: sleep 2.0s (after numpad ok)
+2026-05-01 14:08:13,486 [INFO] browser: Numerical answer submitted: '4'
+2026-05-01 14:08:13,486 [DEBUG] browser: Clicking Next
+2026-05-01 14:08:13,486 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 14:08:17,532 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 14:08:19,549 [DEBUG] browser: Question number: 11  (header text: 'Question 11 of 47')
+2026-05-01 14:08:19,566 [DEBUG] browser: Question meta: type='Numerical'  subject='Chemistry'
+2026-05-01 14:08:21,679 [DEBUG] browser: Screenshot taken (138338 bytes)
+2026-05-01 14:08:23,683 [DEBUG] vlm: Sending numerical question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 14:08:26,744 [INFO] vlm: VLM parsed result: {'answer': '15.85'}
+2026-05-01 14:08:26,744 [DEBUG] exam_runner: Q11: type='Numerical' subject='Chemistry' vlm={'answer': '15.85', '_type': 'numerical'}
+2026-05-01 14:08:26,744 [DEBUG] browser: Entering numerical answer: '15.85'
+2026-05-01 14:08:28,259 [DEBUG] browser: Numpad trigger selector failed (input[placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("input[placeholder^='Text']").first to be visible
+
+2026-05-01 14:08:29,767 [DEBUG] browser: Numpad trigger selector failed ([placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[placeholder^='Text']").first to be visible
+
+2026-05-01 14:08:31,274 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text..')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text..')").first to be visible
+
+2026-05-01 14:08:32,784 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text...')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text...')").first to be visible
+
+2026-05-01 14:08:34,300 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-trigger']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-trigger']").first to be visible
+
+2026-05-01 14:08:35,814 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-input']").first to be visible
+
+2026-05-01 14:08:37,317 [DEBUG] browser: Numpad trigger selector failed ([class*='answer-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='answer-input']").first to be visible
+
+2026-05-01 14:08:38,370 [DEBUG] browser: Numpad trigger clicked via selector: [class*='numerical-input']
+2026-05-01 14:08:38,370 [DEBUG] browser: sleep 2.0s (after numpad trigger click)
+2026-05-01 14:08:40,387 [DEBUG] browser: Numpad modal opened
+2026-05-01 14:08:42,395 [DEBUG] browser: Cleared existing numpad value
+2026-05-01 14:08:42,395 [DEBUG] browser: sleep 2.0s (after clear)
+2026-05-01 14:08:46,432 [DEBUG] browser:   Numpad pressed: data-value='1'
+2026-05-01 14:08:46,432 [DEBUG] browser: sleep 2.0s (after numpad 1)
+2026-05-01 14:08:50,459 [DEBUG] browser:   Numpad pressed: data-value='5'
+2026-05-01 14:08:50,459 [DEBUG] browser: sleep 2.0s (after numpad 5)
+2026-05-01 14:08:54,485 [DEBUG] browser:   Numpad pressed: data-value='.'
+2026-05-01 14:08:54,485 [DEBUG] browser: sleep 2.0s (after numpad .)
+2026-05-01 14:08:57,539 [DEBUG] browser:   Numpad pressed: data-value='8'
+2026-05-01 14:08:57,540 [DEBUG] browser: sleep 2.0s (after numpad 8)
+2026-05-01 14:09:01,556 [DEBUG] browser:   Numpad pressed: data-value='5'
+2026-05-01 14:09:01,556 [DEBUG] browser: sleep 2.0s (after numpad 5)
+2026-05-01 14:09:05,587 [DEBUG] browser:   Numpad pressed: data-value='ok'
+2026-05-01 14:09:05,587 [DEBUG] browser: sleep 2.0s (after numpad ok)
+2026-05-01 14:09:07,597 [INFO] browser: Numerical answer submitted: '15.85'
+2026-05-01 14:09:07,597 [DEBUG] browser: Clicking Next
+2026-05-01 14:09:07,597 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 14:09:11,631 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 14:09:13,655 [DEBUG] browser: Question number: 12  (header text: 'Question 12 of 47')
+2026-05-01 14:09:13,660 [DEBUG] browser: Question meta: type='Numerical'  subject='Chemistry'
+2026-05-01 14:09:15,770 [DEBUG] browser: Screenshot taken (143289 bytes)
+2026-05-01 14:09:17,776 [DEBUG] vlm: Sending numerical question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 14:09:20,882 [INFO] vlm: VLM parsed result: {'answer': '4'}
+2026-05-01 14:09:20,882 [DEBUG] exam_runner: Q12: type='Numerical' subject='Chemistry' vlm={'answer': '4', '_type': 'numerical'}
+2026-05-01 14:09:20,882 [DEBUG] browser: Entering numerical answer: '4'
+2026-05-01 14:09:22,400 [DEBUG] browser: Numpad trigger selector failed (input[placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("input[placeholder^='Text']").first to be visible
+
+2026-05-01 14:09:23,910 [DEBUG] browser: Numpad trigger selector failed ([placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[placeholder^='Text']").first to be visible
+
+2026-05-01 14:09:25,416 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text..')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text..')").first to be visible
+
+2026-05-01 14:09:26,925 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text...')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text...')").first to be visible
+
+2026-05-01 14:09:28,440 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-trigger']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-trigger']").first to be visible
+
+2026-05-01 14:09:29,948 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-input']").first to be visible
+
+2026-05-01 14:09:31,454 [DEBUG] browser: Numpad trigger selector failed ([class*='answer-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='answer-input']").first to be visible
+
+2026-05-01 14:09:33,514 [DEBUG] browser: Numpad trigger clicked via selector: [class*='numerical-input']
+2026-05-01 14:09:33,514 [DEBUG] browser: sleep 2.0s (after numpad trigger click)
+2026-05-01 14:09:35,529 [DEBUG] browser: Numpad modal opened
+2026-05-01 14:09:37,509 [DEBUG] browser: Cleared existing numpad value
+2026-05-01 14:09:37,511 [DEBUG] browser: sleep 2.0s (after clear)
+2026-05-01 14:09:41,565 [DEBUG] browser:   Numpad pressed: data-value='4'
+2026-05-01 14:09:41,567 [DEBUG] browser: sleep 2.0s (after numpad 4)
+2026-05-01 14:09:45,581 [DEBUG] browser:   Numpad pressed: data-value='ok'
+2026-05-01 14:09:45,581 [DEBUG] browser: sleep 2.0s (after numpad ok)
+2026-05-01 14:09:47,599 [INFO] browser: Numerical answer submitted: '4'
+2026-05-01 14:09:47,600 [DEBUG] browser: Clicking Next
+2026-05-01 14:09:47,600 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 14:09:51,645 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 14:09:53,669 [DEBUG] browser: Question number: 13  (header text: 'Question 13 of 47')
+2026-05-01 14:09:53,683 [DEBUG] browser: Question meta: type='Numerical'  subject='Chemistry'
+2026-05-01 14:09:55,802 [DEBUG] browser: Screenshot taken (145322 bytes)
+2026-05-01 14:09:57,810 [DEBUG] vlm: Sending numerical question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 14:10:01,174 [INFO] vlm: VLM parsed result: {'answer': '2'}
+2026-05-01 14:10:01,174 [DEBUG] exam_runner: Q13: type='Numerical' subject='Chemistry' vlm={'answer': '2', '_type': 'numerical'}
+2026-05-01 14:10:01,177 [DEBUG] browser: Entering numerical answer: '2'
+2026-05-01 14:10:02,683 [DEBUG] browser: Numpad trigger selector failed (input[placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("input[placeholder^='Text']").first to be visible
+
+2026-05-01 14:10:04,192 [DEBUG] browser: Numpad trigger selector failed ([placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[placeholder^='Text']").first to be visible
+
+2026-05-01 14:10:05,701 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text..')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text..')").first to be visible
+
+2026-05-01 14:10:07,213 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text...')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text...')").first to be visible
+
+2026-05-01 14:10:08,724 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-trigger']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-trigger']").first to be visible
+
+2026-05-01 14:10:10,232 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-input']").first to be visible
+
+2026-05-01 14:10:11,739 [DEBUG] browser: Numpad trigger selector failed ([class*='answer-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='answer-input']").first to be visible
+
+2026-05-01 14:10:13,357 [DEBUG] browser: Numpad trigger clicked via selector: [class*='numerical-input']
+2026-05-01 14:10:13,357 [DEBUG] browser: sleep 2.0s (after numpad trigger click)
+2026-05-01 14:10:15,379 [DEBUG] browser: Numpad modal opened
+2026-05-01 14:10:17,407 [DEBUG] browser: Cleared existing numpad value
+2026-05-01 14:10:17,407 [DEBUG] browser: sleep 2.0s (after clear)
+2026-05-01 14:10:21,450 [DEBUG] browser:   Numpad pressed: data-value='2'
+2026-05-01 14:10:21,450 [DEBUG] browser: sleep 2.0s (after numpad 2)
+2026-05-01 14:10:24,506 [DEBUG] browser:   Numpad pressed: data-value='ok'
+2026-05-01 14:10:24,506 [DEBUG] browser: sleep 2.0s (after numpad ok)
+2026-05-01 14:10:26,519 [INFO] browser: Numerical answer submitted: '2'
+2026-05-01 14:10:26,521 [DEBUG] browser: Clicking Next
+2026-05-01 14:10:26,522 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 14:10:29,563 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 14:10:31,584 [DEBUG] browser: Question number: 14  (header text: 'Question 14 of 47')
+2026-05-01 14:10:31,601 [DEBUG] browser: Question meta: type='Numerical'  subject='Chemistry'
+2026-05-01 14:10:33,704 [DEBUG] browser: Screenshot taken (131356 bytes)
+2026-05-01 14:10:35,707 [DEBUG] vlm: Sending numerical question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 14:10:38,553 [INFO] vlm: VLM parsed result: {'answer': '105'}
+2026-05-01 14:10:38,554 [DEBUG] exam_runner: Q14: type='Numerical' subject='Chemistry' vlm={'answer': '105', '_type': 'numerical'}
+2026-05-01 14:10:38,554 [DEBUG] browser: Entering numerical answer: '105'
+2026-05-01 14:10:40,069 [DEBUG] browser: Numpad trigger selector failed (input[placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("input[placeholder^='Text']").first to be visible
+
+2026-05-01 14:10:41,587 [DEBUG] browser: Numpad trigger selector failed ([placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[placeholder^='Text']").first to be visible
+
+2026-05-01 14:10:43,100 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text..')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text..')").first to be visible
+
+2026-05-01 14:10:44,608 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text...')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text...')").first to be visible
+
+2026-05-01 14:10:46,118 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-trigger']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-trigger']").first to be visible
+
+2026-05-01 14:10:47,636 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-input']").first to be visible
+
+2026-05-01 14:10:49,155 [DEBUG] browser: Numpad trigger selector failed ([class*='answer-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='answer-input']").first to be visible
+
+2026-05-01 14:10:50,382 [DEBUG] browser: Numpad trigger clicked via selector: [class*='numerical-input']
+2026-05-01 14:10:50,382 [DEBUG] browser: sleep 2.0s (after numpad trigger click)
+2026-05-01 14:10:52,420 [DEBUG] browser: Numpad modal opened
+2026-05-01 14:10:54,407 [DEBUG] browser: Cleared existing numpad value
+2026-05-01 14:10:54,407 [DEBUG] browser: sleep 2.0s (after clear)
+2026-05-01 14:10:58,454 [DEBUG] browser:   Numpad pressed: data-value='1'
+2026-05-01 14:10:58,458 [DEBUG] browser: sleep 2.0s (after numpad 1)
+2026-05-01 14:11:01,487 [DEBUG] browser:   Numpad pressed: data-value='0'
+2026-05-01 14:11:01,487 [DEBUG] browser: sleep 2.0s (after numpad 0)
+2026-05-01 14:11:05,522 [DEBUG] browser:   Numpad pressed: data-value='5'
+2026-05-01 14:11:05,522 [DEBUG] browser: sleep 2.0s (after numpad 5)
+2026-05-01 14:11:09,573 [DEBUG] browser:   Numpad pressed: data-value='ok'
+2026-05-01 14:11:09,574 [DEBUG] browser: sleep 2.0s (after numpad ok)
+2026-05-01 14:11:11,580 [INFO] browser: Numerical answer submitted: '105'
+2026-05-01 14:11:11,580 [DEBUG] browser: Clicking Next
+2026-05-01 14:11:11,580 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 14:11:15,657 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 14:11:17,676 [DEBUG] browser: Question number: 15  (header text: 'Question 15 of 47')
+2026-05-01 14:11:17,689 [DEBUG] browser: Question meta: type='Numerical'  subject='Chemistry'
+2026-05-01 14:11:19,782 [DEBUG] browser: Screenshot taken (100711 bytes)
+2026-05-01 14:11:21,785 [DEBUG] vlm: Sending numerical question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 14:11:23,963 [INFO] vlm: VLM parsed result: {'answer': '8'}
+2026-05-01 14:11:23,963 [DEBUG] exam_runner: Q15: type='Numerical' subject='Chemistry' vlm={'answer': '8', '_type': 'numerical'}
+2026-05-01 14:11:23,966 [DEBUG] browser: Entering numerical answer: '8'
+2026-05-01 14:11:25,473 [DEBUG] browser: Numpad trigger selector failed (input[placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("input[placeholder^='Text']").first to be visible
+
+2026-05-01 14:11:26,978 [DEBUG] browser: Numpad trigger selector failed ([placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[placeholder^='Text']").first to be visible
+
+2026-05-01 14:11:28,483 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text..')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text..')").first to be visible
+
+2026-05-01 14:11:29,990 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text...')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text...')").first to be visible
+
+2026-05-01 14:11:31,500 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-trigger']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-trigger']").first to be visible
+
+2026-05-01 14:11:33,007 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-input']").first to be visible
+
+2026-05-01 14:11:34,514 [DEBUG] browser: Numpad trigger selector failed ([class*='answer-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='answer-input']").first to be visible
+
+2026-05-01 14:11:36,304 [DEBUG] browser: Numpad trigger clicked via selector: [class*='numerical-input']
+2026-05-01 14:11:36,304 [DEBUG] browser: sleep 2.0s (after numpad trigger click)
+2026-05-01 14:11:38,337 [DEBUG] browser: Numpad modal opened
+2026-05-01 14:11:40,360 [DEBUG] browser: Cleared existing numpad value
+2026-05-01 14:11:40,360 [DEBUG] browser: sleep 2.0s (after clear)
+2026-05-01 14:11:44,375 [DEBUG] browser:   Numpad pressed: data-value='8'
+2026-05-01 14:11:44,376 [DEBUG] browser: sleep 2.0s (after numpad 8)
+2026-05-01 14:11:48,430 [DEBUG] browser:   Numpad pressed: data-value='ok'
+2026-05-01 14:11:48,432 [DEBUG] browser: sleep 2.0s (after numpad ok)
+2026-05-01 14:11:50,450 [INFO] browser: Numerical answer submitted: '8'
+2026-05-01 14:11:50,450 [DEBUG] browser: Clicking Next
+2026-05-01 14:11:50,450 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 14:11:54,465 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 14:11:56,481 [DEBUG] browser: Question number: 16  (header text: 'Question 16 of 47')
+2026-05-01 14:11:56,500 [DEBUG] browser: Question meta: type='Numerical'  subject='Chemistry'
+2026-05-01 14:11:58,616 [DEBUG] browser: Screenshot taken (149675 bytes)
+2026-05-01 14:12:00,618 [DEBUG] vlm: Sending numerical question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 14:12:03,435 [INFO] vlm: VLM parsed result: {'answer': '4'}
+2026-05-01 14:12:03,435 [DEBUG] exam_runner: Q16: type='Numerical' subject='Chemistry' vlm={'answer': '4', '_type': 'numerical'}
+2026-05-01 14:12:03,435 [DEBUG] browser: Entering numerical answer: '4'
+2026-05-01 14:12:04,952 [DEBUG] browser: Numpad trigger selector failed (input[placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("input[placeholder^='Text']").first to be visible
+
+2026-05-01 14:12:06,464 [DEBUG] browser: Numpad trigger selector failed ([placeholder^='Text']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[placeholder^='Text']").first to be visible
+
+2026-05-01 14:12:07,974 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text..')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text..')").first to be visible
+
+2026-05-01 14:12:09,481 [DEBUG] browser: Numpad trigger selector failed (button:has-text('Text...')): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Text...')").first to be visible
+
+2026-05-01 14:12:10,997 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-trigger']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-trigger']").first to be visible
+
+2026-05-01 14:12:12,511 [DEBUG] browser: Numpad trigger selector failed ([class*='numpad-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='numpad-input']").first to be visible
+
+2026-05-01 14:12:14,023 [DEBUG] browser: Numpad trigger selector failed ([class*='answer-input']): Locator.wait_for: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("[class*='answer-input']").first to be visible
+
+2026-05-01 14:12:15,077 [DEBUG] browser: Numpad trigger clicked via selector: [class*='numerical-input']
+2026-05-01 14:12:15,079 [DEBUG] browser: sleep 2.0s (after numpad trigger click)
+2026-05-01 14:12:17,089 [DEBUG] browser: Numpad modal opened
+2026-05-01 14:12:19,108 [DEBUG] browser: Cleared existing numpad value
+2026-05-01 14:12:19,111 [DEBUG] browser: sleep 2.0s (after clear)
+2026-05-01 14:12:23,142 [DEBUG] browser:   Numpad pressed: data-value='4'
+2026-05-01 14:12:23,142 [DEBUG] browser: sleep 2.0s (after numpad 4)
+2026-05-01 14:12:27,175 [DEBUG] browser:   Numpad pressed: data-value='ok'
+2026-05-01 14:12:27,175 [DEBUG] browser: sleep 2.0s (after numpad ok)
+2026-05-01 14:12:29,184 [INFO] browser: Numerical answer submitted: '4'
+2026-05-01 14:12:29,190 [DEBUG] browser: Clicking Next
+2026-05-01 14:12:29,190 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 14:12:33,228 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 14:12:35,247 [DEBUG] browser: Question number: 17  (header text: 'Question 17 of 47')
+2026-05-01 14:12:35,262 [DEBUG] browser: Question meta: type='MCQ-Multiple'  subject='Mathematics'
+2026-05-01 14:12:37,365 [DEBUG] browser: Screenshot taken (139276 bytes)
+2026-05-01 14:12:39,369 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 14:12:42,255 [INFO] vlm: VLM parsed result: {'answers': ['A', 'D']}
+2026-05-01 14:12:42,260 [DEBUG] exam_runner: Q17: type='MCQ-Multiple' subject='Mathematics' vlm={'answers': ['A', 'D'], '_type': 'mcq-multiple'}
+2026-05-01 14:12:42,260 [DEBUG] browser: Attempting to click option 'A'
+2026-05-01 14:12:45,360 [INFO] browser: Clicked option A via selector: .mcq-option[data-option='A']
+2026-05-01 14:12:45,362 [DEBUG] browser: sleep 2.0s (after option A click)
+2026-05-01 14:12:47,363 [DEBUG] browser: Attempting to click option 'D'
+2026-05-01 14:12:47,838 [INFO] browser: Clicked option D via selector: .mcq-option[data-option='D']
+2026-05-01 14:12:47,838 [DEBUG] browser: sleep 2.0s (after option D click)
+2026-05-01 14:12:49,841 [DEBUG] browser: Clicking Next
+2026-05-01 14:12:49,841 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-01 14:12:51,894 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-01 14:12:53,913 [DEBUG] browser: Question number: 18  (header text: 'Question 18 of 47')
+2026-05-01 14:12:53,929 [DEBUG] browser: Question meta: type='MCQ-Multiple'  subject='Mathematics'
+2026-05-01 14:12:54,129 [DEBUG] browser: Screenshot taken (159497 bytes)
+2026-05-01 14:12:56,140 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-01 14:12:59,939 [INFO] vlm: VLM parsed result: {'answers': ['C']}
+2026-05-01 14:12:59,941 [DEBUG] exam_runner: Q18: type='MCQ-Multiple' subject='Mathematics' vlm={'answers': ['C'], '_type': 'mcq-multiple'}
+2026-05-01 14:12:59,941 [DEBUG] browser: Attempting to click option 'C'
+2026-05-01 14:13:00,060 [INFO] browser: Clicked option C via selector: .mcq-option[data-option='C']
+2026-05-01 14:13:00,060 [DEBUG] browser: sleep 2.0s (after option C click)
+2026-05-01 14:13:01,792 [DEBUG] asyncio: Using proactor: IocpProactor
