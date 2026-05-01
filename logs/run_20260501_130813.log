@@ -1,0 +1,6 @@
+2026-05-01 13:08:13,211 [INFO] main: Model : groq/meta-llama/llama-4-scout-17b-16e-instruct
+2026-05-01 13:08:13,211 [INFO] main: JSONL : logs\run_20260501_130813.jsonl
+2026-05-01 13:08:13,211 [INFO] main: Papers: 4
+2026-05-01 13:08:13,211 [DEBUG] asyncio: Using proactor: IocpProactor
+2026-05-01 13:08:16,230 [ERROR] asyncio: Task was destroyed but it is pending!
+task: <Task pending name='Task-3' coro=<Connection.run.<locals>.init() running at c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_connection.py:310> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[ProtocolCallback.__init__.<locals>.cb() at c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_connection.py:230]>

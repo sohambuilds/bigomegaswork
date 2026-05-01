@@ -2,65 +2,123 @@ import ast
 import json
 import logging
 import re
+from typing import Any
 import litellm
 
 from .config import config
 
 log = logging.getLogger("vlm")
 
-_DECISION_PROCESS = (
-    "Use an internal three-step decision process before writing JSON: "
-    "1) solve the problem from the screenshot, "
-    "2) independently verify the proposed answer against the visible options/question, "
-    "3) arbitrate to the final highest-scoring answer. "
-    "Do not reveal this reasoning. Output only the final JSON object. "
+SYSTEM_PROMPT = (
+    "You are an expert JEE Advanced exam solver for Physics, Chemistry, and Mathematics.\n"
+    "Solve carefully and rigorously. Think extensively before committing to an answer.\n"
+    "\n"
+    "Workflow you MUST follow for every question:\n"
+    "1. UNDERSTAND - restate what is asked and list given data, units, and constraints.\n"
+    "2. PLAN - choose the principle, formula, or theorem; note units and assumptions.\n"
+    "3. SOLVE - derive step by step; show key algebra, chemistry, or logic.\n"
+    "4. VERIFY - re-derive critical steps a second way, substitute back, check dimensions, or test a limiting case.\n"
+    "5. ELIMINATE - for every option you do not pick, state the specific reason it is wrong.\n"
+    "6. RE-VERIFY - check the chosen answer once more against the question statement and derivation.\n"
+    "7. FINAL - emit the ===ANSWER=== block in exactly the required JSON shape.\n"
+    "\n"
+    "Be thorough in the solving sections. Be exact in the final JSON."
 )
 
 _PROMPTS = {
     "mcq-single": (
-        "You are solving a JEE Advanced exam question. "
-        "Look at this screenshot carefully — the question text and all four options (A, B, C, D) are visible. "
-        "This is a SINGLE-CORRECT MCQ or matching-style question: exactly one option is correct. "
-        "You MUST choose exactly one option. Never skip, never return blank, never say unknown. "
-        "If uncertain, choose the highest-probability option after verification. "
-        + _DECISION_PROCESS
-        + "Respond ONLY with valid JSON, no other text: "
-        '{\"answer\": \"A\", \"ranking\": [\"A\", \"C\", \"B\", \"D\"], '
-        '\"probabilities\": {\"A\": 0.62, \"B\": 0.08, \"C\": 0.22, \"D\": 0.08}} '
-        "where answer is one of A/B/C/D, ranking contains all four options from most likely to least likely, "
-        "and probabilities are relative likelihoods from 0 to 1."
+        "TYPE: MCQ Single Correct (exactly ONE of A/B/C/D)\n"
+        "\n"
+        "Use this EXACT structure:\n"
+        "\n"
+        "UNDERSTAND: <restate the question; list given data, units, and what is asked>\n"
+        "PLAN: <principle/formula/theorem; key assumptions; units>\n"
+        "SOLVE:\n"
+        "  <step-by-step derivation; show the algebra/chemistry/logic that matters>\n"
+        "VERIFY: <confirm the result by a second route, substitution, dimensional check, or limiting case>\n"
+        "ELIMINATE: for EACH of the three options you did NOT pick, give the specific concrete reason it is wrong:\n"
+        "  - <wrong-letter-1>: <specific failure>\n"
+        "  - <wrong-letter-2>: <specific failure>\n"
+        "  - <wrong-letter-3>: <specific failure>\n"
+        "RE-VERIFY: <re-check the chosen letter against the question statement before finalizing>\n"
+        "\n"
+        "===ANSWER===\n"
+        '{"answer": "<A|B|C|D>"}\n'
+        "\n"
+        "STRICT: the JSON value MUST be a single uppercase letter A, B, C, or D as a string. "
+        "No prose, markdown, or text after the JSON."
     ),
     "mcq-multiple": (
-        "You are solving a JEE Advanced exam question. "
-        "Look at this screenshot carefully — the question text and all four options (A, B, C, D) are visible. "
-        "This is a MULTIPLE-CORRECT MCQ: one or more options may be correct. "
-        "Select the highest-probability correct options. "
-        "You MUST return either one or two options only. Never return zero options. Never return three or four options. "
-        "Prefer two options only when both are strongly supported by the verified solution; otherwise return only the best option. "
-        + _DECISION_PROCESS
-        + "Respond ONLY with valid JSON, no other text: "
-        '{\"answers\": [\"B\", \"D\"], \"ranking\": [\"B\", \"D\", \"A\", \"C\"], '
-        '\"probabilities\": {\"A\": 0.35, \"B\": 0.78, \"C\": 0.12, \"D\": 0.64}} '
-        "where answers has one or two option letters, ranking contains all four options from most likely to least likely, "
-        "and probabilities are relative likelihoods from 0 to 1."
+        "TYPE: MCQ Multiple Correct (ONE or MORE of A/B/C/D may be correct)\n"
+        "\n"
+        "Use this EXACT structure:\n"
+        "\n"
+        "UNDERSTAND: <restate the question; list given data, units, and what is asked>\n"
+        "PLAN: <principle/formula/theorem; key assumptions; units>\n"
+        "SOLVE:\n"
+        "  <work out the underlying result needed to judge each option>\n"
+        "VERIFY: for EACH option independently, evaluate truth and confirm it:\n"
+        "  - A: CORRECT/WRONG - <reason + verification>\n"
+        "  - B: CORRECT/WRONG - <reason + verification>\n"
+        "  - C: CORRECT/WRONG - <reason + verification>\n"
+        "  - D: CORRECT/WRONG - <reason + verification>\n"
+        "ELIMINATE: for every option marked WRONG above, restate the specific concrete failure.\n"
+        "RE-VERIFY: re-check each option you marked CORRECT against the question before finalizing.\n"
+        "\n"
+        "===ANSWER===\n"
+        '{"answer": ["<letter>", "..."]}\n'
+        "\n"
+        "STRICT: the JSON value MUST be a JSON array of distinct uppercase letters from A, B, C, D, in alphabetical order. "
+        "At least one letter. No prose, markdown, or text after the JSON."
     ),
     "numerical": (
-        "You are solving a JEE Advanced exam question. "
-        "Look at this screenshot carefully — the full question is visible. "
-        "This is a NUMERICAL answer question: compute the exact numerical value. "
-        "You MUST always provide exactly one answer. Never skip, never return blank, never say unknown. "
-        "If uncertain, compute the best possible estimate from the screenshot and still return it. "
-        "The answer must be a non-negative number (integer or decimal), with no units and no extra text. "
-        + _DECISION_PROCESS
-        + "Respond ONLY with valid JSON, no other text: "
-        '{\"answer\": \"21\"} '
-        "where answer is the computed number as a string."
+        "TYPE: Numerical Answer (a NUMBER: integer or decimal, can be negative if the question permits it)\n"
+        "\n"
+        "Use this EXACT structure:\n"
+        "\n"
+        "UNDERSTAND: <restate the question; list given data, units, and what is asked>\n"
+        "PLAN: <principle/formula/method; units; expected sign and order of magnitude>\n"
+        "SOLVE:\n"
+        "  <step-by-step calculation; keep intermediate values; track units>\n"
+        "VERIFY: <confirm by a second method, substitution, or dimensional and limiting check>\n"
+        "ELIMINATE: <list at least two plausible wrong answers and the specific reason each is incorrect>\n"
+        "RE-VERIFY: <final check of number, requested units, and precision; round only at the end>\n"
+        "\n"
+        "===ANSWER===\n"
+        '{"answer": "<number>"}\n'
+        "\n"
+        "STRICT: the JSON value MUST be a number rendered as a string. No units, symbols, prose, markdown, or text after the JSON."
+    ),
+    "matching": (
+        "TYPE: Matching / List Match (choose ONE option A/B/C/D)\n"
+        "Each option gives a complete set of pair-matches.\n"
+        "\n"
+        "Use this EXACT structure:\n"
+        "\n"
+        "UNDERSTAND: <restate the two lists; note constraints on the matches>\n"
+        "PLAN: <how each item in the left list will be matched; relevant principle>\n"
+        "SOLVE:\n"
+        "  <determine the correct match for each left-list item independently>\n"
+        "VERIFY: <re-check each pairing via a second argument or cross-check>\n"
+        "ELIMINATE: for EACH of the three options you did NOT pick, identify the specific pair inside that option that is wrong and why:\n"
+        "  - <wrong-letter-1>: <bad pair and reason>\n"
+        "  - <wrong-letter-2>: <bad pair and reason>\n"
+        "  - <wrong-letter-3>: <bad pair and reason>\n"
+        "RE-VERIFY: <re-check that every pair in the chosen option is correct>\n"
+        "\n"
+        "===ANSWER===\n"
+        '{"answer": "<A|B|C|D>"}\n'
+        "\n"
+        "STRICT: the JSON value MUST be a single uppercase letter A, B, C, or D as a string. "
+        "No prose, markdown, or text after the JSON."
     ),
 }
 
 
 def _normalize_type(question_type: str) -> str:
     t = question_type.lower().replace(" ", "").replace("-", "")
+    if "match" in t or "list" in t:
+        return "matching"
     if "multiple" in t or "multi" in t:
         return "mcq-multiple"
     if "single" in t or "mcq" in t:
@@ -68,6 +126,10 @@ def _normalize_type(question_type: str) -> str:
     if "numerical" in t or "integer" in t or "numeric" in t:
         return "numerical"
     return "mcq-single"
+
+
+def _runner_type(prompt_key: str) -> str:
+    return "mcq-single" if prompt_key == "matching" else prompt_key
 
 
 _RELEVANT_KEYS = ("answer", "answers", "ranking", "probabilities", "confidences")
@@ -91,81 +153,138 @@ def _try_parse(blob: str) -> dict | None:
         return None
 
 
-def _extract_json(text: str) -> dict:
-    """
-    The model may return markdown, nested JSON, or reasoning text despite the
-    prompt. Extract the last parseable dict containing a relevant answer key.
-    """
-    cleaned = re.sub(r"```(?:json)?\s*", "", text, flags=re.IGNORECASE).replace("```", "")
+def _extract_from_section(section: str) -> dict | None:
     candidates: list[dict] = []
 
     decoder = json.JSONDecoder()
-    for index, char in enumerate(cleaned):
+    for index, char in enumerate(section):
         if char != "{":
             continue
         try:
-            value, _ = decoder.raw_decode(cleaned[index:])
+            value, _ = decoder.raw_decode(section[index:])
         except json.JSONDecodeError:
             continue
         if isinstance(value, dict):
             candidates.append(value)
 
     stack: list[int] = []
-    for index, char in enumerate(cleaned):
+    for index, char in enumerate(section):
         if char == "{":
             stack.append(index)
         elif char == "}" and stack:
             start = stack.pop()
-            parsed = _try_parse(cleaned[start : index + 1])
+            parsed = _try_parse(section[start : index + 1])
             if parsed:
                 candidates.append(parsed)
 
-    # Walk from end → start, pick first parseable dict with a relevant key
     for parsed in reversed(candidates):
         if any(k in parsed for k in _RELEVANT_KEYS):
             return parsed
 
-    # Fallback: any parseable dict (may still be useful)
     if candidates:
         return candidates[-1]
+
+    return None
+
+
+def _extract_json(text: str) -> dict:
+    cleaned = re.sub(r"```(?:json)?\s*", "", text, flags=re.IGNORECASE).replace("```", "")
+    marker_match = re.search(r"===ANSWER===\s*(.*)", cleaned, flags=re.DOTALL)
+    sections = [marker_match.group(1)] if marker_match else []
+    sections.append(cleaned)
+
+    for section in sections:
+        parsed = _extract_from_section(section)
+        if parsed:
+            return parsed
 
     raise ValueError(f"Could not parse JSON from VLM response: {text!r}")
 
 
+def _options_from_value(value: Any) -> list[str]:
+    if isinstance(value, str):
+        raw_options = re.findall(r"[ABCD]", value.upper())
+    elif isinstance(value, (list, tuple)):
+        raw_options = [str(item).strip().upper() for item in value]
+    else:
+        raw_options = []
+
+    options: list[str] = []
+    for option in raw_options:
+        if option in {"A", "B", "C", "D"} and option not in options:
+            options.append(option)
+    return options
+
+
+def _normalize_result(parsed: dict, prompt_key: str) -> dict:
+    if prompt_key == "mcq-multiple":
+        answers = _options_from_value(parsed.get("answer", parsed.get("answers", [])))
+        if not answers:
+            ranking = _options_from_value(parsed.get("ranking", []))
+            answers = ranking[:1]
+        if not answers:
+            raise ValueError(f"No valid multiple-correct answer in parsed response: {parsed!r}")
+        return {"answers": sorted(answers)}
+
+    if prompt_key == "numerical":
+        value = str(parsed.get("answer", "")).strip().replace(",", "")
+        match = re.search(r"-?\d+(?:\.\d+)?", value)
+        if not match:
+            raise ValueError(f"No valid numerical answer in parsed response: {parsed!r}")
+        return {"answer": match.group(0)}
+
+    options = _options_from_value(parsed.get("answer", ""))
+    if not options:
+        ranking = _options_from_value(parsed.get("ranking", []))
+        options = ranking[:1]
+    if not options:
+        raise ValueError(f"No valid single-correct answer in parsed response: {parsed!r}")
+    return {"answer": options[0]}
+
+
 def query_vlm(screenshot_b64: str, question_type: str) -> dict:
     """
-    Send a screenshot to the VLM and return a parsed answer dict.
-
-    Returns for MCQ-single:            {"answer": "A", "ranking": [...], "probabilities": {...}}
-    Returns for MCQ-multiple:          {"answers": ["B", "D"], "ranking": [...], "probabilities": {...}}
-    Returns for numerical:             {"answer": "21"}
-    On failure returns:                {"error": "<message>", "raw": "<raw response>"}
+    Send a screenshot to the VLM and return a normalized answer dict.
     """
-    key = _normalize_type(question_type)
-    prompt = _PROMPTS[key]
+    prompt_key = _normalize_type(question_type)
+    prompt = _PROMPTS[prompt_key]
 
     messages = [
+        {"role": "system", "content": SYSTEM_PROMPT},
         {
             "role": "user",
             "content": [
+                {"type": "text", "text": f"Solve this JEE Advanced exam question.\n\n{prompt}\n\nQuestion image follows:"},
                 {
                     "type": "image_url",
                     "image_url": {"url": f"data:image/png;base64,{screenshot_b64}"},
                 },
-                {"type": "text", "text": prompt},
+                {
+                    "type": "text",
+                    "text": (
+                        "Now solve using the exact structured format above. "
+                        "Work through all sections in order and end with ===ANSWER=== followed by the JSON in the exact required shape. "
+                        "Do not add any text, markdown, or commentary after the JSON."
+                    ),
+                },
             ],
         }
     ]
 
-    log.debug(f"Sending {key} question to model {config.model!r}")
+    log.debug(f"Sending {prompt_key} question to model {config.model!r}")
     try:
-        response = litellm.completion(model=config.model, messages=messages)
+        response = litellm.completion(
+            model=config.model,
+            messages=messages,
+            temperature=0,
+            max_tokens=8192,
+        )
         raw = response.choices[0].message.content or ""
-        result = _extract_json(raw)
+        result = _normalize_result(_extract_json(raw), prompt_key)
         log.info(f"VLM parsed result: { {k: v for k, v in result.items() if k != '_raw'} }")
-        result["_type"] = key
+        result["_type"] = _runner_type(prompt_key)
         result["_raw"] = raw
         return result
     except Exception as exc:
         log.error(f"VLM call failed: {exc}")
-        return {"error": str(exc), "_type": key}
+        return {"error": str(exc), "_type": _runner_type(prompt_key)}
