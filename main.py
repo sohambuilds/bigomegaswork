@@ -6,12 +6,7 @@ from playwright.sync_api import sync_playwright
 from src.config import config
 from src.exam_runner import run_paper
 
-PAPERS = [
-    "2025 – Paper 1 – English",
-    "2025 – Paper 2 – English",
-    "2025 – Paper 1 – Hindi",
-    "2025 – Paper 2 – Hindi",
-]
+PAPERS = config.paper_labels
 
 
 def _setup_logging(logs_dir: Path, run_ts: str) -> None:

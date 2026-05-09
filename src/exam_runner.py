@@ -5,6 +5,8 @@ import time
 from typing import IO
 from playwright.sync_api import Page
 
+from .config import config
+
 VLM_DELAY = 2.0  # seconds — pause before each VLM call
 
 log = logging.getLogger("exam_runner")
@@ -27,6 +29,9 @@ OPTIONS = ("A", "B", "C", "D")
 
 def _submit_after_question(paper_label: str, total_questions: int) -> int:
     """Return the question number where this paper should be submitted."""
+    if "sat" in config.base_url.lower() or "sat" in config.exam_label.lower():
+        return min(total_questions, 27) if total_questions else 27
+
     normalized = paper_label.lower()
     if "paper 2" in normalized:
         return 47

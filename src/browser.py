@@ -33,16 +33,98 @@ def _pause(label: str = "") -> None:
     time.sleep(ACTION_DELAY)
 
 
+def _fill_first(page: Page, selectors: list[str], value: str, label: str) -> None:
+    last_error: Exception | None = None
+    for selector in selectors:
+        try:
+            loc = page.locator(selector).first
+            loc.wait_for(state="visible", timeout=1500)
+            loc.fill(value, timeout=2500)
+            log.debug(f"Filled {label} via selector: {selector}")
+            return
+        except Exception as exc:
+            last_error = exc
+            log.debug(f"{label} selector failed ({selector}): {exc}")
+    raise RuntimeError(f"Could not fill {label}") from last_error
+
+
+def _click_first(page: Page, selectors: list[str], label: str, timeout: int = 2500) -> bool:
+    for selector in selectors:
+        try:
+            loc = page.locator(selector).first
+            loc.wait_for(state="visible", timeout=timeout)
+            loc.click(timeout=timeout)
+            log.debug(f"Clicked {label} via selector: {selector}")
+            return True
+        except Exception as exc:
+            log.debug(f"{label} selector failed ({selector}): {exc}")
+    return False
+
+
+def _is_sat_exam() -> bool:
+    return "sat" in config.base_url.lower() or "sat" in config.exam_label.lower()
+
+
+def _default_total_questions() -> int:
+    return 27 if _is_sat_exam() else 48
+
+
+def _text_content_first(page: Page, selectors: list[str], default: str) -> str:
+    for selector in selectors:
+        try:
+            text = page.locator(selector).first.text_content(timeout=1500)
+            if text and text.strip():
+                return text.strip()
+        except Exception as exc:
+            log.debug(f"Text selector failed ({selector}): {exc}")
+    return default
+
+
 def login(page: Page, paper_label: str) -> None:
     log.info(f"Navigating to {config.base_url}")
     page.goto(config.base_url)
     page.wait_for_load_state("networkidle")
     log.debug("Filling login form")
-    page.fill("input[placeholder='Enter Username']", config.username)
-    page.fill("input[placeholder='Enter Password']", config.password)
-    log.debug(f"Selecting paper: {paper_label}")
-    page.locator(f"text={paper_label}").click()
-    page.click("button:has-text('Login')")
+    _fill_first(
+        page,
+        [
+            "input[placeholder='Enter Username']",
+            "input[placeholder='Username']",
+            "input[name*='user']",
+            "input[type='text']",
+        ],
+        config.username,
+        "username",
+    )
+    _fill_first(
+        page,
+        [
+            "input[placeholder='Enter Password']",
+            "input[placeholder='Password']",
+            "input[name*='pass']",
+            "input[type='password']",
+        ],
+        config.password,
+        "password",
+    )
+    if paper_label:
+        try:
+            log.debug(f"Selecting paper: {paper_label}")
+            page.locator(f"text={paper_label}").click(timeout=2500)
+        except Exception as exc:
+            log.debug(f"Paper label selection skipped/failed for {paper_label!r}: {exc}")
+    _click_first(
+        page,
+        [
+            "button:has-text('Login')",
+            "button:has-text('Start')",
+            "button:has-text('Continue')",
+            "input[type='submit']",
+        ],
+        "login/start",
+    )
+    page.wait_for_load_state("networkidle")
+    _click_first(page, ["button:has-text('Start Exam')", "button:has-text('Begin')"], "directions start", timeout=1500)
     page.wait_for_load_state("networkidle")
     log.info(f"Logged in — paper: {paper_label}")
 
@@ -56,8 +138,26 @@ def zoom_out(page: Page) -> None:
 
 def get_question_meta(page: Page) -> tuple[str, str]:
     """Returns (question_type, subject) from the badge elements."""
-    question_type = page.locator("[class*='question-type-badge']").first.text_content() or "Unknown"
-    subject = page.locator(".subject-badge").first.text_content() or "Unknown"
+    question_type = _text_content_first(
+        page,
+        [
+            "[class*='question-type-badge']",
+            "[class*='question-type']",
+            "[class*='badge']:has-text('Multiple Choice')",
+            "text=/Multiple Choice|Numerical|Single|Multiple Correct|Matching/",
+        ],
+        "Unknown",
+    )
+    subject = _text_content_first(
+        page,
+        [
+            ".subject-badge",
+            "[class*='subject']",
+            "[class*='topic']",
+            "[class*='category']",
+        ],
+        "Unknown",
+    )
     q_type = question_type.strip()
     subj = subject.strip()
     log.debug(f"Question meta: type={q_type!r}  subject={subj!r}")
@@ -65,7 +165,7 @@ def get_question_meta(page: Page) -> tuple[str, str]:
 
 
 def get_question_number(page: Page) -> int:
-    header_text = page.locator("text=/Question \\d+ of \\d+/").first.text_content()
+    header_text = _text_content_first(page, ["text=/Question \\d+ of \\d+/"], "")
     match = re.search(r"Question (\d+) of \d+", header_text or "")
     n = int(match.group(1)) if match else -1
     log.debug(f"Question number: {n}  (header text: {header_text!r})")
@@ -73,9 +173,9 @@ def get_question_number(page: Page) -> int:
 
 
 def get_total_questions(page: Page) -> int:
-    header_text = page.locator("text=/Question \\d+ of \\d+/").first.text_content()
+    header_text = _text_content_first(page, ["text=/Question \\d+ of \\d+/"], "")
     match = re.search(r"Question \d+ of (\d+)", header_text or "")
-    total = int(match.group(1)) if match else 48
+    total = int(match.group(1)) if match else _default_total_questions()
     log.info(f"Total questions in paper: {total}")
     return total
 
@@ -233,6 +333,16 @@ def _extract_dom_snapshot(page: Page) -> dict:
                 if (!/^[ABCD]$/.test(option) || optionTexts[option]) continue;
                 optionTexts[option] = textOf(row);
             }
+            for (const input of Array.from(document.querySelectorAll('input[type="radio"], input[type="checkbox"]'))) {
+                if (!visible(input)) continue;
+                const idLabel = input.id ? document.querySelector(`label[for="${CSS.escape(input.id)}"]`) : null;
+                const row = idLabel || input.closest('label, [role="radio"], [role="checkbox"], li, tr, div');
+                const text = textOf(row);
+                const match = text.match(/^([A-D])\\b[\\).:\\-]?\\s*(.+)$/i);
+                if (match && !optionTexts[match[1].toUpperCase()]) {
+                    optionTexts[match[1].toUpperCase()] = text;
+                }
+            }
 
             const roots = Array.from(document.querySelectorAll(
                 '[class*="question"], [class*="problem"], [class*="passage"], [class*="prompt"], [class*="content"], main, [role="main"]'
@@ -296,6 +406,7 @@ def click_mcq_option(page: Page, letter: str) -> None:
         f"label:has(:text-is('{letter}'))",
         # Direct checkbox/radio with value=A/B/C/D
         f"input[type='checkbox'][value='{letter}'], input[type='radio'][value='{letter}']",
+        f"input[type='checkbox']:near(:text-is('{letter}')), input[type='radio']:near(:text-is('{letter}'))",
         # Option-label fallback
         f".option-label:text-is('{letter}'), [class*='option-label']:text-is('{letter}')",
         # Last resort: bare letter text
@@ -311,6 +422,31 @@ def click_mcq_option(page: Page, letter: str) -> None:
             return
         except Exception as e:
             log.debug(f"Option {letter} selector failed ({sel}): {e}")
+
+    try:
+        clicked = page.evaluate(
+            """letter => {
+                const visible = el => {
+                    const r = el.getBoundingClientRect();
+                    const s = getComputedStyle(el);
+                    return r.width > 0 && r.height > 0 && s.visibility !== 'hidden' && s.display !== 'none';
+                };
+                const textOf = el => (el.innerText || el.textContent || '').replace(/\\s+/g, ' ').trim();
+                const rows = Array.from(document.querySelectorAll('label, [role="radio"], [role="checkbox"], li, tr, div'));
+                const row = rows.find(el => visible(el) && new RegExp(`^${letter}\\\\b`, 'i').test(textOf(el)));
+                if (!row) return false;
+                const input = row.querySelector('input[type="radio"], input[type="checkbox"]');
+                (input || row).click();
+                return true;
+            }""",
+            letter,
+        )
+        if clicked:
+            log.info(f"Clicked option {letter} via JS row-text fallback")
+            _pause(f"after option {letter} click")
+            return
+    except Exception as e:
+        log.debug(f"JS row-text fallback failed for option {letter!r}: {e}")
 
     # Final fallback: bare letter text
     try:
@@ -433,14 +569,19 @@ def enter_numerical(page: Page, value_str: str) -> None:
 def click_next(page: Page) -> None:
     log.debug("Clicking Next")
     _pause("before Next")
-    page.locator("button:has-text('Next')").click()
+    _click_first(page, ["button:has-text('Next')", "button[aria-label*='Next']"], "Next")
     page.wait_for_load_state("networkidle")
     _pause("after Next")
 
 
 def click_submit(page: Page) -> None:
-    log.info("Clicking Submit Exam")
-    page.locator("button:has-text('Submit Exam')").click()
+    log.info("Clicking Submit")
+    if not _click_first(
+        page,
+        ["button:has-text('Submit Exam')", "button:has-text('Submit Module')", "button:has-text('Submit')"],
+        "submit",
+    ):
+        raise RuntimeError("Could not locate submit button")
     try:
         page.locator("button:has-text('Yes'), button:has-text('Confirm'), button:has-text('OK')").first.click(timeout=3000)
         log.debug("Confirmed submit dialog")
