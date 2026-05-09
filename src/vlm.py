@@ -5,12 +5,13 @@ import re
 from typing import Any
 import litellm
 
+from .browser import QuestionSnapshot
 from .config import config
 
 log = logging.getLogger("vlm")
 
 SYSTEM_PROMPT = (
-    "You are an expert JEE Advanced exam solver for Physics, Chemistry, and Mathematics.\n"
+    f"You are an expert {config.exam_label} exam solver.\n"
     "Solve carefully and rigorously. Think extensively before committing to an answer.\n"
     "\n"
     "Workflow you MUST follow for every question:\n"
@@ -242,22 +243,59 @@ def _normalize_result(parsed: dict, prompt_key: str) -> dict:
     return {"answer": options[0]}
 
 
-def query_vlm(screenshot_b64: str, question_type: str) -> dict:
+def _coerce_snapshot(question_input: QuestionSnapshot | str) -> QuestionSnapshot:
+    if isinstance(question_input, QuestionSnapshot):
+        return question_input
+    return QuestionSnapshot(screenshot_b64=question_input)
+
+
+def _format_question_context(snapshot: QuestionSnapshot) -> str:
+    if not snapshot.has_useful_text:
+        return (
+            "No reliable extracted DOM question text was found. "
+            "Solve from the screenshot image."
+        )
+
+    parts = [
+        "Extracted DOM question text is available. Use it as the primary source for text-rendered content.",
+        "Use the screenshot as the authority for diagrams, images, equations, layout, and anything missing or ambiguous in the text.",
+    ]
+    if snapshot.question_text:
+        parts.extend(["", "Question text:", snapshot.question_text])
+    if snapshot.option_texts:
+        option_lines = [f"{letter}. {text}" for letter, text in sorted(snapshot.option_texts.items())]
+        parts.extend(["", "Option text:", *option_lines])
+    return "\n".join(parts)
+
+
+def query_vlm(question_input: QuestionSnapshot | str, question_type: str) -> dict:
     """
-    Send a screenshot to the VLM and return a normalized answer dict.
+    Send a hybrid question snapshot to the VLM and return a normalized answer dict.
+
+    A raw screenshot base64 string is still accepted for the old screenshot-only path.
     """
+    snapshot = _coerce_snapshot(question_input)
     prompt_key = _normalize_type(question_type)
     prompt = _PROMPTS[prompt_key]
+    question_context = _format_question_context(snapshot)
 
     messages = [
         {"role": "system", "content": SYSTEM_PROMPT},
         {
             "role": "user",
             "content": [
-                {"type": "text", "text": f"Solve this JEE Advanced exam question.\n\n{prompt}\n\nQuestion image follows:"},
+                {
+                    "type": "text",
+                    "text": (
+                        f"Solve this {config.exam_label} exam question.\n\n"
+                        f"{prompt}\n\n"
+                        f"{question_context}\n\n"
+                        "Question screenshot follows:"
+                    ),
+                },
                 {
                     "type": "image_url",
-                    "image_url": {"url": f"data:image/png;base64,{screenshot_b64}"},
+                    "image_url": {"url": f"data:image/png;base64,{snapshot.screenshot_b64}"},
                 },
                 {
                     "type": "text",

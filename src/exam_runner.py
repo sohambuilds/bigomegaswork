@@ -14,7 +14,7 @@ from .browser import (
     get_question_meta,
     get_question_number,
     get_total_questions,
-    take_screenshot_b64,
+    capture_question_snapshot,
     click_mcq_option,
     enter_numerical,
     click_next,
@@ -205,17 +205,31 @@ def run_paper(page: Page, paper_label: str, log_file: IO) -> dict:
         subject = "?"
         vlm_result: dict = {}
         actions: list[str] = []
+        snapshot_meta: dict = {}
         try:
             q_num = get_question_number(page)
             q_type, subject = get_question_meta(page)
 
             print(f"  Q{q_num:>2}/{total} [{q_type:15s}] [{subject:10s}] ", end="", flush=True)
 
-            screenshot = take_screenshot_b64(page)
+            snapshot = capture_question_snapshot(page)
+            snapshot_meta = {
+                "source_mode": snapshot.source_mode,
+                "question_text_len": len(snapshot.question_text),
+                "option_count": len(snapshot.option_texts),
+                "image_count": snapshot.image_count,
+            }
             time.sleep(VLM_DELAY)
-            vlm_result = query_vlm(screenshot, q_type)
+            vlm_result = query_vlm(snapshot, q_type)
             loggable = {k: v for k, v in vlm_result.items() if k != "_raw"}
-            log.debug(f"Q{q_num}: type={q_type!r} subject={subject!r} vlm={loggable}")
+            log.debug(
+                "Q%s: type=%r subject=%r snapshot=%s vlm=%s",
+                q_num,
+                q_type,
+                subject,
+                snapshot_meta,
+                loggable,
+            )
             actions = _apply_strategy(page, vlm_result, q_type)
         except Exception as exc:
             log.exception(f"Unhandled error on Q{q_num} ({q_type}); advancing to next")
@@ -234,6 +248,7 @@ def run_paper(page: Page, paper_label: str, log_file: IO) -> dict:
                 "q_num": q_num,
                 "q_type": q_type,
                 "subject": subject,
+                "snapshot": snapshot_meta,
                 "vlm_result": vlm_result,
                 "actions": actions,
             }

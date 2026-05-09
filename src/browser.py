@@ -2,6 +2,7 @@ import base64
 import logging
 import re
 import time
+from dataclasses import dataclass, field
 from playwright.sync_api import Page
 
 from .config import config
@@ -9,6 +10,21 @@ from .config import config
 log = logging.getLogger("browser")
 
 ACTION_DELAY = 2.0  # seconds — pause between browser actions for reliability
+
+OPTIONS = ("A", "B", "C", "D")
+
+
+@dataclass
+class QuestionSnapshot:
+    screenshot_b64: str
+    question_text: str = ""
+    option_texts: dict[str, str] = field(default_factory=dict)
+    image_count: int = 0
+    source_mode: str = "image"
+
+    @property
+    def has_useful_text(self) -> bool:
+        return bool(self.question_text or self.option_texts)
 
 
 def _pause(label: str = "") -> None:
@@ -69,6 +85,197 @@ def take_screenshot_b64(page: Page) -> str:
     b64 = base64.b64encode(data).decode("utf-8")
     log.debug(f"Screenshot taken ({len(data)} bytes)")
     return b64
+
+
+_CHROME_LINE_PATTERNS = [
+    re.compile(r"^question\s+\d+\s+of\s+\d+$", re.IGNORECASE),
+    re.compile(r"^(next|previous|submit exam|submit|login|logout|confirm|ok|clear)$", re.IGNORECASE),
+    re.compile(r"^(physics|chemistry|mathematics|math|english|hindi)$", re.IGNORECASE),
+    re.compile(r"^(single|multiple|numerical|integer|matching|list).*(correct|answer|type)?$", re.IGNORECASE),
+    re.compile(r"^text\.{0,3}$", re.IGNORECASE),
+]
+
+_LOW_SIGNAL_TOKEN_RE = re.compile(
+    r"\b("
+    r"question|of|next|previous|submit|exam|login|logout|confirm|ok|clear|"
+    r"physics|chemistry|mathematics|math|english|hindi|"
+    r"single|multiple|numerical|integer|matching|list|correct|answer|type|"
+    r"text"
+    r")\b",
+    re.IGNORECASE,
+)
+
+
+def _normalize_dom_text(text: str) -> str:
+    text = text.replace("\xa0", " ")
+    lines = []
+    previous = ""
+    for raw_line in text.splitlines():
+        line = re.sub(r"\s+", " ", raw_line).strip()
+        if not line or line == previous:
+            continue
+        if any(pattern.match(line) for pattern in _CHROME_LINE_PATTERNS):
+            continue
+        lines.append(line)
+        previous = line
+    return "\n".join(lines).strip()
+
+
+def _content_score(text: str) -> int:
+    normalized = _normalize_dom_text(text)
+    if not normalized:
+        return 0
+
+    signal_text = _signal_text(normalized)
+    words = re.findall(r"[A-Za-z0-9]{2,}", signal_text)
+    math_symbols = re.findall(r"[=+\-*/^√∫ΣπθλμΩ<>≤≥]", normalized)
+    return len(signal_text) + (8 * len(words)) + (4 * len(math_symbols))
+
+
+def _signal_text(text: str) -> str:
+    signal = re.sub(r"question\s+\d+\s+of\s+\d+", " ", text, flags=re.IGNORECASE)
+    signal = re.sub(r"\b[ABCD]\b", " ", signal)
+    signal = _LOW_SIGNAL_TOKEN_RE.sub(" ", signal)
+    return re.sub(r"\s+", " ", signal).strip()
+
+
+def _is_useful_dom_text(text: str) -> bool:
+    normalized = _normalize_dom_text(text)
+    if not normalized:
+        return False
+
+    signal_text = _signal_text(normalized)
+    words = re.findall(r"[A-Za-z0-9]{2,}", signal_text)
+    has_math = bool(re.search(r"[=+\-*/^√∫ΣπθλμΩ<>≤≥]", normalized))
+    return len(signal_text) >= 40 and len(words) >= 6 or len(signal_text) >= 20 and has_math
+
+
+def _strip_option_label(letter: str, text: str) -> str:
+    pattern = rf"^\s*{re.escape(letter)}\s*[\).:\-]?\s*"
+    return re.sub(pattern, "", text, count=1, flags=re.IGNORECASE).strip()
+
+
+def _is_meaningful_option_text(text: str) -> bool:
+    signal_text = _signal_text(_normalize_dom_text(text))
+    if not signal_text:
+        return False
+    if re.search(r"\d|[=+\-*/^√∫ΣπθλμΩ<>≤≥]", signal_text):
+        return True
+    return len(signal_text) >= 3
+
+
+def _meaningful_options(raw_options: dict[str, str]) -> dict[str, str]:
+    option_texts: dict[str, str] = {}
+    for letter in OPTIONS:
+        raw_text = raw_options.get(letter, "")
+        normalized = _normalize_dom_text(raw_text)
+        option_body = _strip_option_label(letter, normalized)
+        if _is_meaningful_option_text(option_body):
+            option_texts[letter] = option_body
+    return option_texts
+
+
+def _best_question_text(candidates: list[str]) -> str:
+    normalized_candidates = [_normalize_dom_text(candidate) for candidate in candidates]
+    useful_candidates = [candidate for candidate in normalized_candidates if _is_useful_dom_text(candidate)]
+    if not useful_candidates:
+        return ""
+    return max(useful_candidates, key=_content_score)
+
+
+def _source_mode(question_text: str, option_texts: dict[str, str], image_count: int) -> str:
+    if not question_text and not option_texts:
+        return "image"
+    return "hybrid" if image_count else "text"
+
+
+def _extract_dom_snapshot(page: Page) -> dict:
+    return page.evaluate(
+        """() => {
+            const normalize = value => (value || '').replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim();
+            const visible = el => {
+                const rect = el.getBoundingClientRect();
+                const style = window.getComputedStyle(el);
+                return rect.width > 0 && rect.height > 0 && style.visibility !== 'hidden' && style.display !== 'none';
+            };
+            const textOf = el => normalize(el.innerText || el.textContent || '');
+            const addText = (items, el) => {
+                if (!el || !visible(el)) return;
+                const text = textOf(el);
+                if (text) items.push(text);
+            };
+
+            const questionSelectors = [
+                '[class*="question-content"]',
+                '[class*="question-text"]',
+                '[class*="question-body"]',
+                '[class*="question-stem"]',
+                '[class*="question"]',
+                '[class*="problem"]',
+                '[class*="passage"]',
+                '[class*="prompt"]',
+                '[class*="content"]',
+                'main',
+                '[role="main"]'
+            ];
+            const questionTexts = [];
+            for (const selector of questionSelectors) {
+                for (const el of Array.from(document.querySelectorAll(selector)).slice(0, 20)) {
+                    addText(questionTexts, el);
+                }
+            }
+            addText(questionTexts, document.body);
+
+            const optionTexts = {};
+            for (const row of Array.from(document.querySelectorAll('.mcq-option[data-option], [data-option]'))) {
+                if (!visible(row)) continue;
+                const option = String(row.getAttribute('data-option') || '').trim().toUpperCase();
+                if (!/^[ABCD]$/.test(option) || optionTexts[option]) continue;
+                optionTexts[option] = textOf(row);
+            }
+
+            const roots = Array.from(document.querySelectorAll(
+                '[class*="question"], [class*="problem"], [class*="passage"], [class*="prompt"], [class*="content"], main, [role="main"]'
+            )).filter(visible);
+            const imageElements = new Set();
+            for (const root of (roots.length ? roots : [document.body])) {
+                for (const el of Array.from(root.querySelectorAll('img, svg, canvas'))) {
+                    if (visible(el)) imageElements.add(el);
+                }
+            }
+            const imageCount = imageElements.size;
+
+            return {questionTexts, optionTexts, imageCount};
+        }"""
+    )
+
+
+def capture_question_snapshot(page: Page) -> QuestionSnapshot:
+    screenshot_b64 = take_screenshot_b64(page)
+    try:
+        raw_snapshot = _extract_dom_snapshot(page)
+    except Exception as exc:
+        log.debug(f"DOM question extraction failed; falling back to image only: {exc}")
+        return QuestionSnapshot(screenshot_b64=screenshot_b64)
+
+    question_text = _best_question_text(raw_snapshot.get("questionTexts", []))
+    option_texts = _meaningful_options(raw_snapshot.get("optionTexts", {}))
+    image_count = int(raw_snapshot.get("imageCount") or 0)
+    snapshot = QuestionSnapshot(
+        screenshot_b64=screenshot_b64,
+        question_text=question_text,
+        option_texts=option_texts,
+        image_count=image_count,
+        source_mode=_source_mode(question_text, option_texts, image_count),
+    )
+    log.debug(
+        "Question snapshot: mode=%s text_len=%d options=%d images=%d",
+        snapshot.source_mode,
+        len(snapshot.question_text),
+        len(snapshot.option_texts),
+        snapshot.image_count,
+    )
+    return snapshot
 
 
 def click_mcq_option(page: Page, letter: str) -> None:

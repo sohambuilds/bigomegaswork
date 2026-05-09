@@ -11,6 +11,7 @@ class Config:
     username: str
     password: str
     model: str
+    exam_label: str
     headless: bool
 
 
@@ -19,5 +20,6 @@ config = Config(
     username=os.environ["USERNAME"],
     password=os.environ["PASSWORD"],
     model=os.environ.get("LITELLM_MODEL", "gemini/gemini-2.5-pro"),
+    exam_label=os.environ.get("EXAM_LABEL", "JEE Advanced"),
     headless=os.environ.get("HEADLESS", "false").lower() == "true",
 )
