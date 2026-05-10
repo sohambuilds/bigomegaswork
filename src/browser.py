@@ -583,18 +583,68 @@ def click_next(page: Page) -> None:
     _pause("after Next")
 
 
-def click_submit(page: Page) -> None:
-    log.info("Clicking Submit")
-    if not _click_first(
-        page,
-        ["button:has-text('Submit Exam')", "button:has-text('Submit Module')", "button:has-text('Submit')"],
-        "submit",
-    ):
-        raise RuntimeError("Could not locate submit button")
+def _confirm_submit_modal(page: Page, label: str) -> bool:
     try:
-        page.locator("button:has-text('Yes'), button:has-text('Confirm'), button:has-text('OK')").first.click(timeout=3000)
-        log.debug("Confirmed submit dialog")
-    except Exception:
-        pass
+        confirmed = page.evaluate(
+            """() => {
+                const visible = el => {
+                    const r = el.getBoundingClientRect();
+                    const s = getComputedStyle(el);
+                    return r.width > 0 && r.height > 0 && s.visibility !== 'hidden' && s.display !== 'none';
+                };
+                const modal = Array.from(document.querySelectorAll('.modal, [role="dialog"], #confirm-modal'))
+                    .find(visible) || document;
+                const buttons = Array.from(modal.querySelectorAll('button')).filter(visible);
+                const confirm = buttons.find(button => /^(Yes|Confirm|OK|Submit)$/i.test((button.innerText || '').trim()));
+                if (!confirm) return false;
+                confirm.click();
+                return true;
+            }"""
+        )
+        if confirmed:
+            log.debug(f"Confirmed {label} modal")
+        return bool(confirmed)
+    except Exception as exc:
+        log.debug(f"{label} confirmation click skipped/failed: {exc}")
+        return False
+
+
+def _wait_for_question_one(page: Page, label: str) -> None:
+    try:
+        page.wait_for_function(
+            "() => /Question\\s+1\\s+of\\s+\\d+/i.test(document.body.innerText || '')",
+            timeout=10000,
+        )
+        log.debug(f"{label}: next module question 1 is visible")
+    except Exception as exc:
+        log.warning(f"{label}: did not observe next module question 1 before timeout: {exc}")
+
+
+def click_submit_module(page: Page) -> None:
+    log.info("Clicking Submit Module")
+    if not _click_first(page, ["button:has-text('Submit Module')"], "submit module"):
+        raise RuntimeError("Could not locate Submit Module button")
+    try:
+        with page.expect_event("dialog", timeout=10000) as dialog_info:
+            _confirm_submit_modal(page, "module submit")
+        dialog = dialog_info.value
+        log.info(f"Accepting module submit dialog: {dialog.message}")
+        dialog.accept()
+    except Exception as exc:
+        log.warning(f"Module submit dialog was not observed/accepted before timeout: {exc}")
+    page.wait_for_load_state("networkidle")
+    _wait_for_question_one(page, "module submit")
+    _pause("after Submit Module")
+
+
+def click_submit_exam(page: Page) -> None:
+    log.info("Clicking Submit Exam")
+    if not _click_first(page, ["button:has-text('Submit Exam')", "button:has-text('Submit')"], "submit exam"):
+        raise RuntimeError("Could not locate Submit Exam button")
+    _confirm_submit_modal(page, "exam submit")
     page.wait_for_load_state("networkidle")
     log.info("Exam submitted")
+
+
+def click_submit(page: Page) -> None:
+    click_submit_exam(page)

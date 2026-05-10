@@ -1,0 +1,627 @@
+2026-05-10 10:57:02,889 [INFO] main: Model : groq/meta-llama/llama-4-scout-17b-16e-instruct
+2026-05-10 10:57:02,890 [INFO] main: JSONL : logs\run_20260510_105702.jsonl
+2026-05-10 10:57:02,890 [INFO] main: Papers: 1
+2026-05-10 10:57:02,891 [DEBUG] asyncio: Using proactor: IocpProactor
+2026-05-10 10:57:04,214 [INFO] browser: Navigating to https://sat-image.onrender.com
+2026-05-10 10:57:05,418 [DEBUG] browser: Filling login form
+2026-05-10 10:57:05,487 [DEBUG] browser: Filled username via selector: #model-name
+2026-05-10 10:57:05,514 [DEBUG] browser: Filled password via selector: #password
+2026-05-10 10:57:05,515 [DEBUG] browser: Selecting paper: Practice Test 4
+2026-05-10 10:57:05,585 [DEBUG] browser: Clicked login/start via selector: #login-btn
+2026-05-10 10:57:06,560 [DEBUG] browser: Clicked directions start via selector: button:has-text('Start Exam')
+2026-05-10 10:57:08,331 [INFO] browser: Logged in — paper: Practice Test 4
+2026-05-10 10:57:08,332 [DEBUG] browser: Zooming out (Ctrl+Minus x5)
+2026-05-10 10:57:08,340 [DEBUG] browser:   Ctrl+Minus press 1/5
+2026-05-10 10:57:08,347 [DEBUG] browser:   Ctrl+Minus press 2/5
+2026-05-10 10:57:08,352 [DEBUG] browser:   Ctrl+Minus press 3/5
+2026-05-10 10:57:08,357 [DEBUG] browser:   Ctrl+Minus press 4/5
+2026-05-10 10:57:08,363 [DEBUG] browser:   Ctrl+Minus press 5/5
+2026-05-10 10:57:08,363 [INFO] exam_runner: Starting SAT Module 1 target=27
+2026-05-10 10:57:08,382 [INFO] browser: Total questions in paper: 27
+2026-05-10 10:57:08,383 [INFO] exam_runner: Submit target for Practice Test 4 Module 1: Q27
+2026-05-10 10:57:08,395 [DEBUG] browser: Question number: 1  (header text: 'Question 1 of 27')
+2026-05-10 10:57:08,404 [DEBUG] browser: Question meta: type='Multiple Choice'  subject='vocabulary_in_context'
+2026-05-10 10:57:08,545 [DEBUG] browser: Screenshot taken (50157 bytes)
+2026-05-10 10:57:08,564 [DEBUG] browser: Question snapshot: mode=text text_len=793 options=4 images=0
+2026-05-10 10:57:10,565 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-10 10:57:12,114 [INFO] vlm: VLM parsed result: {'answers': ['B']}
+2026-05-10 10:57:12,114 [DEBUG] exam_runner: Q1: type='Multiple Choice' subject='vocabulary_in_context' snapshot={'source_mode': 'text', 'question_text_len': 793, 'option_count': 4, 'image_count': 0} vlm={'answers': ['B'], '_type': 'mcq-multiple'}
+2026-05-10 10:57:12,114 [DEBUG] browser: Attempting to click option 'B'
+2026-05-10 10:57:12,171 [INFO] browser: Clicked option B via selector: .mcq-option[data-option='B']
+2026-05-10 10:57:12,171 [DEBUG] browser: sleep 2.0s (after option B click)
+2026-05-10 10:57:14,173 [DEBUG] browser: Clicking Next
+2026-05-10 10:57:14,174 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-10 10:57:16,215 [DEBUG] browser: Clicked Next via selector: button:has-text('Next')
+2026-05-10 10:57:16,219 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-10 10:57:18,236 [DEBUG] browser: Question number: 2  (header text: 'Question 2 of 27')
+2026-05-10 10:57:18,248 [DEBUG] browser: Question meta: type='Multiple Choice'  subject='vocabulary_in_context'
+2026-05-10 10:57:18,362 [DEBUG] browser: Screenshot taken (50879 bytes)
+2026-05-10 10:57:18,371 [DEBUG] browser: Question snapshot: mode=text text_len=815 options=4 images=0
+2026-05-10 10:57:20,372 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-10 10:57:21,976 [INFO] vlm: VLM parsed result: {'answers': ['B']}
+2026-05-10 10:57:21,978 [DEBUG] exam_runner: Q2: type='Multiple Choice' subject='vocabulary_in_context' snapshot={'source_mode': 'text', 'question_text_len': 815, 'option_count': 4, 'image_count': 0} vlm={'answers': ['B'], '_type': 'mcq-multiple'}
+2026-05-10 10:57:21,978 [DEBUG] browser: Attempting to click option 'B'
+2026-05-10 10:57:22,021 [INFO] browser: Clicked option B via selector: .mcq-option[data-option='B']
+2026-05-10 10:57:22,021 [DEBUG] browser: sleep 2.0s (after option B click)
+2026-05-10 10:57:24,022 [DEBUG] browser: Clicking Next
+2026-05-10 10:57:24,022 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-10 10:57:26,054 [DEBUG] browser: Clicked Next via selector: button:has-text('Next')
+2026-05-10 10:57:26,058 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-10 10:57:28,071 [DEBUG] browser: Question number: 3  (header text: 'Question 3 of 27')
+2026-05-10 10:57:28,080 [DEBUG] browser: Question meta: type='Multiple Choice'  subject='contextual_vocabulary'
+2026-05-10 10:57:28,172 [DEBUG] browser: Screenshot taken (50617 bytes)
+2026-05-10 10:57:28,181 [DEBUG] browser: Question snapshot: mode=text text_len=827 options=4 images=0
+2026-05-10 10:57:30,182 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-10 10:57:31,638 [INFO] vlm: VLM parsed result: {'answers': ['A']}
+2026-05-10 10:57:31,639 [DEBUG] exam_runner: Q3: type='Multiple Choice' subject='contextual_vocabulary' snapshot={'source_mode': 'text', 'question_text_len': 827, 'option_count': 4, 'image_count': 0} vlm={'answers': ['A'], '_type': 'mcq-multiple'}
+2026-05-10 10:57:31,640 [DEBUG] browser: Attempting to click option 'A'
+2026-05-10 10:57:31,699 [INFO] browser: Clicked option A via selector: .mcq-option[data-option='A']
+2026-05-10 10:57:31,700 [DEBUG] browser: sleep 2.0s (after option A click)
+2026-05-10 10:57:33,702 [DEBUG] browser: Clicking Next
+2026-05-10 10:57:33,702 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-10 10:57:35,740 [DEBUG] browser: Clicked Next via selector: button:has-text('Next')
+2026-05-10 10:57:35,745 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-10 10:57:37,759 [DEBUG] browser: Question number: 4  (header text: 'Question 4 of 27')
+2026-05-10 10:57:37,767 [DEBUG] browser: Question meta: type='Multiple Choice'  subject='scientific_context'
+2026-05-10 10:57:37,860 [DEBUG] browser: Screenshot taken (50854 bytes)
+2026-05-10 10:57:37,869 [DEBUG] browser: Question snapshot: mode=text text_len=798 options=4 images=0
+2026-05-10 10:57:39,870 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-10 10:57:41,661 [INFO] vlm: VLM parsed result: {'answers': ['B']}
+2026-05-10 10:57:41,662 [DEBUG] exam_runner: Q4: type='Multiple Choice' subject='scientific_context' snapshot={'source_mode': 'text', 'question_text_len': 798, 'option_count': 4, 'image_count': 0} vlm={'answers': ['B'], '_type': 'mcq-multiple'}
+2026-05-10 10:57:41,663 [DEBUG] browser: Attempting to click option 'B'
+2026-05-10 10:57:41,708 [INFO] browser: Clicked option B via selector: .mcq-option[data-option='B']
+2026-05-10 10:57:41,709 [DEBUG] browser: sleep 2.0s (after option B click)
+2026-05-10 10:57:43,710 [DEBUG] browser: Clicking Next
+2026-05-10 10:57:43,710 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-10 10:57:45,740 [DEBUG] browser: Clicked Next via selector: button:has-text('Next')
+2026-05-10 10:57:45,744 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-10 10:57:47,755 [DEBUG] browser: Question number: 5  (header text: 'Question 5 of 27')
+2026-05-10 10:57:47,764 [DEBUG] browser: Question meta: type='Multiple Choice'  subject='vocabulary_in_context'
+2026-05-10 10:57:47,854 [DEBUG] browser: Screenshot taken (51257 bytes)
+2026-05-10 10:57:47,861 [DEBUG] browser: Question snapshot: mode=text text_len=817 options=4 images=0
+2026-05-10 10:57:49,861 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-10 10:57:51,455 [INFO] vlm: VLM parsed result: {'answers': ['A']}
+2026-05-10 10:57:51,456 [DEBUG] exam_runner: Q5: type='Multiple Choice' subject='vocabulary_in_context' snapshot={'source_mode': 'text', 'question_text_len': 817, 'option_count': 4, 'image_count': 0} vlm={'answers': ['A'], '_type': 'mcq-multiple'}
+2026-05-10 10:57:51,456 [DEBUG] browser: Attempting to click option 'A'
+2026-05-10 10:57:51,499 [INFO] browser: Clicked option A via selector: .mcq-option[data-option='A']
+2026-05-10 10:57:51,500 [DEBUG] browser: sleep 2.0s (after option A click)
+2026-05-10 10:57:53,501 [DEBUG] browser: Clicking Next
+2026-05-10 10:57:53,502 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-10 10:57:55,533 [DEBUG] browser: Clicked Next via selector: button:has-text('Next')
+2026-05-10 10:57:55,536 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-10 10:57:57,549 [DEBUG] browser: Question number: 6  (header text: 'Question 6 of 27')
+2026-05-10 10:57:57,559 [DEBUG] browser: Question meta: type='Multiple Choice'  subject='word_in_context'
+2026-05-10 10:57:57,642 [DEBUG] browser: Screenshot taken (58514 bytes)
+2026-05-10 10:57:57,650 [DEBUG] browser: Question snapshot: mode=text text_len=979 options=4 images=0
+2026-05-10 10:57:59,652 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-10 10:58:01,897 [INFO] vlm: VLM parsed result: {'answers': ['A']}
+2026-05-10 10:58:01,898 [DEBUG] exam_runner: Q6: type='Multiple Choice' subject='word_in_context' snapshot={'source_mode': 'text', 'question_text_len': 979, 'option_count': 4, 'image_count': 0} vlm={'answers': ['A'], '_type': 'mcq-multiple'}
+2026-05-10 10:58:01,899 [DEBUG] browser: Attempting to click option 'A'
+2026-05-10 10:58:01,946 [INFO] browser: Clicked option A via selector: .mcq-option[data-option='A']
+2026-05-10 10:58:01,946 [DEBUG] browser: sleep 2.0s (after option A click)
+2026-05-10 10:58:03,948 [DEBUG] browser: Clicking Next
+2026-05-10 10:58:03,949 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-10 10:58:05,988 [DEBUG] browser: Clicked Next via selector: button:has-text('Next')
+2026-05-10 10:58:05,992 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-10 10:58:08,003 [DEBUG] browser: Question number: 7  (header text: 'Question 7 of 27')
+2026-05-10 10:58:08,011 [DEBUG] browser: Question meta: type='Multiple Choice'  subject='cause_and_effect'
+2026-05-10 10:58:08,097 [DEBUG] browser: Screenshot taken (65329 bytes)
+2026-05-10 10:58:08,108 [DEBUG] browser: Question snapshot: mode=text text_len=1249 options=4 images=0
+2026-05-10 10:58:10,109 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-10 10:58:12,097 [INFO] vlm: VLM parsed result: {'answers': ['A']}
+2026-05-10 10:58:12,098 [DEBUG] exam_runner: Q7: type='Multiple Choice' subject='cause_and_effect' snapshot={'source_mode': 'text', 'question_text_len': 1249, 'option_count': 4, 'image_count': 0} vlm={'answers': ['A'], '_type': 'mcq-multiple'}
+2026-05-10 10:58:12,098 [DEBUG] browser: Attempting to click option 'A'
+2026-05-10 10:58:12,148 [INFO] browser: Clicked option A via selector: .mcq-option[data-option='A']
+2026-05-10 10:58:12,148 [DEBUG] browser: sleep 2.0s (after option A click)
+2026-05-10 10:58:14,149 [DEBUG] browser: Clicking Next
+2026-05-10 10:58:14,150 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-10 10:58:16,180 [DEBUG] browser: Clicked Next via selector: button:has-text('Next')
+2026-05-10 10:58:16,184 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-10 10:58:18,195 [DEBUG] browser: Question number: 8  (header text: 'Question 8 of 27')
+2026-05-10 10:58:18,204 [DEBUG] browser: Question meta: type='Multiple Choice'  subject='main_idea'
+2026-05-10 10:58:18,291 [DEBUG] browser: Screenshot taken (58041 bytes)
+2026-05-10 10:58:18,300 [DEBUG] browser: Question snapshot: mode=text text_len=1051 options=4 images=0
+2026-05-10 10:58:20,302 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-10 10:58:21,944 [INFO] vlm: VLM parsed result: {'answers': ['A']}
+2026-05-10 10:58:21,945 [DEBUG] exam_runner: Q8: type='Multiple Choice' subject='main_idea' snapshot={'source_mode': 'text', 'question_text_len': 1051, 'option_count': 4, 'image_count': 0} vlm={'answers': ['A'], '_type': 'mcq-multiple'}
+2026-05-10 10:58:21,945 [DEBUG] browser: Attempting to click option 'A'
+2026-05-10 10:58:21,993 [INFO] browser: Clicked option A via selector: .mcq-option[data-option='A']
+2026-05-10 10:58:21,993 [DEBUG] browser: sleep 2.0s (after option A click)
+2026-05-10 10:58:23,994 [DEBUG] browser: Clicking Next
+2026-05-10 10:58:23,994 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-10 10:58:26,026 [DEBUG] browser: Clicked Next via selector: button:has-text('Next')
+2026-05-10 10:58:26,030 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-10 10:58:28,040 [DEBUG] browser: Question number: 9  (header text: 'Question 9 of 27')
+2026-05-10 10:58:28,049 [DEBUG] browser: Question meta: type='Multiple Choice'  subject='literary_analysis'
+2026-05-10 10:58:28,141 [DEBUG] browser: Screenshot taken (65699 bytes)
+2026-05-10 10:58:28,151 [DEBUG] browser: Question snapshot: mode=text text_len=1262 options=4 images=0
+2026-05-10 10:58:30,153 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-10 10:58:31,774 [INFO] vlm: VLM parsed result: {'answers': ['A', 'D']}
+2026-05-10 10:58:31,775 [DEBUG] exam_runner: Q9: type='Multiple Choice' subject='literary_analysis' snapshot={'source_mode': 'text', 'question_text_len': 1262, 'option_count': 4, 'image_count': 0} vlm={'answers': ['A', 'D'], '_type': 'mcq-multiple'}
+2026-05-10 10:58:31,776 [DEBUG] browser: Attempting to click option 'A'
+2026-05-10 10:58:31,819 [INFO] browser: Clicked option A via selector: .mcq-option[data-option='A']
+2026-05-10 10:58:31,819 [DEBUG] browser: sleep 2.0s (after option A click)
+2026-05-10 10:58:33,820 [DEBUG] browser: Attempting to click option 'D'
+2026-05-10 10:58:33,868 [INFO] browser: Clicked option D via selector: .mcq-option[data-option='D']
+2026-05-10 10:58:33,868 [DEBUG] browser: sleep 2.0s (after option D click)
+2026-05-10 10:58:35,869 [DEBUG] browser: Clicking Next
+2026-05-10 10:58:35,870 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-10 10:58:37,900 [DEBUG] browser: Clicked Next via selector: button:has-text('Next')
+2026-05-10 10:58:37,904 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-10 10:58:39,916 [DEBUG] browser: Question number: 10  (header text: 'Question 10 of 27')
+2026-05-10 10:58:39,925 [DEBUG] browser: Question meta: type='Multiple Choice'  subject='evidence'
+2026-05-10 10:58:40,018 [DEBUG] browser: Screenshot taken (66471 bytes)
+2026-05-10 10:58:40,028 [DEBUG] browser: Question snapshot: mode=text text_len=1350 options=4 images=0
+2026-05-10 10:58:42,029 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-10 10:58:43,993 [INFO] vlm: VLM parsed result: {'answers': ['B']}
+2026-05-10 10:58:43,994 [DEBUG] exam_runner: Q10: type='Multiple Choice' subject='evidence' snapshot={'source_mode': 'text', 'question_text_len': 1350, 'option_count': 4, 'image_count': 0} vlm={'answers': ['B'], '_type': 'mcq-multiple'}
+2026-05-10 10:58:43,994 [DEBUG] browser: Attempting to click option 'B'
+2026-05-10 10:58:44,038 [INFO] browser: Clicked option B via selector: .mcq-option[data-option='B']
+2026-05-10 10:58:44,039 [DEBUG] browser: sleep 2.0s (after option B click)
+2026-05-10 10:58:46,041 [DEBUG] browser: Clicking Next
+2026-05-10 10:58:46,042 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-10 10:58:48,071 [DEBUG] browser: Clicked Next via selector: button:has-text('Next')
+2026-05-10 10:58:48,075 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-10 10:58:50,086 [DEBUG] browser: Question number: 11  (header text: 'Question 11 of 27')
+2026-05-10 10:58:50,098 [DEBUG] browser: Question meta: type='Multiple Choice'  subject='data_analysis'
+2026-05-10 10:58:50,205 [DEBUG] browser: Screenshot taken (114854 bytes)
+2026-05-10 10:58:50,214 [DEBUG] browser: Question snapshot: mode=hybrid text_len=1265 options=4 images=1
+2026-05-10 10:58:52,215 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-10 10:58:53,970 [INFO] vlm: VLM parsed result: {'answers': ['A']}
+2026-05-10 10:58:53,972 [DEBUG] exam_runner: Q11: type='Multiple Choice' subject='data_analysis' snapshot={'source_mode': 'hybrid', 'question_text_len': 1265, 'option_count': 4, 'image_count': 1} vlm={'answers': ['A'], '_type': 'mcq-multiple'}
+2026-05-10 10:58:53,972 [DEBUG] browser: Attempting to click option 'A'
+2026-05-10 10:58:54,016 [INFO] browser: Clicked option A via selector: .mcq-option[data-option='A']
+2026-05-10 10:58:54,016 [DEBUG] browser: sleep 2.0s (after option A click)
+2026-05-10 10:58:56,016 [DEBUG] browser: Clicking Next
+2026-05-10 10:58:56,017 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-10 10:58:58,046 [DEBUG] browser: Clicked Next via selector: button:has-text('Next')
+2026-05-10 10:58:58,050 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-10 10:59:00,061 [DEBUG] browser: Question number: 12  (header text: 'Question 12 of 27')
+2026-05-10 10:59:00,070 [DEBUG] browser: Question meta: type='Multiple Choice'  subject='argument_logic'
+2026-05-10 10:59:00,156 [DEBUG] browser: Screenshot taken (60249 bytes)
+2026-05-10 10:59:00,166 [DEBUG] browser: Question snapshot: mode=text text_len=1090 options=4 images=0
+2026-05-10 10:59:02,166 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-10 10:59:03,904 [INFO] vlm: VLM parsed result: {'answers': ['B']}
+2026-05-10 10:59:03,905 [DEBUG] exam_runner: Q12: type='Multiple Choice' subject='argument_logic' snapshot={'source_mode': 'text', 'question_text_len': 1090, 'option_count': 4, 'image_count': 0} vlm={'answers': ['B'], '_type': 'mcq-multiple'}
+2026-05-10 10:59:03,905 [DEBUG] browser: Attempting to click option 'B'
+2026-05-10 10:59:03,951 [INFO] browser: Clicked option B via selector: .mcq-option[data-option='B']
+2026-05-10 10:59:03,951 [DEBUG] browser: sleep 2.0s (after option B click)
+2026-05-10 10:59:05,954 [DEBUG] browser: Clicking Next
+2026-05-10 10:59:05,954 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-10 10:59:07,984 [DEBUG] browser: Clicked Next via selector: button:has-text('Next')
+2026-05-10 10:59:07,987 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-10 10:59:10,001 [DEBUG] browser: Question number: 13  (header text: 'Question 13 of 27')
+2026-05-10 10:59:10,010 [DEBUG] browser: Question meta: type='Multiple Choice'  subject='cause_and_effect'
+2026-05-10 10:59:10,098 [DEBUG] browser: Screenshot taken (72610 bytes)
+2026-05-10 10:59:10,107 [DEBUG] browser: Question snapshot: mode=text text_len=1467 options=4 images=0
+2026-05-10 10:59:12,109 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-10 10:59:13,802 [INFO] vlm: VLM parsed result: {'answers': ['B']}
+2026-05-10 10:59:13,803 [DEBUG] exam_runner: Q13: type='Multiple Choice' subject='cause_and_effect' snapshot={'source_mode': 'text', 'question_text_len': 1467, 'option_count': 4, 'image_count': 0} vlm={'answers': ['B'], '_type': 'mcq-multiple'}
+2026-05-10 10:59:13,804 [DEBUG] browser: Attempting to click option 'B'
+2026-05-10 10:59:13,852 [INFO] browser: Clicked option B via selector: .mcq-option[data-option='B']
+2026-05-10 10:59:13,853 [DEBUG] browser: sleep 2.0s (after option B click)
+2026-05-10 10:59:15,854 [DEBUG] browser: Clicking Next
+2026-05-10 10:59:15,854 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-10 10:59:17,885 [DEBUG] browser: Clicked Next via selector: button:has-text('Next')
+2026-05-10 10:59:17,889 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-10 10:59:19,899 [DEBUG] browser: Question number: 14  (header text: 'Question 14 of 27')
+2026-05-10 10:59:19,909 [DEBUG] browser: Question meta: type='Multiple Choice'  subject='punctuation'
+2026-05-10 10:59:19,999 [DEBUG] browser: Screenshot taken (49565 bytes)
+2026-05-10 10:59:20,007 [DEBUG] browser: Question snapshot: mode=text text_len=724 options=4 images=0
+2026-05-10 10:59:22,008 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-10 10:59:23,617 [INFO] vlm: VLM parsed result: {'answers': ['C']}
+2026-05-10 10:59:23,618 [DEBUG] exam_runner: Q14: type='Multiple Choice' subject='punctuation' snapshot={'source_mode': 'text', 'question_text_len': 724, 'option_count': 4, 'image_count': 0} vlm={'answers': ['C'], '_type': 'mcq-multiple'}
+2026-05-10 10:59:23,619 [DEBUG] browser: Attempting to click option 'C'
+2026-05-10 10:59:23,679 [INFO] browser: Clicked option C via selector: .mcq-option[data-option='C']
+2026-05-10 10:59:23,679 [DEBUG] browser: sleep 2.0s (after option C click)
+2026-05-10 10:59:25,681 [DEBUG] browser: Clicking Next
+2026-05-10 10:59:25,681 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-10 10:59:27,711 [DEBUG] browser: Clicked Next via selector: button:has-text('Next')
+2026-05-10 10:59:27,714 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-10 10:59:29,725 [DEBUG] browser: Question number: 15  (header text: 'Question 15 of 27')
+2026-05-10 10:59:29,733 [DEBUG] browser: Question meta: type='Multiple Choice'  subject='sentence_structure'
+2026-05-10 10:59:29,829 [DEBUG] browser: Screenshot taken (49656 bytes)
+2026-05-10 10:59:29,837 [DEBUG] browser: Question snapshot: mode=text text_len=744 options=4 images=0
+2026-05-10 10:59:31,838 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-10 10:59:33,786 [INFO] vlm: VLM parsed result: {'answers': ['A']}
+2026-05-10 10:59:33,787 [DEBUG] exam_runner: Q15: type='Multiple Choice' subject='sentence_structure' snapshot={'source_mode': 'text', 'question_text_len': 744, 'option_count': 4, 'image_count': 0} vlm={'answers': ['A'], '_type': 'mcq-multiple'}
+2026-05-10 10:59:33,788 [DEBUG] browser: Attempting to click option 'A'
+2026-05-10 10:59:33,833 [INFO] browser: Clicked option A via selector: .mcq-option[data-option='A']
+2026-05-10 10:59:33,833 [DEBUG] browser: sleep 2.0s (after option A click)
+2026-05-10 10:59:35,834 [DEBUG] browser: Clicking Next
+2026-05-10 10:59:35,834 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-10 10:59:37,864 [DEBUG] browser: Clicked Next via selector: button:has-text('Next')
+2026-05-10 10:59:37,868 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-10 10:59:39,877 [DEBUG] browser: Question number: 16  (header text: 'Question 16 of 27')
+2026-05-10 10:59:39,886 [DEBUG] browser: Question meta: type='Multiple Choice'  subject='apostrophe_usage'
+2026-05-10 10:59:39,985 [DEBUG] browser: Screenshot taken (48882 bytes)
+2026-05-10 10:59:39,993 [DEBUG] browser: Question snapshot: mode=text text_len=710 options=4 images=0
+2026-05-10 10:59:41,994 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-10 10:59:43,509 [INFO] vlm: VLM parsed result: {'answers': ['B']}
+2026-05-10 10:59:43,510 [DEBUG] exam_runner: Q16: type='Multiple Choice' subject='apostrophe_usage' snapshot={'source_mode': 'text', 'question_text_len': 710, 'option_count': 4, 'image_count': 0} vlm={'answers': ['B'], '_type': 'mcq-multiple'}
+2026-05-10 10:59:43,510 [DEBUG] browser: Attempting to click option 'B'
+2026-05-10 10:59:43,549 [INFO] browser: Clicked option B via selector: .mcq-option[data-option='B']
+2026-05-10 10:59:43,549 [DEBUG] browser: sleep 2.0s (after option B click)
+2026-05-10 10:59:45,551 [DEBUG] browser: Clicking Next
+2026-05-10 10:59:45,551 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-10 10:59:47,583 [DEBUG] browser: Clicked Next via selector: button:has-text('Next')
+2026-05-10 10:59:47,587 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-10 10:59:49,598 [DEBUG] browser: Question number: 17  (header text: 'Question 17 of 27')
+2026-05-10 10:59:49,605 [DEBUG] browser: Question meta: type='Multiple Choice'  subject='punctuation'
+2026-05-10 10:59:49,696 [DEBUG] browser: Screenshot taken (49185 bytes)
+2026-05-10 10:59:49,704 [DEBUG] browser: Question snapshot: mode=text text_len=747 options=4 images=0
+2026-05-10 10:59:51,705 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-10 10:59:53,414 [INFO] vlm: VLM parsed result: {'answers': ['C']}
+2026-05-10 10:59:53,415 [DEBUG] exam_runner: Q17: type='Multiple Choice' subject='punctuation' snapshot={'source_mode': 'text', 'question_text_len': 747, 'option_count': 4, 'image_count': 0} vlm={'answers': ['C'], '_type': 'mcq-multiple'}
+2026-05-10 10:59:53,415 [DEBUG] browser: Attempting to click option 'C'
+2026-05-10 10:59:53,459 [INFO] browser: Clicked option C via selector: .mcq-option[data-option='C']
+2026-05-10 10:59:53,459 [DEBUG] browser: sleep 2.0s (after option C click)
+2026-05-10 10:59:55,461 [DEBUG] browser: Clicking Next
+2026-05-10 10:59:55,461 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-10 10:59:57,494 [DEBUG] browser: Clicked Next via selector: button:has-text('Next')
+2026-05-10 10:59:57,497 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-10 10:59:59,511 [DEBUG] browser: Question number: 18  (header text: 'Question 18 of 27')
+2026-05-10 10:59:59,519 [DEBUG] browser: Question meta: type='Multiple Choice'  subject='subject_verb_agreement'
+2026-05-10 10:59:59,597 [DEBUG] browser: Screenshot taken (47594 bytes)
+2026-05-10 10:59:59,605 [DEBUG] browser: Question snapshot: mode=text text_len=689 options=4 images=0
+2026-05-10 11:00:01,606 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-10 11:00:03,216 [INFO] vlm: VLM parsed result: {'answers': ['B']}
+2026-05-10 11:00:03,217 [DEBUG] exam_runner: Q18: type='Multiple Choice' subject='subject_verb_agreement' snapshot={'source_mode': 'text', 'question_text_len': 689, 'option_count': 4, 'image_count': 0} vlm={'answers': ['B'], '_type': 'mcq-multiple'}
+2026-05-10 11:00:03,217 [DEBUG] browser: Attempting to click option 'B'
+2026-05-10 11:00:03,260 [INFO] browser: Clicked option B via selector: .mcq-option[data-option='B']
+2026-05-10 11:00:03,261 [DEBUG] browser: sleep 2.0s (after option B click)
+2026-05-10 11:00:05,262 [DEBUG] browser: Clicking Next
+2026-05-10 11:00:05,262 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-10 11:00:07,294 [DEBUG] browser: Clicked Next via selector: button:has-text('Next')
+2026-05-10 11:00:07,299 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-10 11:00:09,313 [DEBUG] browser: Question number: 19  (header text: 'Question 19 of 27')
+2026-05-10 11:00:09,321 [DEBUG] browser: Question meta: type='Multiple Choice'  subject='punctuation'
+2026-05-10 11:00:09,408 [DEBUG] browser: Screenshot taken (53511 bytes)
+2026-05-10 11:00:09,416 [DEBUG] browser: Question snapshot: mode=text text_len=916 options=4 images=0
+2026-05-10 11:00:11,417 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-10 11:00:13,095 [INFO] vlm: VLM parsed result: {'answers': ['A']}
+2026-05-10 11:00:13,096 [DEBUG] exam_runner: Q19: type='Multiple Choice' subject='punctuation' snapshot={'source_mode': 'text', 'question_text_len': 916, 'option_count': 4, 'image_count': 0} vlm={'answers': ['A'], '_type': 'mcq-multiple'}
+2026-05-10 11:00:13,096 [DEBUG] browser: Attempting to click option 'A'
+2026-05-10 11:00:13,138 [INFO] browser: Clicked option A via selector: .mcq-option[data-option='A']
+2026-05-10 11:00:13,139 [DEBUG] browser: sleep 2.0s (after option A click)
+2026-05-10 11:00:15,140 [DEBUG] browser: Clicking Next
+2026-05-10 11:00:15,140 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-10 11:00:17,169 [DEBUG] browser: Clicked Next via selector: button:has-text('Next')
+2026-05-10 11:00:17,173 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-10 11:00:19,186 [DEBUG] browser: Question number: 20  (header text: 'Question 20 of 27')
+2026-05-10 11:00:19,194 [DEBUG] browser: Question meta: type='Multiple Choice'  subject='verb_tense'
+2026-05-10 11:00:19,275 [DEBUG] browser: Screenshot taken (47832 bytes)
+2026-05-10 11:00:19,284 [DEBUG] browser: Question snapshot: mode=text text_len=713 options=4 images=0
+2026-05-10 11:00:21,285 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-10 11:00:23,055 [INFO] vlm: VLM parsed result: {'answers': ['D']}
+2026-05-10 11:00:23,056 [DEBUG] exam_runner: Q20: type='Multiple Choice' subject='verb_tense' snapshot={'source_mode': 'text', 'question_text_len': 713, 'option_count': 4, 'image_count': 0} vlm={'answers': ['D'], '_type': 'mcq-multiple'}
+2026-05-10 11:00:23,057 [DEBUG] browser: Attempting to click option 'D'
+2026-05-10 11:00:23,097 [INFO] browser: Clicked option D via selector: .mcq-option[data-option='D']
+2026-05-10 11:00:23,097 [DEBUG] browser: sleep 2.0s (after option D click)
+2026-05-10 11:00:25,099 [DEBUG] browser: Clicking Next
+2026-05-10 11:00:25,099 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-10 11:00:27,131 [DEBUG] browser: Clicked Next via selector: button:has-text('Next')
+2026-05-10 11:00:27,135 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-10 11:00:29,148 [DEBUG] browser: Question number: 21  (header text: 'Question 21 of 27')
+2026-05-10 11:00:29,157 [DEBUG] browser: Question meta: type='Multiple Choice'  subject='transitions'
+2026-05-10 11:00:29,244 [DEBUG] browser: Screenshot taken (48829 bytes)
+2026-05-10 11:00:29,251 [DEBUG] browser: Question snapshot: mode=text text_len=731 options=4 images=0
+2026-05-10 11:00:31,252 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-10 11:00:33,178 [INFO] vlm: VLM parsed result: {'answers': ['D']}
+2026-05-10 11:00:33,180 [DEBUG] exam_runner: Q21: type='Multiple Choice' subject='transitions' snapshot={'source_mode': 'text', 'question_text_len': 731, 'option_count': 4, 'image_count': 0} vlm={'answers': ['D'], '_type': 'mcq-multiple'}
+2026-05-10 11:00:33,180 [DEBUG] browser: Attempting to click option 'D'
+2026-05-10 11:00:33,225 [INFO] browser: Clicked option D via selector: .mcq-option[data-option='D']
+2026-05-10 11:00:33,226 [DEBUG] browser: sleep 2.0s (after option D click)
+2026-05-10 11:00:35,227 [DEBUG] browser: Clicking Next
+2026-05-10 11:00:35,227 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-10 11:00:37,257 [DEBUG] browser: Clicked Next via selector: button:has-text('Next')
+2026-05-10 11:00:37,260 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-10 11:00:39,275 [DEBUG] browser: Question number: 22  (header text: 'Question 22 of 27')
+2026-05-10 11:00:39,284 [DEBUG] browser: Question meta: type='Multiple Choice'  subject='information_synthesis'
+2026-05-10 11:00:39,368 [DEBUG] browser: Screenshot taken (62470 bytes)
+2026-05-10 11:00:39,379 [DEBUG] browser: Question snapshot: mode=text text_len=1149 options=4 images=0
+2026-05-10 11:00:41,380 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-10 11:00:42,982 [INFO] vlm: VLM parsed result: {'answers': ['C']}
+2026-05-10 11:00:42,983 [DEBUG] exam_runner: Q22: type='Multiple Choice' subject='information_synthesis' snapshot={'source_mode': 'text', 'question_text_len': 1149, 'option_count': 4, 'image_count': 0} vlm={'answers': ['C'], '_type': 'mcq-multiple'}
+2026-05-10 11:00:42,983 [DEBUG] browser: Attempting to click option 'C'
+2026-05-10 11:00:43,028 [INFO] browser: Clicked option C via selector: .mcq-option[data-option='C']
+2026-05-10 11:00:43,028 [DEBUG] browser: sleep 2.0s (after option C click)
+2026-05-10 11:00:45,029 [DEBUG] browser: Clicking Next
+2026-05-10 11:00:45,029 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-10 11:00:47,058 [DEBUG] browser: Clicked Next via selector: button:has-text('Next')
+2026-05-10 11:00:47,062 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-10 11:00:49,075 [DEBUG] browser: Question number: 23  (header text: 'Question 23 of 27')
+2026-05-10 11:00:49,082 [DEBUG] browser: Question meta: type='Multiple Choice'  subject='information_synthesis'
+2026-05-10 11:00:49,174 [DEBUG] browser: Screenshot taken (62555 bytes)
+2026-05-10 11:00:49,182 [DEBUG] browser: Question snapshot: mode=text text_len=1114 options=4 images=0
+2026-05-10 11:00:51,184 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-10 11:00:52,613 [INFO] vlm: VLM parsed result: {'answers': ['D']}
+2026-05-10 11:00:52,614 [DEBUG] exam_runner: Q23: type='Multiple Choice' subject='information_synthesis' snapshot={'source_mode': 'text', 'question_text_len': 1114, 'option_count': 4, 'image_count': 0} vlm={'answers': ['D'], '_type': 'mcq-multiple'}
+2026-05-10 11:00:52,614 [DEBUG] browser: Attempting to click option 'D'
+2026-05-10 11:00:52,659 [INFO] browser: Clicked option D via selector: .mcq-option[data-option='D']
+2026-05-10 11:00:52,660 [DEBUG] browser: sleep 2.0s (after option D click)
+2026-05-10 11:00:54,662 [DEBUG] browser: Clicking Next
+2026-05-10 11:00:54,662 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-10 11:00:56,694 [DEBUG] browser: Clicked Next via selector: button:has-text('Next')
+2026-05-10 11:00:56,699 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-10 11:00:58,708 [DEBUG] browser: Question number: 24  (header text: 'Question 24 of 27')
+2026-05-10 11:00:58,716 [DEBUG] browser: Question meta: type='Multiple Choice'  subject='information_synthesis'
+2026-05-10 11:00:58,801 [DEBUG] browser: Screenshot taken (63766 bytes)
+2026-05-10 11:00:58,810 [DEBUG] browser: Question snapshot: mode=text text_len=1170 options=4 images=0
+2026-05-10 11:01:00,812 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-10 11:01:02,358 [INFO] vlm: VLM parsed result: {'answers': ['A', 'C']}
+2026-05-10 11:01:02,359 [DEBUG] exam_runner: Q24: type='Multiple Choice' subject='information_synthesis' snapshot={'source_mode': 'text', 'question_text_len': 1170, 'option_count': 4, 'image_count': 0} vlm={'answers': ['A', 'C'], '_type': 'mcq-multiple'}
+2026-05-10 11:01:02,360 [DEBUG] browser: Attempting to click option 'A'
+2026-05-10 11:01:02,421 [INFO] browser: Clicked option A via selector: .mcq-option[data-option='A']
+2026-05-10 11:01:02,422 [DEBUG] browser: sleep 2.0s (after option A click)
+2026-05-10 11:01:04,423 [DEBUG] browser: Attempting to click option 'C'
+2026-05-10 11:01:04,469 [INFO] browser: Clicked option C via selector: .mcq-option[data-option='C']
+2026-05-10 11:01:04,470 [DEBUG] browser: sleep 2.0s (after option C click)
+2026-05-10 11:01:06,472 [DEBUG] browser: Clicking Next
+2026-05-10 11:01:06,472 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-10 11:01:08,502 [DEBUG] browser: Clicked Next via selector: button:has-text('Next')
+2026-05-10 11:01:08,506 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-10 11:01:10,519 [DEBUG] browser: Question number: 25  (header text: 'Question 25 of 27')
+2026-05-10 11:01:10,527 [DEBUG] browser: Question meta: type='Multiple Choice'  subject='comparison'
+2026-05-10 11:01:10,616 [DEBUG] browser: Screenshot taken (58353 bytes)
+2026-05-10 11:01:10,627 [DEBUG] browser: Question snapshot: mode=text text_len=1063 options=4 images=0
+2026-05-10 11:01:12,628 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-10 11:01:13,953 [INFO] vlm: VLM parsed result: {'answers': ['C']}
+2026-05-10 11:01:13,954 [DEBUG] exam_runner: Q25: type='Multiple Choice' subject='comparison' snapshot={'source_mode': 'text', 'question_text_len': 1063, 'option_count': 4, 'image_count': 0} vlm={'answers': ['C'], '_type': 'mcq-multiple'}
+2026-05-10 11:01:13,954 [DEBUG] browser: Attempting to click option 'C'
+2026-05-10 11:01:13,995 [INFO] browser: Clicked option C via selector: .mcq-option[data-option='C']
+2026-05-10 11:01:13,996 [DEBUG] browser: sleep 2.0s (after option C click)
+2026-05-10 11:01:15,997 [DEBUG] browser: Clicking Next
+2026-05-10 11:01:15,998 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-10 11:01:18,028 [DEBUG] browser: Clicked Next via selector: button:has-text('Next')
+2026-05-10 11:01:18,031 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-10 11:01:20,043 [DEBUG] browser: Question number: 26  (header text: 'Question 26 of 27')
+2026-05-10 11:01:20,052 [DEBUG] browser: Question meta: type='Multiple Choice'  subject='summary'
+2026-05-10 11:01:20,144 [DEBUG] browser: Screenshot taken (64039 bytes)
+2026-05-10 11:01:20,152 [DEBUG] browser: Question snapshot: mode=text text_len=1184 options=4 images=0
+2026-05-10 11:01:22,153 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-10 11:01:23,522 [INFO] vlm: VLM parsed result: {'answers': ['D']}
+2026-05-10 11:01:23,523 [DEBUG] exam_runner: Q26: type='Multiple Choice' subject='summary' snapshot={'source_mode': 'text', 'question_text_len': 1184, 'option_count': 4, 'image_count': 0} vlm={'answers': ['D'], '_type': 'mcq-multiple'}
+2026-05-10 11:01:23,524 [DEBUG] browser: Attempting to click option 'D'
+2026-05-10 11:01:23,570 [INFO] browser: Clicked option D via selector: .mcq-option[data-option='D']
+2026-05-10 11:01:23,570 [DEBUG] browser: sleep 2.0s (after option D click)
+2026-05-10 11:01:25,573 [DEBUG] browser: Clicking Next
+2026-05-10 11:01:25,574 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-10 11:01:27,602 [DEBUG] browser: Clicked Next via selector: button:has-text('Next')
+2026-05-10 11:01:27,607 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-10 11:01:29,619 [DEBUG] browser: Question number: 27  (header text: 'Question 27 of 27')
+2026-05-10 11:01:29,628 [DEBUG] browser: Question meta: type='Multiple Choice'  subject='information_synthesis'
+2026-05-10 11:01:29,717 [DEBUG] browser: Screenshot taken (63661 bytes)
+2026-05-10 11:01:29,725 [DEBUG] browser: Question snapshot: mode=text text_len=1174 options=4 images=0
+2026-05-10 11:01:31,727 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-10 11:01:33,040 [INFO] vlm: VLM parsed result: {'answers': ['C']}
+2026-05-10 11:01:33,041 [DEBUG] exam_runner: Q27: type='Multiple Choice' subject='information_synthesis' snapshot={'source_mode': 'text', 'question_text_len': 1174, 'option_count': 4, 'image_count': 0} vlm={'answers': ['C'], '_type': 'mcq-multiple'}
+2026-05-10 11:01:33,042 [DEBUG] browser: Attempting to click option 'C'
+2026-05-10 11:01:33,087 [INFO] browser: Clicked option C via selector: .mcq-option[data-option='C']
+2026-05-10 11:01:33,088 [DEBUG] browser: sleep 2.0s (after option C click)
+2026-05-10 11:01:35,089 [INFO] exam_runner: Submit target reached (Q27); breaking loop to submit
+2026-05-10 11:01:35,090 [INFO] browser: Clicking Submit Module
+2026-05-10 11:01:35,131 [DEBUG] browser: Clicked submit module via selector: button:has-text('Submit Module')
+2026-05-10 11:01:35,135 [DEBUG] browser: sleep 2.0s (after Submit Module)
+2026-05-10 11:01:37,136 [INFO] exam_runner: Starting SAT Module 2 target=27
+2026-05-10 11:01:37,143 [INFO] browser: Total questions in paper: 27
+2026-05-10 11:01:37,143 [INFO] exam_runner: Submit target for Practice Test 4 Module 2: Q27
+2026-05-10 11:01:37,153 [DEBUG] browser: Question number: 27  (header text: 'Question 27 of 27')
+2026-05-10 11:01:37,163 [DEBUG] browser: Question meta: type='Multiple Choice'  subject='information_synthesis'
+2026-05-10 11:01:37,254 [DEBUG] browser: Screenshot taken (78941 bytes)
+2026-05-10 11:01:37,265 [DEBUG] browser: Question snapshot: mode=text text_len=1384 options=4 images=0
+2026-05-10 11:01:39,266 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-10 11:01:40,596 [INFO] vlm: VLM parsed result: {'answers': ['C']}
+2026-05-10 11:01:40,597 [DEBUG] exam_runner: Q27: type='Multiple Choice' subject='information_synthesis' snapshot={'source_mode': 'text', 'question_text_len': 1384, 'option_count': 4, 'image_count': 0} vlm={'answers': ['C'], '_type': 'mcq-multiple'}
+2026-05-10 11:01:40,597 [DEBUG] browser: Attempting to click option 'C'
+2026-05-10 11:01:43,144 [DEBUG] browser: Option C selector failed (.mcq-option[data-option='C']): Locator.click: Timeout 2500ms exceeded.
+Call log:
+  - waiting for locator(".mcq-option[data-option='C']").first
+    - locator resolved to <div data-option="C" class="mcq-option selected">…</div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="modal" id="confirm-modal">…</div> intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="modal" id="confirm-modal">…</div> intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    5 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="modal" id="confirm-modal">…</div> intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+
+2026-05-10 11:01:45,684 [DEBUG] browser: Option C selector failed ([data-option='C']): Locator.click: Timeout 2500ms exceeded.
+Call log:
+  - waiting for locator("[data-option='C']").first
+    - locator resolved to <div data-option="C" class="mcq-option selected">…</div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="modal" id="confirm-modal">…</div> intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="modal" id="confirm-modal">…</div> intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    5 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="modal" id="confirm-modal">…</div> intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+
+2026-05-10 11:01:48,211 [DEBUG] browser: Option C selector failed (.mcq-option:has(:text-is('C'))): Locator.click: Timeout 2500ms exceeded.
+Call log:
+  - waiting for locator(".mcq-option:has(:text-is('C'))").first
+    - locator resolved to <div data-option="C" class="mcq-option selected">…</div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="modal" id="confirm-modal">…</div> intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="modal" id="confirm-modal">…</div> intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    5 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="modal" id="confirm-modal">…</div> intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+
+2026-05-10 11:01:49,726 [DEBUG] browser: Option C selector failed (label:has(:text-is('C'))): Locator.scroll_into_view_if_needed: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("label:has(:text-is('C'))").first
+
+2026-05-10 11:01:52,264 [DEBUG] browser: Option C selector failed (input[type='checkbox'][value='C'], input[type='radio'][value='C']): Locator.click: Timeout 2500ms exceeded.
+Call log:
+  - waiting for locator("input[type='checkbox'][value='C'], input[type='radio'][value='C']").first
+    - locator resolved to <input value="C" type="radio" id="option-C" name="mcq-answer"/>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="modal" id="confirm-modal">…</div> intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="modal" id="confirm-modal">…</div> intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    5 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="modal" id="confirm-modal">…</div> intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+
+2026-05-10 11:01:54,796 [DEBUG] browser: Option C selector failed (input[type='checkbox']:near(:text-is('C')), input[type='radio']:near(:text-is('C'))): Locator.click: Timeout 2500ms exceeded.
+Call log:
+  - waiting for locator("input[type='checkbox']:near(:text-is('C')), input[type='radio']:near(:text-is('C'))").first
+    - locator resolved to <input value="C" type="radio" id="option-C" name="mcq-answer"/>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="modal" id="confirm-modal">…</div> intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="modal" id="confirm-modal">…</div> intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    5 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="modal" id="confirm-modal">…</div> intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+
+2026-05-10 11:01:57,326 [DEBUG] browser: Option C selector failed (.option-label:text-is('C'), [class*='option-label']:text-is('C')): Locator.click: Timeout 2500ms exceeded.
+Call log:
+  - waiting for locator(".option-label:text-is('C'), [class*='option-label']:text-is('C')").first
+    - locator resolved to <label for="option-C" class="mcq-option-label">C</label>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="modal" id="confirm-modal">…</div> intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="modal" id="confirm-modal">…</div> intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    5 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="modal" id="confirm-modal">…</div> intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+
+2026-05-10 11:01:57,331 [INFO] browser: Clicked option C via JS row-text fallback
+2026-05-10 11:01:57,332 [DEBUG] browser: sleep 2.0s (after option C click)
+2026-05-10 11:01:59,333 [INFO] exam_runner: Submit target reached (Q27); breaking loop to submit
+2026-05-10 11:01:59,333 [INFO] browser: Clicking Submit Module
+2026-05-10 11:02:01,859 [DEBUG] browser: submit module selector failed (button:has-text('Submit Module')): Locator.click: Timeout 2500ms exceeded.
+Call log:
+  - waiting for locator("button:has-text('Submit Module')").first
+    - locator resolved to <button id="submit-btn" class="nav-btn danger">Submit Module</button>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="modal" id="confirm-modal">…</div> intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="modal" id="confirm-modal">…</div> intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    5 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="modal" id="confirm-modal">…</div> intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+
+2026-05-10 11:02:01,860 [ERROR] exam_runner: click_submit_module failed after Module 2
+Traceback (most recent call last):
+  File "C:\Users\Soham\Documents\NGMI26\bigomegaswork\src\exam_runner.py", line 322, in _run_sat_paper
+    click_submit_module(page)
+  File "C:\Users\Soham\Documents\NGMI26\bigomegaswork\src\browser.py", line 598, in click_submit_module
+    raise RuntimeError("Could not locate Submit Module button")
+RuntimeError: Could not locate Submit Module button
+2026-05-10 11:02:02,248 [INFO] main: ============================================================
+2026-05-10 11:02:02,249 [INFO] main: FINAL SUMMARY
+2026-05-10 11:02:02,249 [INFO] main: ============================================================
+2026-05-10 11:02:02,249 [INFO] main:   Practice Test 4                     answered=28/54  (52%)
+2026-05-10 11:02:02,250 [INFO] main: Total answered: 28/28
+2026-05-10 11:02:02,250 [INFO] main: JSONL log     : logs\run_20260510_105702.jsonl
+2026-05-10 11:02:02,251 [DEBUG] asyncio: Using proactor: IocpProactor

@@ -21,15 +21,22 @@ from .browser import (
     enter_numerical,
     click_next,
     click_submit,
+    click_submit_module,
+    click_submit_exam,
 )
 from .vlm import query_vlm
 
 OPTIONS = ("A", "B", "C", "D")
+SAT_MODULE_TOTALS = (27, 27, 22, 22)
+
+
+def _is_sat_exam() -> bool:
+    return "sat" in config.base_url.lower() or "sat" in config.exam_label.lower()
 
 
 def _submit_after_question(paper_label: str, total_questions: int) -> int:
     """Return the question number where this paper should be submitted."""
-    if "sat" in config.base_url.lower() or "sat" in config.exam_label.lower():
+    if _is_sat_exam():
         return min(total_questions, 27) if total_questions else 27
 
     normalized = paper_label.lower()
@@ -177,20 +184,17 @@ def _apply_strategy(page: Page, result: dict, q_type: str = "") -> list[str]:
     return actions if actions else ["skip:unknown"]
 
 
-def run_paper(page: Page, paper_label: str, log_file: IO) -> dict:
-    """
-    Run a single paper end-to-end. Returns a summary dict.
-    """
-    print(f"\n{'='*60}")
-    print(f"Starting: {paper_label}")
-    print(f"{'='*60}")
-
-    login(page, paper_label)
-    zoom_out(page)
-
+def _answer_current_module(
+    page: Page,
+    paper_label: str,
+    log_file: IO,
+    submit_after: int,
+    module_label: str = "",
+) -> dict:
     total = get_total_questions(page)
-    submit_after = _submit_after_question(paper_label, total)
-    log.info(f"Submit target for {paper_label}: Q{submit_after}")
+    if submit_after <= 0:
+        submit_after = _submit_after_question(paper_label, total)
+    log.info(f"Submit target for {paper_label} {module_label}: Q{submit_after}")
     answered = 0
     skipped = 0
     prev_q_num = -1
@@ -250,6 +254,7 @@ def run_paper(page: Page, paper_label: str, log_file: IO) -> dict:
         try:
             log_entry = {
                 "paper": paper_label,
+                "module": module_label,
                 "q_num": q_num,
                 "q_type": q_type,
                 "subject": subject,
@@ -293,6 +298,64 @@ def run_paper(page: Page, paper_label: str, log_file: IO) -> dict:
             click_next(page)
         except Exception:
             log.exception(f"click_next failed after Q{q_num}; continuing anyway")
+
+    return {"answered": answered, "skipped": skipped, "total": total}
+
+
+def _run_sat_paper(page: Page, paper_label: str, log_file: IO) -> dict:
+    answered = 0
+    skipped = 0
+    total = 0
+
+    for module_index, module_total in enumerate(SAT_MODULE_TOTALS, start=1):
+        module_label = f"Module {module_index}"
+        log.info(f"Starting SAT {module_label} target={module_total}")
+        print(f"\nSAT {module_label} target={module_total}")
+
+        summary = _answer_current_module(page, paper_label, log_file, module_total, module_label)
+        answered += summary["answered"]
+        skipped += summary["skipped"]
+        total += module_total
+
+        if module_index < len(SAT_MODULE_TOTALS):
+            try:
+                click_submit_module(page)
+            except Exception:
+                log.exception(f"click_submit_module failed after {module_label}")
+                break
+        else:
+            try:
+                click_submit_exam(page)
+            except Exception:
+                log.exception("click_submit_exam failed")
+
+    print(f"\nSubmitted: {paper_label} — answered={answered}, skipped={skipped}")
+    return {"paper": paper_label, "answered": answered, "skipped": skipped, "total": total}
+
+
+def run_paper(page: Page, paper_label: str, log_file: IO) -> dict:
+    """
+    Run a single paper end-to-end. Returns a summary dict.
+    """
+    print(f"\n{'='*60}")
+    print(f"Starting: {paper_label}")
+    print(f"{'='*60}")
+
+    login(page, paper_label)
+    zoom_out(page)
+
+    if _is_sat_exam():
+        return _run_sat_paper(page, paper_label, log_file)
+
+    total = get_total_questions(page)
+    summary = _answer_current_module(
+        page,
+        paper_label,
+        log_file,
+        _submit_after_question(paper_label, total),
+    )
+    answered = summary["answered"]
+    skipped = summary["skipped"]
 
     try:
         click_submit(page)
