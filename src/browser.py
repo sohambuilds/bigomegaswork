@@ -175,6 +175,17 @@ def get_question_meta(page: Page) -> tuple[str, str]:
 
 def get_question_number(page: Page) -> int:
     header_text = _text_content_first(page, ["text=/Question \\d+ of \\d+/"], "")
+    if not header_text:
+        try:
+            header_text = page.evaluate(
+                """() => {
+                    const text = document.body.innerText || '';
+                    const match = text.match(/Question\\s+\\d+\\s+of\\s+\\d+/i);
+                    return match ? match[0] : '';
+                }"""
+            )
+        except Exception as exc:
+            log.debug(f"Question number body fallback failed: {exc}")
     match = re.search(r"Question (\d+) of \d+", header_text or "")
     n = int(match.group(1)) if match else -1
     log.debug(f"Question number: {n}  (header text: {header_text!r})")
@@ -183,6 +194,17 @@ def get_question_number(page: Page) -> int:
 
 def get_total_questions(page: Page) -> int:
     header_text = _text_content_first(page, ["text=/Question \\d+ of \\d+/"], "")
+    if not header_text:
+        try:
+            header_text = page.evaluate(
+                """() => {
+                    const text = document.body.innerText || '';
+                    const match = text.match(/Question\\s+\\d+\\s+of\\s+\\d+/i);
+                    return match ? match[0] : '';
+                }"""
+            )
+        except Exception as exc:
+            log.debug(f"Total questions body fallback failed: {exc}")
     match = re.search(r"Question \d+ of (\d+)", header_text or "")
     total = int(match.group(1)) if match else _default_total_questions()
     log.info(f"Total questions in paper: {total}")

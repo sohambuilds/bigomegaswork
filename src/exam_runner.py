@@ -217,6 +217,9 @@ def _answer_current_module(
         snapshot_meta: dict = {}
         try:
             q_num = get_question_number(page)
+            if q_num == -1:
+                q_num = prev_q_num + 1 if prev_q_num > 0 else 1
+                log.warning(f"Question number unavailable; inferring Q{q_num} from loop state")
             q_type, subject = get_question_meta(page)
 
             print(f"  Q{q_num:>2}/{total} [{q_type:15s}] [{subject:10s}] ", end="", flush=True)
@@ -289,7 +292,7 @@ def _answer_current_module(
         prev_q_num = q_num
 
         # If this is the last question, stop iterating and submit.
-        if is_last:
+        if is_last and (q_num >= submit_after or q_num >= total):
             log.info(f"Last question reached (Q{q_num}); breaking loop to submit")
             break
 

@@ -122,10 +122,14 @@ def _normalize_type(question_type: str) -> str:
         return "matching"
     if "numerical" in t or "integer" in t or "numeric" in t or "studentresponse" in t or "studentproduced" in t:
         return "numerical"
-    if "multiplechoice" in t or "mcq" in t or "single" in t:
+    if "mcqmultiple" in t or "multiplecorrect" in t or "multicorrect" in t:
+        return "mcq-multiple"
+    if "multiplechoice" in t:
         return "mcq-single"
     if "multiple" in t or "multi" in t:
         return "mcq-multiple"
+    if "single" in t or "mcq" in t:
+        return "mcq-single"
     return "mcq-single"
 
 
