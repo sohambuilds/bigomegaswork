@@ -1,0 +1,132 @@
+2026-05-10 10:05:35,657 [INFO] main: Model : groq/meta-llama/llama-4-scout-17b-16e-instruct
+2026-05-10 10:05:35,658 [INFO] main: JSONL : logs\run_20260510_100535.jsonl
+2026-05-10 10:05:35,658 [INFO] main: Papers: 1
+2026-05-10 10:05:35,659 [DEBUG] asyncio: Using proactor: IocpProactor
+2026-05-10 10:05:50,689 [INFO] browser: Navigating to https://sat-image.onrender.com
+2026-05-10 10:05:52,516 [DEBUG] browser: Filling login form
+2026-05-10 10:05:52,606 [DEBUG] browser: Filled username via selector: #model-name
+2026-05-10 10:05:52,636 [DEBUG] browser: Filled password via selector: #password
+2026-05-10 10:05:52,636 [DEBUG] browser: Selecting paper: Practice Test 4
+2026-05-10 10:05:52,707 [DEBUG] browser: Clicked login/start via selector: #login-btn
+2026-05-10 10:05:53,740 [DEBUG] browser: Clicked directions start via selector: button:has-text('Start Exam')
+2026-05-10 10:05:55,503 [INFO] browser: Logged in — paper: Practice Test 4
+2026-05-10 10:05:55,505 [DEBUG] browser: Zooming out (Ctrl+Minus x5)
+2026-05-10 10:05:55,533 [DEBUG] browser:   Ctrl+Minus press 1/5
+2026-05-10 10:05:55,542 [DEBUG] browser:   Ctrl+Minus press 2/5
+2026-05-10 10:05:55,550 [DEBUG] browser:   Ctrl+Minus press 3/5
+2026-05-10 10:05:55,556 [DEBUG] browser:   Ctrl+Minus press 4/5
+2026-05-10 10:05:55,563 [DEBUG] browser:   Ctrl+Minus press 5/5
+2026-05-10 10:05:55,583 [INFO] browser: Total questions in paper: 27
+2026-05-10 10:05:55,585 [INFO] exam_runner: Submit target for Practice Test 4: Q27
+2026-05-10 10:05:55,600 [DEBUG] browser: Question number: 1  (header text: 'Question 1 of 27')
+2026-05-10 10:05:55,614 [DEBUG] browser: Question meta: type='Multiple Choice'  subject='vocabulary_in_context'
+2026-05-10 10:05:55,725 [DEBUG] browser: Screenshot taken (50157 bytes)
+2026-05-10 10:05:55,742 [DEBUG] browser: Question snapshot: mode=text text_len=793 options=4 images=0
+2026-05-10 10:05:57,743 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-10 10:05:59,330 [INFO] vlm: VLM parsed result: {'answers': ['B']}
+2026-05-10 10:05:59,331 [DEBUG] exam_runner: Q1: type='Multiple Choice' subject='vocabulary_in_context' snapshot={'source_mode': 'text', 'question_text_len': 793, 'option_count': 4, 'image_count': 0} vlm={'answers': ['B'], '_type': 'mcq-multiple'}
+2026-05-10 10:05:59,331 [DEBUG] browser: Attempting to click option 'B'
+2026-05-10 10:05:59,415 [INFO] browser: Clicked option B via selector: .mcq-option[data-option='B']
+2026-05-10 10:05:59,416 [DEBUG] browser: sleep 2.0s (after option B click)
+2026-05-10 10:06:01,417 [DEBUG] browser: Clicking Next
+2026-05-10 10:06:01,418 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-10 10:06:03,470 [DEBUG] browser: Clicked Next via selector: button:has-text('Next')
+2026-05-10 10:06:03,474 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-10 10:06:05,491 [DEBUG] browser: Question number: 2  (header text: 'Question 2 of 27')
+2026-05-10 10:06:05,503 [DEBUG] browser: Question meta: type='Multiple Choice'  subject='vocabulary_in_context'
+2026-05-10 10:06:05,625 [DEBUG] browser: Screenshot taken (50855 bytes)
+2026-05-10 10:06:05,636 [DEBUG] browser: Question snapshot: mode=text text_len=815 options=4 images=0
+2026-05-10 10:06:07,637 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-10 10:06:09,292 [INFO] vlm: VLM parsed result: {'answers': ['B']}
+2026-05-10 10:06:09,293 [DEBUG] exam_runner: Q2: type='Multiple Choice' subject='vocabulary_in_context' snapshot={'source_mode': 'text', 'question_text_len': 815, 'option_count': 4, 'image_count': 0} vlm={'answers': ['B'], '_type': 'mcq-multiple'}
+2026-05-10 10:06:09,293 [DEBUG] browser: Attempting to click option 'B'
+2026-05-10 10:06:09,350 [INFO] browser: Clicked option B via selector: .mcq-option[data-option='B']
+2026-05-10 10:06:09,351 [DEBUG] browser: sleep 2.0s (after option B click)
+2026-05-10 10:06:11,353 [DEBUG] browser: Clicking Next
+2026-05-10 10:06:11,353 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-10 10:06:13,404 [DEBUG] browser: Clicked Next via selector: button:has-text('Next')
+2026-05-10 10:06:13,409 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-10 10:06:15,422 [DEBUG] browser: Question number: 3  (header text: 'Question 3 of 27')
+2026-05-10 10:06:15,431 [DEBUG] browser: Question meta: type='Multiple Choice'  subject='contextual_vocabulary'
+2026-05-10 10:06:15,516 [DEBUG] browser: Screenshot taken (50590 bytes)
+2026-05-10 10:06:15,526 [DEBUG] browser: Question snapshot: mode=text text_len=827 options=4 images=0
+2026-05-10 10:06:17,528 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-10 10:06:19,093 [INFO] vlm: VLM parsed result: {'answers': ['A']}
+2026-05-10 10:06:19,094 [DEBUG] exam_runner: Q3: type='Multiple Choice' subject='contextual_vocabulary' snapshot={'source_mode': 'text', 'question_text_len': 827, 'option_count': 4, 'image_count': 0} vlm={'answers': ['A'], '_type': 'mcq-multiple'}
+2026-05-10 10:06:19,096 [DEBUG] browser: Attempting to click option 'A'
+2026-05-10 10:06:19,145 [INFO] browser: Clicked option A via selector: .mcq-option[data-option='A']
+2026-05-10 10:06:19,145 [DEBUG] browser: sleep 2.0s (after option A click)
+2026-05-10 10:06:21,147 [DEBUG] browser: Clicking Next
+2026-05-10 10:06:21,147 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-10 10:06:23,206 [DEBUG] browser: Clicked Next via selector: button:has-text('Next')
+2026-05-10 10:06:23,210 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-10 10:06:25,222 [DEBUG] browser: Question number: 4  (header text: 'Question 4 of 27')
+2026-05-10 10:06:25,232 [DEBUG] browser: Question meta: type='Multiple Choice'  subject='scientific_context'
+2026-05-10 10:06:25,326 [DEBUG] browser: Screenshot taken (50835 bytes)
+2026-05-10 10:06:25,335 [DEBUG] browser: Question snapshot: mode=text text_len=798 options=4 images=0
+2026-05-10 10:06:27,336 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-10 10:06:29,075 [INFO] vlm: VLM parsed result: {'answers': ['B']}
+2026-05-10 10:06:29,076 [DEBUG] exam_runner: Q4: type='Multiple Choice' subject='scientific_context' snapshot={'source_mode': 'text', 'question_text_len': 798, 'option_count': 4, 'image_count': 0} vlm={'answers': ['B'], '_type': 'mcq-multiple'}
+2026-05-10 10:06:29,076 [DEBUG] browser: Attempting to click option 'B'
+2026-05-10 10:06:29,124 [INFO] browser: Clicked option B via selector: .mcq-option[data-option='B']
+2026-05-10 10:06:29,125 [DEBUG] browser: sleep 2.0s (after option B click)
+2026-05-10 10:06:31,126 [DEBUG] browser: Clicking Next
+2026-05-10 10:06:31,127 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-10 10:06:33,175 [DEBUG] browser: Clicked Next via selector: button:has-text('Next')
+2026-05-10 10:06:33,178 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-10 10:06:35,189 [DEBUG] browser: Question number: 5  (header text: 'Question 5 of 27')
+2026-05-10 10:06:35,199 [DEBUG] browser: Question meta: type='Multiple Choice'  subject='vocabulary_in_context'
+2026-05-10 10:06:35,293 [DEBUG] browser: Screenshot taken (51222 bytes)
+2026-05-10 10:06:35,301 [DEBUG] browser: Question snapshot: mode=text text_len=817 options=4 images=0
+2026-05-10 10:06:37,302 [DEBUG] vlm: Sending mcq-multiple question to model 'groq/meta-llama/llama-4-scout-17b-16e-instruct'
+2026-05-10 10:06:38,747 [INFO] vlm: VLM parsed result: {'answers': ['A']}
+2026-05-10 10:06:38,748 [DEBUG] exam_runner: Q5: type='Multiple Choice' subject='vocabulary_in_context' snapshot={'source_mode': 'text', 'question_text_len': 817, 'option_count': 4, 'image_count': 0} vlm={'answers': ['A'], '_type': 'mcq-multiple'}
+2026-05-10 10:06:38,748 [DEBUG] browser: Attempting to click option 'A'
+2026-05-10 10:06:38,805 [INFO] browser: Clicked option A via selector: .mcq-option[data-option='A']
+2026-05-10 10:06:38,806 [DEBUG] browser: sleep 2.0s (after option A click)
+2026-05-10 10:06:40,807 [DEBUG] browser: Clicking Next
+2026-05-10 10:06:40,808 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-10 10:06:42,843 [DEBUG] browser: Clicked Next via selector: button:has-text('Next')
+2026-05-10 10:06:42,847 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-10 10:06:44,851 [DEBUG] browser: Text selector failed (text=/Question \d+ of \d+/): Locator.text_content: Target page, context or browser has been closed
+2026-05-10 10:06:44,852 [DEBUG] browser: Question number: -1  (header text: '')
+2026-05-10 10:06:44,854 [DEBUG] browser: Text selector failed ([class*='question-type-badge']): Locator.text_content: Target page, context or browser has been closed
+2026-05-10 10:06:44,856 [DEBUG] browser: Text selector failed ([class*='question-type']): Locator.text_content: Target page, context or browser has been closed
+2026-05-10 10:06:44,857 [DEBUG] browser: Text selector failed ([class*='badge']:has-text('Multiple Choice')): Locator.text_content: Target page, context or browser has been closed
+2026-05-10 10:06:44,859 [DEBUG] browser: Text selector failed (text=/Multiple Choice|Numerical|Single|Multiple Correct|Matching/): Locator.text_content: Target page, context or browser has been closed
+2026-05-10 10:06:44,863 [DEBUG] browser: Text selector failed (.subject-badge): Locator.text_content: Target page, context or browser has been closed
+2026-05-10 10:06:44,866 [DEBUG] browser: Text selector failed ([class*='subject']): Locator.text_content: Target page, context or browser has been closed
+2026-05-10 10:06:44,867 [DEBUG] browser: Text selector failed ([class*='topic']): Locator.text_content: Target page, context or browser has been closed
+2026-05-10 10:06:44,869 [DEBUG] browser: Text selector failed ([class*='category']): Locator.text_content: Target page, context or browser has been closed
+2026-05-10 10:06:44,870 [DEBUG] browser: Question meta: type='Unknown'  subject='Unknown'
+2026-05-10 10:06:44,872 [ERROR] exam_runner: Unhandled error on Q-1 (Unknown); advancing to next
+Traceback (most recent call last):
+  File "C:\Users\Soham\Documents\NGMI26\bigomegaswork\src\exam_runner.py", line 220, in run_paper
+    snapshot = capture_question_snapshot(page)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Soham\Documents\NGMI26\bigomegaswork\src\browser.py", line 373, in capture_question_snapshot
+    screenshot_b64 = take_screenshot_b64(page)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Soham\Documents\NGMI26\bigomegaswork\src\browser.py", line 193, in take_screenshot_b64
+    data = page.screenshot(type="png")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\sync_api\_generated.py", line 10129, in screenshot
+    self._sync(
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_page.py", line 814, in screenshot
+    encoded_binary = await self._channel.send(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Soham\Documents\NGMI26\bigomegaswork\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: Page.screenshot: Target page, context or browser has been closed
+2026-05-10 10:06:44,874 [DEBUG] browser: Clicking Next
+2026-05-10 10:06:44,876 [DEBUG] browser: sleep 2.0s (before Next)
+2026-05-10 10:06:46,879 [DEBUG] browser: Next selector failed (button:has-text('Next')): Locator.wait_for: Target page, context or browser has been closed
+2026-05-10 10:06:46,881 [DEBUG] browser: Next selector failed (button[aria-label*='Next']): Locator.wait_for: Target page, context or browser has been closed
+2026-05-10 10:06:46,884 [DEBUG] browser: sleep 2.0s (after Next)
+2026-05-10 10:06:49,323 [DEBUG] asyncio: Using proactor: IocpProactor

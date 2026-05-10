@@ -88,6 +88,10 @@ def login(page: Page, paper_label: str) -> None:
     _fill_first(
         page,
         [
+            "#model-name",
+            "input[name='model-name']",
+            "#username",
+            "input[name='username']",
             "input[placeholder='Enter Username']",
             "input[placeholder='Username']",
             "input[name*='user']",
@@ -99,6 +103,8 @@ def login(page: Page, paper_label: str) -> None:
     _fill_first(
         page,
         [
+            "#password",
+            "input[name='password']",
             "input[placeholder='Enter Password']",
             "input[placeholder='Password']",
             "input[name*='pass']",
@@ -116,7 +122,10 @@ def login(page: Page, paper_label: str) -> None:
     _click_first(
         page,
         [
+            "#login-btn",
+            "button:has-text('Sign In')",
             "button:has-text('Login')",
+            "button[type='submit']",
             "button:has-text('Start')",
             "button:has-text('Continue')",
             "input[type='submit']",
